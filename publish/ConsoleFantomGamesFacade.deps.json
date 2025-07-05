@@ -1,0 +1,72 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "ConsoleFantomGamesFacade/1.0.0": {
+        "dependencies": {
+          "FantomGamesIntermediary": "1.0.0"
+        },
+        "runtime": {
+          "ConsoleFantomGamesFacade.dll": {}
+        }
+      },
+      "FantomGamesCore/1.0.0": {
+        "runtime": {
+          "FantomGamesCore.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FantomGamesIntermediary/1.0.0": {
+        "dependencies": {
+          "FantomGamesCore": "1.0.0",
+          "FantomGamesSystemUtils": "1.0.0"
+        },
+        "runtime": {
+          "FantomGamesIntermediary.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FantomGamesSystemUtils/1.0.0": {
+        "dependencies": {
+          "FantomGamesCore": "1.0.0"
+        },
+        "runtime": {
+          "FantomGamesSystemUtils.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsoleFantomGamesFacade/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FantomGamesCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FantomGamesIntermediary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FantomGamesSystemUtils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
