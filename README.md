@@ -30,3 +30,4 @@ As such it they should run on the target platform without any other user actions
 
 The runnable files are `AvaloniaFantomGamesFacade.Desktop` and `AvaloniaFantomGamesFacade.Desktop.exe` respectively.
 
+For Linux users it might be necessary to add the runnable flag (`chmod +x`) to the `AvaloniaFantomGamesFacade.Desktop` file in order to run it. The app also uses the `Bernard MT` font for in game text displays which will likely not be available (the app will likely default to another system font).
