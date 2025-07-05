@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['removegamestatechangecallback_0',['RemoveGameStateChangeCallback',['../interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a0cca717ee920ed0f36021be51049bc05',1,'FantomGamesCore.Interfaces.IFantomGameInterface.RemoveGameStateChangeCallback()'],['../class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#a0d290e00dc6641d16758f45ed65ea665',1,'FantomGamesCore.Managers.FantomGameManager.RemoveGameStateChangeCallback()']]],
+  ['reset_1',['Reset',['../interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a4b60bd04c4680d8ac97103f455b0527d',1,'FantomGamesCore.Interfaces.IFantomGameInterface.Reset()'],['../class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#a6b321b580d0db85e9931d407919b5522',1,'FantomGamesCore.Managers.FantomGameManager.Reset()']]],
+  ['restart_2',['Restart',['../interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#acd29f9042add6c5727c007b4a8eca6c5',1,'FantomGamesCore.Interfaces.IFantomGameInterface.Restart()'],['../class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#a9ce430c7a4ed0a67d59d01637badcd6a',1,'FantomGamesCore.Managers.FantomGameManager.Restart()']]]
+];

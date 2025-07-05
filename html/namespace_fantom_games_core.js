@@ -1,0 +1,70 @@
+var namespace_fantom_games_core =
+[
+    [ "Interfaces", "namespace_fantom_games_core_1_1_interfaces.html", "namespace_fantom_games_core_1_1_interfaces" ],
+    [ "Managers", "namespace_fantom_games_core_1_1_managers.html", "namespace_fantom_games_core_1_1_managers" ],
+    [ "FantomGameResult", "struct_fantom_games_core_1_1_fantom_game_result.html", "struct_fantom_games_core_1_1_fantom_game_result" ],
+    [ "FantomGameSettings", "struct_fantom_games_core_1_1_fantom_game_settings.html", "struct_fantom_games_core_1_1_fantom_game_settings" ],
+    [ "FantomGameState", "struct_fantom_games_core_1_1_fantom_game_state.html", "struct_fantom_games_core_1_1_fantom_game_state" ],
+    [ "ReturnCode< T >", "struct_fantom_games_core_1_1_return_code-1-g.html", null ],
+    [ "TicketGroup", "struct_fantom_games_core_1_1_ticket_group.html", "struct_fantom_games_core_1_1_ticket_group" ],
+    [ "GameMechanics", "namespace_fantom_games_core.html#a306c06e4430edf99c1e3d70a79ed36ec", [
+      [ "None", "namespace_fantom_games_core.html#a306c06e4430edf99c1e3d70a79ed36eca6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "BankMechanic", "namespace_fantom_games_core.html#a306c06e4430edf99c1e3d70a79ed36ecaf309acd26acd96807116e662bbcc0dbb", null ],
+      [ "InformerMechanic", "namespace_fantom_games_core.html#a306c06e4430edf99c1e3d70a79ed36eca2af0473a93f67c1653834e7778eced24", null ],
+      [ "CrimeMechanic", "namespace_fantom_games_core.html#a306c06e4430edf99c1e3d70a79ed36eca8cf73816eb845de92e07f2c2ca0be938", null ],
+      [ "Manhunt", "namespace_fantom_games_core.html#a306c06e4430edf99c1e3d70a79ed36ecad7dfd5ae0e0156dc4313aa88b40c6ba5", null ],
+      [ "TransportationBan", "namespace_fantom_games_core.html#a306c06e4430edf99c1e3d70a79ed36eca4d16773405b149e4ad0d20dba5acdc46", null ],
+      [ "Interrogation", "namespace_fantom_games_core.html#a306c06e4430edf99c1e3d70a79ed36eca85e8ad21a99472df77e6bad8de8c7b45", null ],
+      [ "SearchingClues", "namespace_fantom_games_core.html#a306c06e4430edf99c1e3d70a79ed36eca196f3528cd6a75fc9e7569d0ae79a8d9", null ],
+      [ "Roadblock", "namespace_fantom_games_core.html#a306c06e4430edf99c1e3d70a79ed36eca74ac74608670b9bb656a8714fc426175", null ],
+      [ "TakeTicket", "namespace_fantom_games_core.html#a306c06e4430edf99c1e3d70a79ed36ecaaae7e178512b64b2498a0f5ceeafdf44", null ],
+      [ "DeepDive", "namespace_fantom_games_core.html#a306c06e4430edf99c1e3d70a79ed36eca7560e62f965cebf932e0e680b7e0f6c1", null ],
+      [ "Escape", "namespace_fantom_games_core.html#a306c06e4430edf99c1e3d70a79ed36eca013ec032d3460d4be4431c6ab1f8f224", null ]
+    ] ],
+    [ "GameOverConditions", "namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670", [
+      [ "None", "namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670a6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "FC", "namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670a6b8f0029ce30f9b4d5fe0def33875511", null ],
+      [ "NCR", "namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670a2f4f2b64140dee89547e89d0695c02b1", null ],
+      [ "FM", "namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670aff94b93682a7bb18a97d720c82e253cb", null ],
+      [ "SM", "namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670a4e0d4f6ce30646f5a3f3e2a7422c1c5a", null ],
+      [ "RB", "namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670ac8ee22e1fc2165dfd3d2b04aef93b2f2", null ],
+      [ "NRB", "namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670afd5c8f626db0a1343eecdeebbf1fb42b", null ],
+      [ "DC", "namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670acf75e54791dd1f49f918345fdfe2430b", null ],
+      [ "NCM", "namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670a35d05f65ea1f03b90ad40d0a961c5728", null ]
+    ] ],
+    [ "GameStates", "namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0", [
+      [ "Init", "namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0a95b19f7739b0b7ea7d6b07586be54f36", null ],
+      [ "Choosing", "namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0aaedf3ee345e2e8c6cd7528183a49d62f", null ],
+      [ "FantomTurn", "namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0a990c1cb966fb80ae77b64cf4024b07f4", null ],
+      [ "FantomDouble1", "namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0a3b46f30c3d4686024018ac2de382c1c9", null ],
+      [ "FantomDouble2", "namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0a778693feb947a94a3affc1cdd4b53f06", null ],
+      [ "PostFantomTurn", "namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0ac9c1019ff04006363a2b2a4733296eed", null ],
+      [ "SeekersTurn", "namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0a37f832f6b9411cdb9f5cb1567b2f043a", null ],
+      [ "PostSeekerTurn", "namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0a87d7ec35f636d0e59ab9a3d3671e10ec", null ],
+      [ "RoundOver", "namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0aa2304f04c782b61d95ef4f23925c5ee8", null ],
+      [ "GameOver", "namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0a8f347bc7cebca9fa6d97e70c6bc29eb3", null ],
+      [ "Fail", "namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0aceaa0734f0b3c738120c67344d8f3ec1", null ],
+      [ "Terminated", "namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0afba9c4daa2dd29d1077d32d965320ac1", null ]
+    ] ],
+    [ "ReturnCodes", "namespace_fantom_games_core.html#a406337a6071e8527489efc0786ee93d8", [
+      [ "OK", "namespace_fantom_games_core.html#a406337a6071e8527489efc0786ee93d8ae0aa021e21dddbd6d8cecec71e9cf564", null ],
+      [ "InvalidState", "namespace_fantom_games_core.html#a406337a6071e8527489efc0786ee93d8aedf260198e4d75d1cb3c7588f7380120", null ],
+      [ "BadIndex", "namespace_fantom_games_core.html#a406337a6071e8527489efc0786ee93d8a916bdff5820422ed3a33ecb7af41d970", null ],
+      [ "PositionOccupied", "namespace_fantom_games_core.html#a406337a6071e8527489efc0786ee93d8a274b371e0f340297fd3c4ef20bf842a4", null ],
+      [ "InvalidOperation", "namespace_fantom_games_core.html#a406337a6071e8527489efc0786ee93d8a1cd5ecce6fe138df5c3f7e8854a1a66d", null ],
+      [ "BadArgument", "namespace_fantom_games_core.html#a406337a6071e8527489efc0786ee93d8af6ed8680cdcc84dd73c333b9b4efa900", null ],
+      [ "NotEnoughTickets", "namespace_fantom_games_core.html#a406337a6071e8527489efc0786ee93d8ac9cb2e1a537ad8bdbfb474179b69dbda", null ],
+      [ "BoardTilesNotConnected", "namespace_fantom_games_core.html#a406337a6071e8527489efc0786ee93d8a6aadeb38d1cf89e29e1bdf1e5474aa10", null ],
+      [ "InvalidSettings", "namespace_fantom_games_core.html#a406337a6071e8527489efc0786ee93d8a37a5f254c366f6c4dcba8bfd75f1070e", null ],
+      [ "Fail", "namespace_fantom_games_core.html#a406337a6071e8527489efc0786ee93d8aceaa0734f0b3c738120c67344d8f3ec1", null ]
+    ] ],
+    [ "TicketKinds", "namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c", [
+      [ "Mode1", "namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3ca7a2ea225a084605104f8c39b3ae9657c", null ],
+      [ "Mode2", "namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3ca04c542f260d16590ec60c594f67a30e7", null ],
+      [ "Mode3", "namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3cab68fa4884da8d22e83f37b4f209295f1", null ],
+      [ "Black", "namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3cae90dfb84e30edf611e326eeb04d680de", null ],
+      [ "Double", "namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3cad909d38d705ce75386dd86e611a82f5b", null ],
+      [ "River", "namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3ca149529f6dcbcc198787e69a11235422e", null ],
+      [ "Balloon", "namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3ca502dd302b6d8d3c24b20ee49e2d51bd1", null ]
+    ] ]
+];

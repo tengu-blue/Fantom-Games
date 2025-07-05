@@ -1,0 +1,31 @@
+var namespace_fantom_games_core_1_1_interfaces =
+[
+    [ "GameBoardLoadingTile", "struct_fantom_games_core_1_1_interfaces_1_1_game_board_loading_tile.html", "struct_fantom_games_core_1_1_interfaces_1_1_game_board_loading_tile" ],
+    [ "IFantomGameInterface", "interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html", "interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface" ],
+    [ "IFantomPlayerInterface", "interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_player_interface.html", "interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_player_interface" ],
+    [ "IGameBoardLoader", "interface_fantom_games_core_1_1_interfaces_1_1_i_game_board_loader.html", "interface_fantom_games_core_1_1_interfaces_1_1_i_game_board_loader" ],
+    [ "IReadOnlyFantomBoard", "interface_fantom_games_core_1_1_interfaces_1_1_i_read_only_fantom_board.html", "interface_fantom_games_core_1_1_interfaces_1_1_i_read_only_fantom_board" ],
+    [ "ISeekersPlayerInterface", "interface_fantom_games_core_1_1_interfaces_1_1_i_seekers_player_interface.html", "interface_fantom_games_core_1_1_interfaces_1_1_i_seekers_player_interface" ],
+    [ "TileProperties", "namespace_fantom_games_core_1_1_interfaces.html#a3af43050b41780355feb9f3c0a710a9e", [
+      [ "None", "namespace_fantom_games_core_1_1_interfaces.html#a3af43050b41780355feb9f3c0a710a9ea6adf97f83acf6453d4a6a4b1070f3754", null ],
+      [ "District_I", "namespace_fantom_games_core_1_1_interfaces.html#a3af43050b41780355feb9f3c0a710a9ea5093dafff4189540e681fd3081e15903", null ],
+      [ "District_II", "namespace_fantom_games_core_1_1_interfaces.html#a3af43050b41780355feb9f3c0a710a9eaa9dad22601b784ae8608a3aba32035c9", null ],
+      [ "District_III", "namespace_fantom_games_core_1_1_interfaces.html#a3af43050b41780355feb9f3c0a710a9ea211a704138b7a3c0a60b90d312e9ab19", null ],
+      [ "District_IV", "namespace_fantom_games_core_1_1_interfaces.html#a3af43050b41780355feb9f3c0a710a9ea0a9cff27a5b38c4beb988311b1cc8ce1", null ],
+      [ "Park", "namespace_fantom_games_core_1_1_interfaces.html#a3af43050b41780355feb9f3c0a710a9ea910101318275914a9f141d4e255bf8c8", null ],
+      [ "Landmark", "namespace_fantom_games_core_1_1_interfaces.html#a3af43050b41780355feb9f3c0a710a9eacedaec2f6d467bc1f2243b660ed33e77", null ],
+      [ "River", "namespace_fantom_games_core_1_1_interfaces.html#a3af43050b41780355feb9f3c0a710a9ea149529f6dcbcc198787e69a11235422e", null ],
+      [ "Hideout", "namespace_fantom_games_core_1_1_interfaces.html#a3af43050b41780355feb9f3c0a710a9eac96b5dfdaf59e2be31cfb7dab11889d0", null ],
+      [ "Bank", "namespace_fantom_games_core_1_1_interfaces.html#a3af43050b41780355feb9f3c0a710a9eaeb45bd2725cb8ac50d0795432a918f86", null ],
+      [ "Crime", "namespace_fantom_games_core_1_1_interfaces.html#a3af43050b41780355feb9f3c0a710a9eac967a0dbb29151be23e4d79805a1da02", null ],
+      [ "Blocked", "namespace_fantom_games_core_1_1_interfaces.html#a3af43050b41780355feb9f3c0a710a9ea4ecc0d90eec1cea3e9db96583a1bb9c2", null ]
+    ] ],
+    [ "TravelModes", "namespace_fantom_games_core_1_1_interfaces.html#a7512e7a6e78df5dccb0881049ed61999", [
+      [ "Mode1", "namespace_fantom_games_core_1_1_interfaces.html#a7512e7a6e78df5dccb0881049ed61999a7a2ea225a084605104f8c39b3ae9657c", null ],
+      [ "Mode2", "namespace_fantom_games_core_1_1_interfaces.html#a7512e7a6e78df5dccb0881049ed61999a04c542f260d16590ec60c594f67a30e7", null ],
+      [ "Mode3", "namespace_fantom_games_core_1_1_interfaces.html#a7512e7a6e78df5dccb0881049ed61999ab68fa4884da8d22e83f37b4f209295f1", null ],
+      [ "River", "namespace_fantom_games_core_1_1_interfaces.html#a7512e7a6e78df5dccb0881049ed61999a149529f6dcbcc198787e69a11235422e", null ]
+    ] ],
+    [ "FantomGameStateChangedCallback", "namespace_fantom_games_core_1_1_interfaces.html#a26218f4034649284a7f43aebadcc1dd0", null ],
+    [ "GameBoardLoadingException", "namespace_fantom_games_core_1_1_interfaces.html#a7909455d3a082d68902ca7d18edb98f0", null ]
+];

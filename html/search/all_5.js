@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['fail_0',['Fail',['../namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0aceaa0734f0b3c738120c67344d8f3ec1',1,'FantomGamesCore.Fail'],['../namespace_fantom_games_core.html#a406337a6071e8527489efc0786ee93d8aceaa0734f0b3c738120c67344d8f3ec1',1,'FantomGamesCore.Fail']]],
+  ['fantomdouble1_1',['FantomDouble1',['../namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0a3b46f30c3d4686024018ac2de382c1c9',1,'FantomGamesCore']]],
+  ['fantomdouble2_2',['FantomDouble2',['../namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0a778693feb947a94a3affc1cdd4b53f06',1,'FantomGamesCore']]],
+  ['fantomfirstmovestatic_3',['FantomFirstMoveStatic',['../struct_fantom_games_core_1_1_fantom_game_settings.html#a097a01d7332260b5682b332d7115984a',1,'FantomGamesCore::FantomGameSettings']]],
+  ['fantomgamemanager_4',['FantomGameManager',['../class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html',1,'FantomGamesCore::Managers']]],
+  ['fantomgameresult_5',['FantomGameResult',['../struct_fantom_games_core_1_1_fantom_game_result.html',1,'FantomGamesCore']]],
+  ['fantomgamescore_6',['FantomGamesCore',['../namespace_fantom_games_core.html',1,'']]],
+  ['fantomgamescore_3a_3ainterfaces_7',['Interfaces',['../namespace_fantom_games_core_1_1_interfaces.html',1,'FantomGamesCore']]],
+  ['fantomgamescore_3a_3amanagers_8',['Managers',['../namespace_fantom_games_core_1_1_managers.html',1,'FantomGamesCore']]],
+  ['fantomgamesettings_9',['FantomGameSettings',['../struct_fantom_games_core_1_1_fantom_game_settings.html',1,'FantomGamesCore']]],
+  ['fantomgamestate_10',['FantomGameState',['../struct_fantom_games_core_1_1_fantom_game_state.html',1,'FantomGamesCore.FantomGameState'],['../struct_fantom_games_core_1_1_fantom_game_state.html#ac236d7ad3eeb2ff81df2bfd2f40f2275',1,'FantomGamesCore.FantomGameState.FantomGameState()']]],
+  ['fantomgamestatechangedcallback_11',['FantomGameStateChangedCallback',['../namespace_fantom_games_core_1_1_interfaces.html#a26218f4034649284a7f43aebadcc1dd0',1,'FantomGamesCore::Interfaces']]],
+  ['fantomlastknownposition_12',['FantomLastKnownPosition',['../struct_fantom_games_core_1_1_fantom_game_state.html#aa889d24993161b5277a45eb3e7394ce2',1,'FantomGamesCore::FantomGameState']]],
+  ['fantomposition_13',['FantomPosition',['../struct_fantom_games_core_1_1_fantom_game_state.html#a2bc06e6d7897560be03c1d5e0921fc51',1,'FantomGamesCore::FantomGameState']]],
+  ['fantomstartingpositions_14',['FantomStartingPositions',['../struct_fantom_games_core_1_1_fantom_game_settings.html#a26807b5a8435fce38d178ed83ce19d48',1,'FantomGamesCore::FantomGameSettings']]],
+  ['fantomstartingtickets_15',['FantomStartingTickets',['../struct_fantom_games_core_1_1_fantom_game_settings.html#acfdd8c5dc158b4b803065ce6da7b19dd',1,'FantomGamesCore::FantomGameSettings']]],
+  ['fantomturn_16',['FantomTurn',['../namespace_fantom_games_core.html#a64f23cf3ba2267d13e36ec60af4329c0a990c1cb966fb80ae77b64cf4024b07f4',1,'FantomGamesCore']]],
+  ['fantomvictoryconditions_17',['FantomVictoryConditions',['../struct_fantom_games_core_1_1_fantom_game_settings.html#a899f5246fea6e7cfc2c67606592098aa',1,'FantomGamesCore::FantomGameSettings']]],
+  ['fantomwon_18',['FantomWon',['../struct_fantom_games_core_1_1_fantom_game_result.html#a09c32d30802902d4454f9348507db477',1,'FantomGamesCore::FantomGameResult']]],
+  ['fc_19',['FC',['../namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670a6b8f0029ce30f9b4d5fe0def33875511',1,'FantomGamesCore']]],
+  ['fm_20',['FM',['../namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670aff94b93682a7bb18a97d720c82e253cb',1,'FantomGamesCore']]]
+];
