@@ -1,0 +1,82 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaFantomGamesFacade.Controls.FantomDisplay">
+	<Viewbox
+		  Stretch="Uniform">
+		<Grid Width="250"
+			  Height="145"
+			  ColumnDefinitions="3* 2* 1*"
+			  RowDefinitions="1* 1* 1* 1* 1*">
+
+			<Image Source="/Assets/FantomLogo.png"
+				   Grid.Column="0"
+				   Grid.Row="0"
+				   Grid.RowSpan="5"
+				   Stretch="None"/>
+
+			<Image Source="/Assets/Ticket0.png"
+				   Grid.Column="1"
+				   Grid.Row="0"/>
+
+			<Image Source="/Assets/Ticket1.png"
+				   Grid.Column="1"
+				   Grid.Row="1"/>
+
+			<Image Source="/Assets/Ticket2.png"
+				   Grid.Column="1"
+				   Grid.Row="2"/>
+
+			<Image Source="/Assets/Ticket4.png"
+				   Grid.Column="1"
+				   Grid.Row="3"/>
+
+			<Image Source="/Assets/TicketDouble.png"
+				   Grid.Column="1"
+				   Grid.Row="4"/>
+
+			<TextBlock Name="Ticket1"
+					   FontFamily="Bernard MT"
+					   Text=""
+					   Grid.Column="2"
+					   Grid.Row="0"
+					   FontSize="20"
+				   VerticalAlignment="Center"></TextBlock>
+
+			<TextBlock Name="Ticket2"
+					   FontFamily="Bernard MT"
+					   Text=""
+					   Grid.Column="2"
+					   Grid.Row="1"
+					   FontSize="20"
+			   VerticalAlignment="Center"></TextBlock>
+
+			<TextBlock Name="Ticket3"
+					   FontFamily="Bernard MT"
+					   Text=""
+					   Grid.Column="2"
+					   Grid.Row="2"
+					   FontSize="20"
+				   VerticalAlignment="Center"></TextBlock>
+
+			<TextBlock Name="Ticket4"
+					   FontFamily="Bernard MT"
+					   Text=""
+					   Grid.Column="2"
+					   Grid.Row="3"
+					   FontSize="20"
+				   VerticalAlignment="Center"></TextBlock>
+
+			<TextBlock Name="Ticket5"
+					   FontFamily="Bernard MT"
+					   Text=""
+					   Grid.Column="2"
+					   Grid.Row="4"
+					   FontSize="20"
+				   VerticalAlignment="Center"></TextBlock>
+			
+		</Grid>
+	</Viewbox>
+</UserControl>

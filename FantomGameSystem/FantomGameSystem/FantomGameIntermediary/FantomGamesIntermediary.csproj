@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\FantomGamesCore\FantomGamesCore\FantomGamesCore.csproj" />
+    <ProjectReference Include="..\FantomFacadeUtils\FantomGamesSystemUtils.csproj" />	 
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantomGamesIntermediary", "FantomGameIntermediary\FantomGamesIntermediary.csproj", "{56F7ACEC-B448-45DF-A47D-37EDB7D470CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaFantomGamesFacade", "AvaloniaFantomGamesUI\AvaloniaFantomGamesFacade.csproj", "{E701B7A4-F152-4AF7-BBAD-F3C48891BDB9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaFantomGamesFacade.Desktop", "AvaloniaFantomGamesUI.Desktop\AvaloniaFantomGamesFacade.Desktop.csproj", "{725FE317-7BAE-49A8-A39F-F23A9B9D7765}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantomGamesSystemUtils", "FantomFacadeUtils\FantomGamesSystemUtils.csproj", "{D908D50D-0B6F-4B0B-883F-37145141D9F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleFantomGamesFacade", "ConsoleFantomGamesFacade\ConsoleFantomGamesFacade.csproj", "{A46F3B1E-C5E3-4CCB-B877-B4CBAB373FE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantomGamesCore", "..\..\FantomGamesCore\FantomGamesCore\FantomGamesCore.csproj", "{25C9BC9A-63C1-4F29-B800-ADCB24B73FED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56F7ACEC-B448-45DF-A47D-37EDB7D470CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56F7ACEC-B448-45DF-A47D-37EDB7D470CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56F7ACEC-B448-45DF-A47D-37EDB7D470CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56F7ACEC-B448-45DF-A47D-37EDB7D470CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E701B7A4-F152-4AF7-BBAD-F3C48891BDB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E701B7A4-F152-4AF7-BBAD-F3C48891BDB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E701B7A4-F152-4AF7-BBAD-F3C48891BDB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E701B7A4-F152-4AF7-BBAD-F3C48891BDB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{725FE317-7BAE-49A8-A39F-F23A9B9D7765}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{725FE317-7BAE-49A8-A39F-F23A9B9D7765}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{725FE317-7BAE-49A8-A39F-F23A9B9D7765}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{725FE317-7BAE-49A8-A39F-F23A9B9D7765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D908D50D-0B6F-4B0B-883F-37145141D9F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D908D50D-0B6F-4B0B-883F-37145141D9F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D908D50D-0B6F-4B0B-883F-37145141D9F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D908D50D-0B6F-4B0B-883F-37145141D9F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A46F3B1E-C5E3-4CCB-B877-B4CBAB373FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A46F3B1E-C5E3-4CCB-B877-B4CBAB373FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A46F3B1E-C5E3-4CCB-B877-B4CBAB373FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A46F3B1E-C5E3-4CCB-B877-B4CBAB373FE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25C9BC9A-63C1-4F29-B800-ADCB24B73FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25C9BC9A-63C1-4F29-B800-ADCB24B73FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25C9BC9A-63C1-4F29-B800-ADCB24B73FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25C9BC9A-63C1-4F29-B800-ADCB24B73FED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C92761F-28DA-4A86-A5CD-5D277E78ABC4}
+	EndGlobalSection
+EndGlobal

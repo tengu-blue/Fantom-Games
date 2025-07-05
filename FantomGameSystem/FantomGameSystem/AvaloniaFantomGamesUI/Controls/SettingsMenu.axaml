@@ -1,0 +1,180 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaFantomGamesFacade.Controls.SettingsMenu">
+
+	<Grid 
+		Background="#1f2329"
+		ColumnDefinitions="3* 1* 1* 1*"
+		RowDefinitions="1* 1* 1* 1* 2*">
+
+		<TextBlock 
+			Classes="small"
+			
+			Grid.Column="0"
+			Grid.Row="0"			
+			VerticalAlignment="Center"
+			HorizontalAlignment="Right"
+
+			Text="Seeker Opponent"></TextBlock>
+		<Button
+			Name="SeekerOpToggle"
+			
+			Classes="small"
+			HorizontalAlignment="Stretch"
+			Grid.Column="1"
+			Grid.ColumnSpan="3"
+			Grid.Row="0"
+			
+			Click="ValuesModify_Click"
+			></Button>
+
+
+		<TextBlock
+			Classes="small"
+			
+			Grid.Column="0"
+			Grid.Row="1"
+			VerticalAlignment="Center"
+			HorizontalAlignment="Right"
+
+			Text="Fantom Opponent"></TextBlock>
+		<Button
+			Name="FantomOpToggle"
+			
+			Classes="small"
+			HorizontalAlignment="Stretch"
+			Grid.Column="1"
+			Grid.ColumnSpan="3"
+			Grid.Row="1"
+						
+			Click="ValuesModify_Click"
+			></Button>
+
+		<TextBlock
+			Classes="small"
+			
+			Grid.Column="0"
+			Grid.Row="2"
+			VerticalAlignment="Center"
+			HorizontalAlignment="Right"
+
+			Text="Seekers Count"></TextBlock>
+
+		<Button
+			Name="SeekerCountDec"
+			
+			Classes="small"
+			HorizontalAlignment="Stretch"
+			Grid.Column="1"
+			Grid.ColumnSpan="1"
+			Grid.Row="2"
+			Content="-"
+			HorizontalContentAlignment="Center"
+			
+			Click="ValuesModify_Click"
+			></Button>
+
+		<TextBlock
+			Name="DisplaySeekersCount"
+			
+			Classes="small"
+			
+			Grid.Column="2"
+			Grid.Row="2"
+			VerticalAlignment="Center"
+			HorizontalAlignment="Center"
+			></TextBlock>
+
+		<Button
+			Name="SeekerCountInc"
+			
+			Classes="small"
+			HorizontalAlignment="Stretch"
+			Grid.Column="3"
+			Grid.ColumnSpan="1"
+			Grid.Row="2"
+			Content="+"
+			HorizontalContentAlignment="Center"
+			
+			Click="ValuesModify_Click"
+			></Button>
+
+		<TextBlock
+			Classes="small"
+			
+			Grid.Column="0"
+			Grid.Row="3"
+			VerticalAlignment="Center"
+			HorizontalAlignment="Right"
+
+			Text="Bobbies Count"></TextBlock>
+
+		<Button
+			Name="BobbyCountDec"
+			
+			Classes="small"
+			HorizontalAlignment="Stretch"
+			Grid.Column="1"
+			Grid.ColumnSpan="1"
+			Grid.Row="3"
+			Content="-"
+			HorizontalContentAlignment="Center"
+			
+			Click="ValuesModify_Click"
+			></Button>
+
+		<TextBlock
+			Classes="small"
+			
+			Name="DisplayBobbiesCount"
+			
+			Grid.Column="2"
+			Grid.Row="3"
+			VerticalAlignment="Center"
+			HorizontalAlignment="Center"
+			></TextBlock>
+
+		<Button
+			Name="BobbyCountInc"
+			
+			Classes="small"
+			HorizontalAlignment="Stretch"
+			Grid.Column="3"
+			Grid.ColumnSpan="1"
+			Grid.Row="3"
+			Content="+"
+			HorizontalContentAlignment="Center"
+			
+			Click="ValuesModify_Click"
+			></Button>
+
+		<Button
+			Classes="small"
+			HorizontalAlignment="Stretch"
+			Grid.Column="0"
+			Grid.ColumnSpan="1"
+			Grid.Row="4"
+			Content="Apply"
+			HorizontalContentAlignment="Center"
+			
+			Click="Apply_Click"
+			></Button>
+
+		<Button
+			Classes="small"
+			HorizontalAlignment="Stretch"
+			Grid.Column="1"
+			Grid.ColumnSpan="3"
+			Grid.Row="4"
+			Content="Exit"
+			HorizontalContentAlignment="Center"
+			
+			Click="Exit_Click"
+			></Button>
+		
+	</Grid>
+	
+</UserControl>

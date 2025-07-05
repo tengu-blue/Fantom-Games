@@ -1,0 +1,102 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaFantomGamesFacade.Controls.TravelTicketSelector">
+
+	<!-- Show All possible Tickets; then based on who's playing, hide some -->
+
+	<Grid 
+		Margin="5"		
+		ColumnDefinitions="1* 1* 1* 1* 1* 1*">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="20"></RowDefinition>
+			<RowDefinition Height="105"></RowDefinition>
+		</Grid.RowDefinitions>
+		<TextBlock 
+			Name="PieceSelected"
+			Text="For Seeker X"
+			Foreground="Wheat"
+			FontFamily="Bernard MT"
+			FontSize="20"			
+			VerticalAlignment="Center"
+			Margin="5"
+			>
+		</TextBlock>
+		<Button 
+			IsVisible="True"
+			Background="Transparent"
+			Grid.Column="0"
+			Grid.Row="1"
+			MaxWidth="165"
+			Margin="5" 
+			Click="Button_Click"			
+			Name="Option0">
+			<Image Source="/Assets/Ticket0.png"/>
+		</Button>
+
+		<Button
+			IsVisible="True"
+			Background="Transparent"
+			Grid.Column="1"
+			Grid.Row="1"
+			Margin="5"
+			MaxWidth="165"
+			Click="Button_Click"
+			Name="Option1">
+			<Image Source="/Assets/Ticket1.png"/>
+		</Button>
+
+		<Button
+			IsVisible="True"
+			Background="Transparent"
+			Grid.Column="2"
+			Grid.Row="1"
+			Margin="5"
+			MaxWidth="165"
+			Click="Button_Click"
+			Name="Option2">
+			<Image Source="/Assets/Ticket2.png"/>
+		</Button>
+
+		<Button
+			IsVisible="True"
+			Background="Transparent"
+			Grid.Column="3"
+			Grid.Row="1"
+			Margin="5"
+			MaxWidth="165"
+			Click="Button_Click"
+			Name="Option3">
+			<Image Source="/Assets/Ticket4.png"/>
+		</Button>
+
+		<Button
+			IsVisible="True"
+			Background="Transparent"
+			Grid.Column="4"
+			Grid.Row="1"
+			Margin="5"
+			MaxWidth="165"
+			Click="Button_Click"
+			Name="Option4">
+			<Image Source="/Assets/TicketDouble.png"/>
+		</Button>
+
+		<Button
+			IsVisible="True"
+			Background="Transparent"
+			Grid.Column="5"
+			Grid.Row="1"
+			Margin="5" 
+			MaxWidth="165"
+			Click="Button_Click"
+			Name="Option5">
+			<Image Source="/Assets/TicketPass.png"/>
+		</Button>
+		
+	</Grid>
+
+
+</UserControl>

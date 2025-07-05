@@ -1,0 +1,299 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:AvaloniaFantomGamesFacade.ViewModels"
+             xmlns:controls="clr-namespace:AvaloniaFantomGamesFacade.Controls"
+			 mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="600"
+             x:Class="AvaloniaFantomGamesFacade.Views.MainView"
+             x:DataType="vm:MainViewModel">
+	<Design.DataContext>
+		<!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+		<vm:MainViewModel />
+	</Design.DataContext>
+
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition MinHeight="50" Height="1*"></RowDefinition>
+			<RowDefinition MinHeight="600" Height="15*"></RowDefinition>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition MinWidth="250" Width="1*"/>
+			<ColumnDefinition Width="9*"/>
+		</Grid.ColumnDefinitions>
+
+		<Canvas Name="BoardTranslate"			
+			PointerPressed="PointerPressedHandler"
+			PointerReleased="PointerReleasedHandler"
+			PointerMoved="PointerMovedHandler"
+			PointerWheelChanged="PointerWheelChangedHandler">
+
+			<!-- Position for moving and scaling with Transform from code -->
+			<Canvas 
+				Canvas.Left="0" 
+				Canvas.Top="0" 
+				Background="Black" 
+				Margin="20" 
+				Name="CanvasContent"
+				PointerPressed="BoardMousePressed">
+
+				<!-- Board stays where it is; split into 4 parts for better performance -->				
+				<Image Source="/Assets/BoardDesat_P1.png" Canvas.Left="0" Canvas.Top="0" />
+				<Image Source="/Assets/BoardDesat_P2.png" Canvas.Left="1435" Canvas.Top="0" />
+				<Image Source="/Assets/BoardDesat_P3.png" Canvas.Left="0" Canvas.Top="1435" />
+				<Image Source="/Assets/BoardDesat_P4.png" Canvas.Left="1435" Canvas.Top="1435" />
+				
+				<!-- Position Pieces via canvas offsets -->
+				<Image Classes="piece" Source="/Assets/Fantom.png" Canvas.Left="-60" Canvas.Top="0" Name="FantomPiece"/>
+				<Image Classes="piece" Source="/Assets/Seeker0.png" Canvas.Left="-60" Canvas.Top="60" Name="Seeker0Piece"/>
+				<Image Classes="piece" Source="/Assets/Seeker1.png" Canvas.Left="-60" Canvas.Top="120" Name="Seeker1Piece"/>
+				<Image Classes="piece" Source="/Assets/Seeker2.png" Canvas.Left="-60" Canvas.Top="180" Name="Seeker2Piece"/>
+				<Image Classes="piece" Source="/Assets/Seeker3.png" Canvas.Left="-60" Canvas.Top="240" Name="Seeker3Piece"/>
+				<Image Classes="piece" Source="/Assets/Seeker4.png" Canvas.Left="-60" Canvas.Top="300" Name="Seeker4Piece"/>
+
+
+				<Image Classes="piece" Source="/Assets/Bobby.png" Canvas.Left="-60" Canvas.Top="360" Name="BobbyMod0"/>
+				<Image Classes="piece" Source="/Assets/Bobby.png" Canvas.Left="-60" Canvas.Top="360" Name="BobbyMod1"/>
+				<Image Classes="piece" Source="/Assets/Bobby.png" Canvas.Left="-60" Canvas.Top="360" Name="BobbyMod2"/>
+				<Image Classes="piece" Source="/Assets/Bobby.png" Canvas.Left="-60" Canvas.Top="360" Name="BobbyMod3"/>
+				<Image Classes="piece" Source="/Assets/Bobby.png" Canvas.Left="-60" Canvas.Top="360" Name="BobbyMod4"/>
+
+				<Image Classes="piece" Source="/Assets/FantomLastKnown.png" Canvas.Left="-60" Canvas.Top="360" Name="FantomLast"/>
+
+				<Image 
+					Canvas.Left="2870"
+					Source="/Assets/TicketsTable.png"/>
+				
+				<Grid	   Canvas.Left="2870"
+						   Height="1432"
+						   Width="1269"
+						   Name="FantomTicketHistory"						   
+						   >
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+					<Grid.RowDefinitions>
+						<RowDefinition Height="*"></RowDefinition>						
+						<RowDefinition Height="*"></RowDefinition>						
+						<RowDefinition Height="*"></RowDefinition>						
+						<RowDefinition Height="*"></RowDefinition>						
+						<RowDefinition Height="*"></RowDefinition>						
+						<RowDefinition Height="*"></RowDefinition>						
+						<RowDefinition Height="*"></RowDefinition>						
+						<RowDefinition Height="*"></RowDefinition>						
+					</Grid.RowDefinitions>
+					
+					<!-- Add Tickets like this <Image Source="/Assets/Ticket0.png"/> -->
+				</Grid>
+			</Canvas>
+
+
+
+
+		</Canvas>
+
+
+		<!--Top status / control panel -->
+		<Grid Background="#0f1317"
+			  Grid.Column="0"
+			  Grid.ColumnSpan="2"
+			  Grid.Row="0"
+			  Grid.RowSpan="1"
+			  VerticalAlignment="Stretch">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition MinWidth="250" Width="1*"/>
+				<ColumnDefinition Width="2*"/>
+				<ColumnDefinition Width="4*"/>
+				<ColumnDefinition Width="1*"/>
+				<ColumnDefinition Width="1*"/>
+			</Grid.ColumnDefinitions>
+			
+			<!--Round counter display -->
+			<TextBlock
+				Classes="large"
+				
+				Foreground="Wheat"
+				Grid.Column="1"
+				Grid.ColumnSpan="1"
+				Margin="15 0"
+				Name="RoundDisplay"
+				
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center">
+				Round 0 / 22
+			</TextBlock>
+
+			<!--Game over -->
+			<TextBlock
+				Classes="large"
+				
+				Foreground="Wheat"
+				Grid.Column="2"
+				Grid.ColumnSpan="1"
+				Margin="15 0"
+				Name="GameOverStatus"
+				
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center">
+				
+			</TextBlock>
+
+			<Button
+				Grid.Column="3"
+				VerticalAlignment="Stretch"
+				HorizontalAlignment="Stretch"
+				HorizontalContentAlignment="Center"
+				VerticalContentAlignment="Center"
+				Background="Wheat"
+				Foreground="Black"
+				FontFamily="Bernard MT"
+				FontSize="25"
+				Margin="5"
+				
+				Click="ResetButton_Click">
+				Reset
+			</Button>
+
+			<Button
+				Grid.Column="4"
+				VerticalAlignment="Stretch"
+				HorizontalAlignment="Stretch"
+				HorizontalContentAlignment="Center"
+				VerticalContentAlignment="Center"
+				Background="Wheat"
+				Foreground="Black"
+				FontFamily="Bernard MT"
+				FontSize="25"
+				Margin="5"
+				
+				Click="MenuButton_Click">
+				Menu
+			</Button>
+
+		</Grid>
+
+
+		<!-- Game Settings -->
+		<Grid Grid.Column="0"
+			  Grid.ColumnSpan="2"
+			  Grid.Row="1"
+			  Grid.RowSpan="1"
+			  VerticalAlignment="Stretch">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition MinWidth="250" Width="1*"/>
+				<ColumnDefinition Width="6*"/>
+				<ColumnDefinition Width="2*"/>
+			</Grid.ColumnDefinitions>
+
+			<controls:SettingsMenu
+				Name="Settings"
+				
+				IsVisible="False"
+				Grid.Column="2"				
+				Grid.ColumnSpan="1"
+				Margin="5"
+				Height="300"
+				HorizontalAlignment="Stretch"				
+				VerticalAlignment="Top">
+
+			</controls:SettingsMenu>
+			
+		</Grid>
+		
+
+		<!--Tickets and players display-->
+		<Grid Background="#1f2329"
+				
+				
+				VerticalAlignment="Stretch"
+				HorizontalAlignment="Left"
+				Grid.Column="0"
+				Grid.ColumnSpan="1"
+			  Grid.Row="0"
+			  Grid.RowSpan="2"
+			  
+			  RowDefinitions="1* 1* 1* 1* 1* 1*">
+
+			<controls:PlayerDisplay
+				        HorizontalAlignment="Left"
+						Grid.Column="0"
+						Grid.Row="0"
+						Grid.ColumnSpan="1"
+						Width=""
+						Logo="/Assets/Seeker0Logo.png"
+						Name="Seeker0Tickets"
+						/>
+
+			<controls:PlayerDisplay
+				        HorizontalAlignment="Left"
+						Grid.Column="0"
+						Grid.Row="1"
+						Grid.ColumnSpan="1"
+						Width=""
+						Logo="/Assets/Seeker1Logo.png"
+						Name="Seeker1Tickets"
+						/>
+
+			<controls:PlayerDisplay
+				        HorizontalAlignment="Left"
+						Grid.Column="0"
+						Grid.Row="2"
+						Grid.ColumnSpan="1"
+						Width=""
+						Logo="/Assets/Seeker2Logo.png"
+						Name="Seeker2Tickets"
+						/>
+
+			<controls:PlayerDisplay
+				        HorizontalAlignment="Left"
+						Grid.Column="0"
+						Grid.Row="3"
+						Grid.ColumnSpan="1"
+						Width=""
+						Logo="/Assets/Seeker3Logo.png"
+						Name="Seeker3Tickets"
+						/>
+
+			<controls:PlayerDisplay
+				        HorizontalAlignment="Left"
+						Grid.Column="0"
+						Grid.Row="4"
+						Grid.ColumnSpan="1"
+						Width=""
+						Logo="/Assets/Seeker4Logo.png"
+						Name="Seeker4Tickets"
+						/>
+
+			<controls:FantomDisplay
+				        HorizontalAlignment="Left"
+						Grid.Column="0"
+						Grid.Row="5"
+						Grid.ColumnSpan="1"
+						Name="FantomTickets"
+						/>
+
+		</Grid>
+
+		<controls:TravelTicketSelector
+			Background="#1f2329"
+			Grid.Row="1"
+			Grid.Column="1"
+			Height="125"
+			MinWidth="500"
+			VerticalAlignment="Bottom"
+			HorizontalAlignment="Stretch"
+			IsVisible="False"
+			Margin="5"
+			Name="TravelTicketSelect"
+			>
+			
+		</controls:TravelTicketSelector>
+
+		
+		
+	</Grid>
+</UserControl>

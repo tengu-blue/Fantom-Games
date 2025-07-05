@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AvaloniaFantomGamesFacade.Desktop": {
+      "commandName": "Project",
+      "workingDirectory": "$(ProjectDir)"
+    }
+  }
+}

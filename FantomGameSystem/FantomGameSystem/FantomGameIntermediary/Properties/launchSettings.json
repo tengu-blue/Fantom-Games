@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FantomGamesIntermediary": {
+      "commandName": "Project",
+      "workingDirectory": "$(ProjectDir)"
+    }
+  }
+}

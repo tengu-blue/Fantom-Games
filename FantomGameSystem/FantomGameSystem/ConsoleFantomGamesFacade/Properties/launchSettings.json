@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConsoleFantomGamesFacade": {
+      "commandName": "Project",
+      "workingDirectory": "$(ProjectDir)"
+    }
+  }
+}
