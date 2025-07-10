@@ -344,14 +344,6 @@ namespace FantomGamesIntermediary.Opponent.Parts.FantomParts
 
             RecalculateReachableCounts();
             
-            /*
-            for (int tileIndex = 1; tileIndex <= TileCount; ++tileIndex)
-            {
-                Console.Write([tileIndex].ToString(CultureInfo.InvariantCulture)+", ");
-            }
-            Console.WriteLine();
-            */
-
         }
 
 

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FantomGamesCore: FantomGamesCore.FantomGameState Struct Reference</title>
+<title>FantomGames: FantomGamesCore.FantomGameState Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FantomGamesCore
+   <div id="projectname">FantomGames
    </div>
   </td>
  </tr>
@@ -109,33 +109,109 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aeef4408687b43a346dc915ea0d4dd9b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy held ticket counts of the Fantom into the passed array. The array's length must be 7. The ticket indices correspond to the <a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c" title="All known Ticket types.">TicketKinds</a> enum int values.  <br /></td></tr>
 <tr class="memitem:afb1a9497a59d883dcd2d1728d2b28cfc" id="r_afb1a9497a59d883dcd2d1728d2b28cfc"><td class="memItemLeft" align="right" valign="top">readonly void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb1a9497a59d883dcd2d1728d2b28cfc">CopyDetectiveTicketsTo</a> (int[,] DetectiveTicketsDestination)</td></tr>
 <tr class="memdesc:afb1a9497a59d883dcd2d1728d2b28cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy held detective tickets into the passed array. The array's dimensions must be DetectivesCount x 3. The indices are for each detective in game as the first, and the ticket kind (0, 1, 2) for transport tickets as the second.  <br /></td></tr>
-<tr class="memitem:ac236d7ad3eeb2ff81df2bfd2f40f2275" id="r_ac236d7ad3eeb2ff81df2bfd2f40f2275"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac236d7ad3eeb2ff81df2bfd2f40f2275">FantomGameState</a> (int <a class="el" href="#ad0a9d653710cc1850fd3dbbbc283bf9b">DetectivesCount</a>, int <a class="el" href="#a7c4bf5a9b8b34490652fefadf8ad6477">BobbiesCount</a>, int[] SeekerPositions, int? <a class="el" href="#a2bc06e6d7897560be03c1d5e0921fc51">FantomPosition</a>, int? <a class="el" href="#aa889d24993161b5277a45eb3e7394ce2">FantomLastKnownPosition</a>, int[,] ActorTickets, int[] SupplyTickets)</td></tr>
+<tr class="memitem:ac236d7ad3eeb2ff81df2bfd2f40f2275" id="r_ac236d7ad3eeb2ff81df2bfd2f40f2275"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac236d7ad3eeb2ff81df2bfd2f40f2275">FantomGameState</a> (int <a class="el" href="#a8b9c64ac58664b9e4b41c57eddccd977">DetectivesCount</a>, int <a class="el" href="#a5b176fa735bb2501adad6b6902774e21">BobbiesCount</a>, int[] SeekerPositions, int? <a class="el" href="#a725487cc53deb1934670cbe640127b9a">FantomPosition</a>, int? <a class="el" href="#a9d43f9c2a2510828227d600cc0b08656">FantomLastKnownPosition</a>, int[,] ActorTickets, int[] SupplyTickets)</td></tr>
+<tr class="memdesc:ac236d7ad3eeb2ff81df2bfd2f40f2275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to fill out appropriate information for the current game state.  <br /></td></tr>
+<tr class="memitem:af8995cb3efd033a70854447120765586" id="r_af8995cb3efd033a70854447120765586"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8995cb3efd033a70854447120765586">GetFantomTickets</a> (<a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a> ticketKind)</td></tr>
+<tr class="memdesc:af8995cb3efd033a70854447120765586"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of tickets the Fantom is currently holding.  <br /></td></tr>
+<tr class="memitem:adcb1bceb7edb38aadd953316602c34f3" id="r_adcb1bceb7edb38aadd953316602c34f3"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcb1bceb7edb38aadd953316602c34f3">GetDetectiveTickets</a> (int detectiveIndex, <a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a> ticketKinds)</td></tr>
+<tr class="memdesc:adcb1bceb7edb38aadd953316602c34f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of tickets for the specified detective.  <br /></td></tr>
+<tr class="memitem:add1040d1670402f3ed46172d4b1d3e2a" id="r_add1040d1670402f3ed46172d4b1d3e2a"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add1040d1670402f3ed46172d4b1d3e2a">GetSeekerPosition</a> (int seekerIndex)</td></tr>
+<tr class="memdesc:add1040d1670402f3ed46172d4b1d3e2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the position of the specified Seeker. The indexing starts at 0 and goes up to SeekerIndex exclusive. The first DetectiveCount indices correspond to the detectives in play, the remaining ones are for Bobbies. If the returned value is not positive, that that index is currently invalid.  <br /></td></tr>
+<tr class="memitem:aa28c6fa576496272199d1bcb229215ae" id="r_aa28c6fa576496272199d1bcb229215ae"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa28c6fa576496272199d1bcb229215ae">GetSupplyTickets</a> (<a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a> ticketKinds)</td></tr>
+<tr class="memdesc:aa28c6fa576496272199d1bcb229215ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of tickets in the supply.  <br /></td></tr>
+<tr class="memitem:aeef4408687b43a346dc915ea0d4dd9b1" id="r_aeef4408687b43a346dc915ea0d4dd9b1"><td class="memItemLeft" align="right" valign="top">readonly void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeef4408687b43a346dc915ea0d4dd9b1">CopyFantomTicketsTo</a> (int[] FantomTicketsDestination)</td></tr>
+<tr class="memdesc:aeef4408687b43a346dc915ea0d4dd9b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy held ticket counts of the Fantom into the passed array. The array's length must be 7. The ticket indices correspond to the <a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c" title="All known Ticket types.">TicketKinds</a> enum int values.  <br /></td></tr>
+<tr class="memitem:afb1a9497a59d883dcd2d1728d2b28cfc" id="r_afb1a9497a59d883dcd2d1728d2b28cfc"><td class="memItemLeft" align="right" valign="top">readonly void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb1a9497a59d883dcd2d1728d2b28cfc">CopyDetectiveTicketsTo</a> (int[,] DetectiveTicketsDestination)</td></tr>
+<tr class="memdesc:afb1a9497a59d883dcd2d1728d2b28cfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy held detective tickets into the passed array. The array's dimensions must be DetectivesCount x 3. The indices are for each detective in game as the first, and the ticket kind (0, 1, 2) for transport tickets as the second.  <br /></td></tr>
+<tr class="memitem:ac236d7ad3eeb2ff81df2bfd2f40f2275" id="r_ac236d7ad3eeb2ff81df2bfd2f40f2275"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac236d7ad3eeb2ff81df2bfd2f40f2275">FantomGameState</a> (int <a class="el" href="#a8b9c64ac58664b9e4b41c57eddccd977">DetectivesCount</a>, int <a class="el" href="#a5b176fa735bb2501adad6b6902774e21">BobbiesCount</a>, int[] SeekerPositions, int? <a class="el" href="#a725487cc53deb1934670cbe640127b9a">FantomPosition</a>, int? <a class="el" href="#a9d43f9c2a2510828227d600cc0b08656">FantomLastKnownPosition</a>, int[,] ActorTickets, int[] SupplyTickets)</td></tr>
 <tr class="memdesc:ac236d7ad3eeb2ff81df2bfd2f40f2275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to fill out appropriate information for the current game state.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:ad0a9d653710cc1850fd3dbbbc283bf9b" id="r_ad0a9d653710cc1850fd3dbbbc283bf9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0a9d653710cc1850fd3dbbbc283bf9b">DetectivesCount</a><code> [get]</code></td></tr>
-<tr class="memdesc:ad0a9d653710cc1850fd3dbbbc283bf9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of detectives in play right now.  <br /></td></tr>
-<tr class="memitem:a7c4bf5a9b8b34490652fefadf8ad6477" id="r_a7c4bf5a9b8b34490652fefadf8ad6477"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c4bf5a9b8b34490652fefadf8ad6477">BobbiesCount</a><code> [get]</code></td></tr>
-<tr class="memdesc:a7c4bf5a9b8b34490652fefadf8ad6477"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of bobbies in play right now.  <br /></td></tr>
-<tr class="memitem:a919601d0cdba649c4e0c3fb2856615f2" id="r_a919601d0cdba649c4e0c3fb2856615f2"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a919601d0cdba649c4e0c3fb2856615f2">SeekersCount</a><code> [get]</code></td></tr>
-<tr class="memdesc:a919601d0cdba649c4e0c3fb2856615f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of Detectives and Bobbies in play right now.  <br /></td></tr>
-<tr class="memitem:a2bc06e6d7897560be03c1d5e0921fc51" id="r_a2bc06e6d7897560be03c1d5e0921fc51"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bc06e6d7897560be03c1d5e0921fc51">FantomPosition</a><code> [get]</code></td></tr>
-<tr class="memdesc:a2bc06e6d7897560be03c1d5e0921fc51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fantom's position if known will be a positive integer. If not known, will most likely be -1.  <br /></td></tr>
-<tr class="memitem:aa889d24993161b5277a45eb3e7394ce2" id="r_aa889d24993161b5277a45eb3e7394ce2"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa889d24993161b5277a45eb3e7394ce2">FantomLastKnownPosition</a><code> [get]</code></td></tr>
-<tr class="memdesc:aa889d24993161b5277a45eb3e7394ce2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fantom's last revealed position if known will be a positive integer. If not known, will most likely be -1.  <br /></td></tr>
-<tr class="memitem:a3423a6eab155c972c3ed3e2c201cbd82" id="r_a3423a6eab155c972c3ed3e2c201cbd82"><td class="memItemLeft" align="right" valign="top">required uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3423a6eab155c972c3ed3e2c201cbd82">CurrentRound</a><code> [get]</code></td></tr>
-<tr class="memdesc:a3423a6eab155c972c3ed3e2c201cbd82"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of the current round.  <br /></td></tr>
-<tr class="memitem:a786862beb3b2fe9cbba0d25d41d94acf" id="r_a786862beb3b2fe9cbba0d25d41d94acf"><td class="memItemLeft" align="right" valign="top">required uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a786862beb3b2fe9cbba0d25d41d94acf">CurrentMove</a><code> [get]</code></td></tr>
-<tr class="memdesc:a786862beb3b2fe9cbba0d25d41d94acf"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of done Fantom's moves.  <br /></td></tr>
+<tr class="memitem:a8b9c64ac58664b9e4b41c57eddccd977" id="r_a8b9c64ac58664b9e4b41c57eddccd977"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b9c64ac58664b9e4b41c57eddccd977">DetectivesCount</a><code> [get]</code></td></tr>
+<tr class="memdesc:a8b9c64ac58664b9e4b41c57eddccd977"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of detectives in play right now.  <br /></td></tr>
+<tr class="memitem:a5b176fa735bb2501adad6b6902774e21" id="r_a5b176fa735bb2501adad6b6902774e21"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b176fa735bb2501adad6b6902774e21">BobbiesCount</a><code> [get]</code></td></tr>
+<tr class="memdesc:a5b176fa735bb2501adad6b6902774e21"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of bobbies in play right now.  <br /></td></tr>
+<tr class="memitem:aa933139d9f94a9c486ecee7c2cf20828" id="r_aa933139d9f94a9c486ecee7c2cf20828"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa933139d9f94a9c486ecee7c2cf20828">SeekersCount</a><code> [get]</code></td></tr>
+<tr class="memdesc:aa933139d9f94a9c486ecee7c2cf20828"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of Detectives and Bobbies in play right now.  <br /></td></tr>
+<tr class="memitem:a725487cc53deb1934670cbe640127b9a" id="r_a725487cc53deb1934670cbe640127b9a"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a725487cc53deb1934670cbe640127b9a">FantomPosition</a><code> [get]</code></td></tr>
+<tr class="memdesc:a725487cc53deb1934670cbe640127b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fantom's position if known will be a positive integer. If not known, will most likely be -1.  <br /></td></tr>
+<tr class="memitem:a9d43f9c2a2510828227d600cc0b08656" id="r_a9d43f9c2a2510828227d600cc0b08656"><td class="memItemLeft" align="right" valign="top">readonly int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d43f9c2a2510828227d600cc0b08656">FantomLastKnownPosition</a><code> [get]</code></td></tr>
+<tr class="memdesc:a9d43f9c2a2510828227d600cc0b08656"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fantom's last revealed position if known will be a positive integer. If not known, will most likely be -1.  <br /></td></tr>
+<tr class="memitem:a815ce2f875b8150f20ec155c8b8be1ec" id="r_a815ce2f875b8150f20ec155c8b8be1ec"><td class="memItemLeft" align="right" valign="top">required uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a815ce2f875b8150f20ec155c8b8be1ec">CurrentRound</a><code> [get]</code></td></tr>
+<tr class="memdesc:a815ce2f875b8150f20ec155c8b8be1ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of the current round.  <br /></td></tr>
+<tr class="memitem:a9327d28920a4c4eda9f8e9e32cfd5b6a" id="r_a9327d28920a4c4eda9f8e9e32cfd5b6a"><td class="memItemLeft" align="right" valign="top">required uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9327d28920a4c4eda9f8e9e32cfd5b6a">CurrentMove</a><code> [get]</code></td></tr>
+<tr class="memdesc:a9327d28920a4c4eda9f8e9e32cfd5b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of done Fantom's moves.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>An unsafe struct representing the current game's state. Contains information about the number of seekers, their tickets, the round number etc. </p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_state_8cs_source.html#l00007">7</a> of file <a class="el" href="_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html#l00007">7</a> of file <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ac236d7ad3eeb2ff81df2bfd2f40f2275" name="ac236d7ad3eeb2ff81df2bfd2f40f2275"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac236d7ad3eeb2ff81df2bfd2f40f2275">&#9670;&#160;</a></span>FantomGameState()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac236d7ad3eeb2ff81df2bfd2f40f2275">&#9670;&#160;</a></span>FantomGameState() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FantomGamesCore.FantomGameState.FantomGameState </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>DetectivesCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>BobbiesCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int[]</td>          <td class="paramname"><span class="paramname"><em>SeekerPositions</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int?</td>          <td class="paramname"><span class="paramname"><em>FantomPosition</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int?</td>          <td class="paramname"><span class="paramname"><em>FantomLastKnownPosition</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>ActorTickets</em></span>[,], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int[]</td>          <td class="paramname"><span class="paramname"><em>SupplyTickets</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used to fill out appropriate information for the current game state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DetectivesCount</td><td>The number of Detectives in game</td></tr>
+    <tr><td class="paramname">BobbiesCount</td><td>The number of Bobbies in game.</td></tr>
+    <tr><td class="paramname">SeekerPositions</td><td>The positions of all Seekers.</td></tr>
+    <tr><td class="paramname">FantomPosition</td><td>The position of the Fantom - null if not allowed (known)</td></tr>
+    <tr><td class="paramname">FantomLastKnownPosition</td><td>Fantom's last known position - null if not yet revealed</td></tr>
+    <tr><td class="paramname">ActorTickets</td><td>The tickets for all actors.</td></tr>
+    <tr><td class="paramname">SupplyTickets</td><td>The tickets for the supply.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html#l00161">161</a> of file <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac236d7ad3eeb2ff81df2bfd2f40f2275" name="ac236d7ad3eeb2ff81df2bfd2f40f2275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac236d7ad3eeb2ff81df2bfd2f40f2275">&#9670;&#160;</a></span>FantomGameState() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -198,7 +274,40 @@ Properties</h2></td></tr>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="afb1a9497a59d883dcd2d1728d2b28cfc" name="afb1a9497a59d883dcd2d1728d2b28cfc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afb1a9497a59d883dcd2d1728d2b28cfc">&#9670;&#160;</a></span>CopyDetectiveTicketsTo()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afb1a9497a59d883dcd2d1728d2b28cfc">&#9670;&#160;</a></span>CopyDetectiveTicketsTo() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly void FantomGamesCore.FantomGameState.CopyDetectiveTicketsTo </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>DetectiveTicketsDestination</em></span>[,]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy held detective tickets into the passed array. The array's dimensions must be DetectivesCount x 3. The indices are for each detective in game as the first, and the ticket kind (0, 1, 2) for transport tickets as the second. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DetectiveTicketsDestination</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html#l00136">136</a> of file <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
+
+</div>
+</div>
+<a id="afb1a9497a59d883dcd2d1728d2b28cfc" name="afb1a9497a59d883dcd2d1728d2b28cfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb1a9497a59d883dcd2d1728d2b28cfc">&#9670;&#160;</a></span>CopyDetectiveTicketsTo() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -231,7 +340,40 @@ Properties</h2></td></tr>
 </div>
 </div>
 <a id="aeef4408687b43a346dc915ea0d4dd9b1" name="aeef4408687b43a346dc915ea0d4dd9b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeef4408687b43a346dc915ea0d4dd9b1">&#9670;&#160;</a></span>CopyFantomTicketsTo()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aeef4408687b43a346dc915ea0d4dd9b1">&#9670;&#160;</a></span>CopyFantomTicketsTo() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly void FantomGamesCore.FantomGameState.CopyFantomTicketsTo </td>
+          <td>(</td>
+          <td class="paramtype">int[]</td>          <td class="paramname"><span class="paramname"><em>FantomTicketsDestination</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy held ticket counts of the Fantom into the passed array. The array's length must be 7. The ticket indices correspond to the <a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c" title="All known Ticket types.">TicketKinds</a> enum int values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FantomTicketsDestination</td><td>The array to be copied into.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">ArgumentException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html#l00122">122</a> of file <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
+
+</div>
+</div>
+<a id="aeef4408687b43a346dc915ea0d4dd9b1" name="aeef4408687b43a346dc915ea0d4dd9b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeef4408687b43a346dc915ea0d4dd9b1">&#9670;&#160;</a></span>CopyFantomTicketsTo() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -264,7 +406,46 @@ Properties</h2></td></tr>
 </div>
 </div>
 <a id="adcb1bceb7edb38aadd953316602c34f3" name="adcb1bceb7edb38aadd953316602c34f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcb1bceb7edb38aadd953316602c34f3">&#9670;&#160;</a></span>GetDetectiveTickets()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adcb1bceb7edb38aadd953316602c34f3">&#9670;&#160;</a></span>GetDetectiveTickets() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly int FantomGamesCore.FantomGameState.GetDetectiveTickets </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>detectiveIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a></td>          <td class="paramname"><span class="paramname"><em>ticketKinds</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the number of tickets for the specified detective. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">detectiveIndex</td><td>The specified detective.</td></tr>
+    <tr><td class="paramname">ticketKinds</td><td>The kind of the tickets in question.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of specific tickets held by that detective.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IndexOutOfRangeException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html#l00075">75</a> of file <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
+
+</div>
+</div>
+<a id="adcb1bceb7edb38aadd953316602c34f3" name="adcb1bceb7edb38aadd953316602c34f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcb1bceb7edb38aadd953316602c34f3">&#9670;&#160;</a></span>GetDetectiveTickets() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -303,7 +484,41 @@ Properties</h2></td></tr>
 </div>
 </div>
 <a id="af8995cb3efd033a70854447120765586" name="af8995cb3efd033a70854447120765586"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8995cb3efd033a70854447120765586">&#9670;&#160;</a></span>GetFantomTickets()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af8995cb3efd033a70854447120765586">&#9670;&#160;</a></span>GetFantomTickets() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly int FantomGamesCore.FantomGameState.GetFantomTickets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a></td>          <td class="paramname"><span class="paramname"><em>ticketKind</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the number of tickets the Fantom is currently holding. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ticketKind</td><td>The kind of the tickets in question.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of the specified tickets the Fantom is holding.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IndexOutOfRangeException</td><td>Thrown when given an unsupported ticket kinds enum index</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html#l00059">59</a> of file <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
+
+</div>
+</div>
+<a id="af8995cb3efd033a70854447120765586" name="af8995cb3efd033a70854447120765586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8995cb3efd033a70854447120765586">&#9670;&#160;</a></span>GetFantomTickets() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -337,7 +552,41 @@ Properties</h2></td></tr>
 </div>
 </div>
 <a id="add1040d1670402f3ed46172d4b1d3e2a" name="add1040d1670402f3ed46172d4b1d3e2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add1040d1670402f3ed46172d4b1d3e2a">&#9670;&#160;</a></span>GetSeekerPosition()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#add1040d1670402f3ed46172d4b1d3e2a">&#9670;&#160;</a></span>GetSeekerPosition() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly int FantomGamesCore.FantomGameState.GetSeekerPosition </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>seekerIndex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the position of the specified Seeker. The indexing starts at 0 and goes up to SeekerIndex exclusive. The first DetectiveCount indices correspond to the detectives in play, the remaining ones are for Bobbies. If the returned value is not positive, that that index is currently invalid. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">seekerIndex</td><td>Index of the Seeker in question</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The position of the Seeker in question.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IndexOutOfRangeException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html#l00094">94</a> of file <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
+
+</div>
+</div>
+<a id="add1040d1670402f3ed46172d4b1d3e2a" name="add1040d1670402f3ed46172d4b1d3e2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add1040d1670402f3ed46172d4b1d3e2a">&#9670;&#160;</a></span>GetSeekerPosition() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -371,7 +620,41 @@ Properties</h2></td></tr>
 </div>
 </div>
 <a id="aa28c6fa576496272199d1bcb229215ae" name="aa28c6fa576496272199d1bcb229215ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa28c6fa576496272199d1bcb229215ae">&#9670;&#160;</a></span>GetSupplyTickets()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa28c6fa576496272199d1bcb229215ae">&#9670;&#160;</a></span>GetSupplyTickets() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly int FantomGamesCore.FantomGameState.GetSupplyTickets </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a></td>          <td class="paramname"><span class="paramname"><em>ticketKinds</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the number of tickets in the supply. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ticketKinds</td><td>The type of ticket in question.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The number of tickets of the specified type in the supply currently.</dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IndexOutOfRangeException</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html#l00108">108</a> of file <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa28c6fa576496272199d1bcb229215ae" name="aa28c6fa576496272199d1bcb229215ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa28c6fa576496272199d1bcb229215ae">&#9670;&#160;</a></span>GetSupplyTickets() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,8 +688,8 @@ Properties</h2></td></tr>
 </div>
 </div>
 <a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
-<a id="a7c4bf5a9b8b34490652fefadf8ad6477" name="a7c4bf5a9b8b34490652fefadf8ad6477"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c4bf5a9b8b34490652fefadf8ad6477">&#9670;&#160;</a></span>BobbiesCount</h2>
+<a id="a5b176fa735bb2501adad6b6902774e21" name="a5b176fa735bb2501adad6b6902774e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b176fa735bb2501adad6b6902774e21">&#9670;&#160;</a></span>BobbiesCount</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -427,12 +710,12 @@ Properties</h2></td></tr>
 
 <p>The number of bobbies in play right now. </p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_state_8cs_source.html#l00016">16</a> of file <a class="el" href="_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html#l00016">16</a> of file <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
 
 </div>
 </div>
-<a id="a786862beb3b2fe9cbba0d25d41d94acf" name="a786862beb3b2fe9cbba0d25d41d94acf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a786862beb3b2fe9cbba0d25d41d94acf">&#9670;&#160;</a></span>CurrentMove</h2>
+<a id="a9327d28920a4c4eda9f8e9e32cfd5b6a" name="a9327d28920a4c4eda9f8e9e32cfd5b6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9327d28920a4c4eda9f8e9e32cfd5b6a">&#9670;&#160;</a></span>CurrentMove</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -453,12 +736,12 @@ Properties</h2></td></tr>
 
 <p>The number of done Fantom's moves. </p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_state_8cs_source.html#l00042">42</a> of file <a class="el" href="_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html#l00042">42</a> of file <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
 
 </div>
 </div>
-<a id="a3423a6eab155c972c3ed3e2c201cbd82" name="a3423a6eab155c972c3ed3e2c201cbd82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3423a6eab155c972c3ed3e2c201cbd82">&#9670;&#160;</a></span>CurrentRound</h2>
+<a id="a815ce2f875b8150f20ec155c8b8be1ec" name="a815ce2f875b8150f20ec155c8b8be1ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a815ce2f875b8150f20ec155c8b8be1ec">&#9670;&#160;</a></span>CurrentRound</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -479,12 +762,12 @@ Properties</h2></td></tr>
 
 <p>The number of the current round. </p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_state_8cs_source.html#l00038">38</a> of file <a class="el" href="_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html#l00038">38</a> of file <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
 
 </div>
 </div>
-<a id="ad0a9d653710cc1850fd3dbbbc283bf9b" name="ad0a9d653710cc1850fd3dbbbc283bf9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0a9d653710cc1850fd3dbbbc283bf9b">&#9670;&#160;</a></span>DetectivesCount</h2>
+<a id="a8b9c64ac58664b9e4b41c57eddccd977" name="a8b9c64ac58664b9e4b41c57eddccd977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b9c64ac58664b9e4b41c57eddccd977">&#9670;&#160;</a></span>DetectivesCount</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -505,12 +788,12 @@ Properties</h2></td></tr>
 
 <p>The number of detectives in play right now. </p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_state_8cs_source.html#l00012">12</a> of file <a class="el" href="_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html#l00012">12</a> of file <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
 
 </div>
 </div>
-<a id="aa889d24993161b5277a45eb3e7394ce2" name="aa889d24993161b5277a45eb3e7394ce2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa889d24993161b5277a45eb3e7394ce2">&#9670;&#160;</a></span>FantomLastKnownPosition</h2>
+<a id="a9d43f9c2a2510828227d600cc0b08656" name="a9d43f9c2a2510828227d600cc0b08656"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d43f9c2a2510828227d600cc0b08656">&#9670;&#160;</a></span>FantomLastKnownPosition</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -531,12 +814,12 @@ Properties</h2></td></tr>
 
 <p>Fantom's last revealed position if known will be a positive integer. If not known, will most likely be -1. </p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_state_8cs_source.html#l00033">33</a> of file <a class="el" href="_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html#l00033">33</a> of file <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
 
 </div>
 </div>
-<a id="a2bc06e6d7897560be03c1d5e0921fc51" name="a2bc06e6d7897560be03c1d5e0921fc51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2bc06e6d7897560be03c1d5e0921fc51">&#9670;&#160;</a></span>FantomPosition</h2>
+<a id="a725487cc53deb1934670cbe640127b9a" name="a725487cc53deb1934670cbe640127b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a725487cc53deb1934670cbe640127b9a">&#9670;&#160;</a></span>FantomPosition</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -557,12 +840,12 @@ Properties</h2></td></tr>
 
 <p>Fantom's position if known will be a positive integer. If not known, will most likely be -1. </p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_state_8cs_source.html#l00029">29</a> of file <a class="el" href="_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html#l00029">29</a> of file <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
 
 </div>
 </div>
-<a id="a919601d0cdba649c4e0c3fb2856615f2" name="a919601d0cdba649c4e0c3fb2856615f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a919601d0cdba649c4e0c3fb2856615f2">&#9670;&#160;</a></span>SeekersCount</h2>
+<a id="aa933139d9f94a9c486ecee7c2cf20828" name="aa933139d9f94a9c486ecee7c2cf20828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa933139d9f94a9c486ecee7c2cf20828">&#9670;&#160;</a></span>SeekersCount</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -583,13 +866,10 @@ Properties</h2></td></tr>
 
 <p>The number of Detectives and Bobbies in play right now. </p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_state_8cs_source.html#l00020">20</a> of file <a class="el" href="_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html#l00020">20</a> of file <a class="el" href="_fantom_games_core_2_fantom_game_state_8cs_source.html">FantomGameState.cs</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="_fantom_game_state_8cs_source.html">FantomGameState.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

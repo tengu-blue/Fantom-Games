@@ -34,15 +34,18 @@
 			
 			<Image Source="/Assets/Ticket0.png"
 				   Grid.Column="1"
-				   Grid.Row="0"/>
+				   Grid.Row="0"
+				   RenderOptions.BitmapInterpolationMode="HighQuality"/>
 
 			<Image Source="/Assets/Ticket1.png"
 				   Grid.Column="1"
-				   Grid.Row="1"/>
+				   Grid.Row="1"
+				   RenderOptions.BitmapInterpolationMode="HighQuality"/>
 
 			<Image Source="/Assets/Ticket2.png"
 				   Grid.Column="1"
-				   Grid.Row="2"/>
+				   Grid.Row="2"
+				   RenderOptions.BitmapInterpolationMode="HighQuality"/>
 			
 			<TextBlock Name="Ticket1"
 					   FontFamily="Bernard MT"

@@ -79,7 +79,6 @@ namespace FantomGamesIntermediary.Opponent.Parts.SeekerParts
                         // whatever Moves we have made, the turn ended or the game is over now; stop
                         if (!_commander.IsSeekersTurn())
                         {
-                            Console.WriteLine("Done moving ahead of time.");
                             return;
                         }
 
@@ -154,7 +153,7 @@ namespace FantomGamesIntermediary.Opponent.Parts.SeekerParts
 
         private void Log(string message)
         {
-            Console.WriteLine(message);
+            // pass
         }
     }
 }

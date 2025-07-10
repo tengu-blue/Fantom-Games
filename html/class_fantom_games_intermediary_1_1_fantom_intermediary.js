@@ -1,0 +1,26 @@
+var class_fantom_games_intermediary_1_1_fantom_intermediary =
+[
+    [ "CannotMoveFantom", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#aa99f79c1348c13fd0a2a63314c4dc97e", null ],
+    [ "CannotMoveSeeker", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#aeb206e5d4cd6bd681cfcda9debdce7f5", null ],
+    [ "ChangeSettings", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#ac32d0199e963488019bd8a52b34097c2", null ],
+    [ "ConfirmFantomTurnOver", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#abfeb02b9f60bae7f3c534187c866ecb2", null ],
+    [ "ConfirmSeekersTurnOver", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#ae38ad6e20afd4edcb950ed54c7ba83c1", null ],
+    [ "Exit", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#a78c08d3b2ab5bd840d7fd054806adf8d", null ],
+    [ "GetActiveSettings", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#af9fc490b54d5743d44714428798677da", null ],
+    [ "GetBoard", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#a910dc309b450bf0b57d369f70c77f617", null ],
+    [ "GetFantomMovesHistory", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#a33ea9e3154f16e138755c3a2199b3655", null ],
+    [ "GetGameState", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#ac7b9f3854e0c7bf605a4388bdaed7ede", null ],
+    [ "GetIntermediarySettings", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#a32e97da5a0524387b39e599fdc018027", null ],
+    [ "GetPrivateGameState", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#a6851afd6c928f11d38baff8662d438b3", null ],
+    [ "GetPublicGameState", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#aede79a443265a5cc55c9393c8602308e", null ],
+    [ "IsFantomTurn", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#a327ca575b6b8ffabab2e788baed0de8e", null ],
+    [ "IsSeekersTurn", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#a7a62b1918e928c11ec6ccd04d0b22109", null ],
+    [ "MoveFantom", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#a9bc5f42eaf719c05df2409dd7bec8afb", null ],
+    [ "MoveSeeker", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#ad2692c8d364ac881cb20271f86baa7bd", null ],
+    [ "PlaceFantomAt", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#a0c63cd57fc823ea6064f33df283f221c", null ],
+    [ "PlaceSeekerAt", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#ac36b84c54a82ace6a1c9b909ff7efbb2", null ],
+    [ "Reset", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#a9facb0f14e35ca83dc1f0095cbf40468", null ],
+    [ "Restart", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#adbce406f1854771bc50487309643de36", null ],
+    [ "SeekerIndex", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#a1c8393b2afc778c34e957f559c49fc1f", null ],
+    [ "UseDouble", "class_fantom_games_intermediary_1_1_fantom_intermediary.html#a872656556401accc4375f89a13286d40", null ]
+];

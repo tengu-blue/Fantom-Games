@@ -228,9 +228,6 @@ namespace FantomGamesIntermediary.Opponent
         
         private void Reset()
         {
-
-            Console.WriteLine("Searcher reset.");
-
             // timer should be stopped by the request
             // StopTimer();
 
@@ -290,7 +287,6 @@ namespace FantomGamesIntermediary.Opponent
                     break;
                 }
             }
-            Console.WriteLine($"New best is {bestValue} w. {worstValue} worst.");
             _brain.UpdateMoveSequence(worstValue, bestValue, updatedBest);
             stateEvaluator.ForgetMove(0);
 
@@ -298,7 +294,6 @@ namespace FantomGamesIntermediary.Opponent
 
         private void Loop()
         {
-            Console.WriteLine("Waiting for search begin");
             while (_living)
             {
                 
@@ -322,8 +317,6 @@ namespace FantomGamesIntermediary.Opponent
                 // will guarantee consistency
                 if (_searchRequest)
                 {
-                    Console.WriteLine("Search request got.");
-
                     FantomGameState localGameState;
                     MoveType? localOwnMove = null;
                     OpponentMoveType? localOpMove = null;
@@ -337,8 +330,6 @@ namespace FantomGamesIntermediary.Opponent
                         // see NOTE above
                         if (_abortSearchSource.IsCancellationRequested)
                         {
-                            Console.WriteLine("Search cancel before begin.");
-
                             _abortSearchSource?.Dispose();
                             _abortSearchSource = new();
 
@@ -384,8 +375,6 @@ namespace FantomGamesIntermediary.Opponent
 
                     // 2) Start the Search
 
-                    Console.WriteLine("Search timed starting.");
-
                     if (_terminated)
                         break;
 
@@ -404,8 +393,6 @@ namespace FantomGamesIntermediary.Opponent
 
 
                     // 3) Search done or aborted
-
-                    Console.WriteLine($"Search stopped.");
 
                     lock (_searchLock)
                     {
@@ -476,8 +463,6 @@ namespace FantomGamesIntermediary.Opponent
             var moves = _movesGenerator.PossibleMoves(stateHere).ToArray();
             var values = moves.Select(stateEvaluator.Evaluate);
 
-
-            // Console.WriteLine($"Got {moves.Length} possible moves.");
             if (moves.Length != 0)
             {
                 if (abortSearch.IsCancellationRequested)
@@ -513,7 +498,6 @@ namespace FantomGamesIntermediary.Opponent
                         // Should be fast-ish check to see if the branch is still fine
                         if (_brain.CanSetWith(pathHere))
                         {                            
-                            Console.WriteLine($"New BEST is {branchBestValue} w. {branchWorstValue} worst.");
                             _brain.SetBestMoveSequence(branchWorstValue, branchBestValue, pathHere);
                         }
                         // else
@@ -537,19 +521,15 @@ namespace FantomGamesIntermediary.Opponent
                             return;
 
                         pathHere.SetMove(makeMove, moveValue, depth);
-                        // Console.WriteLine(stateEvaluator.Evaluate(makeMove));
 
                         if (abortSearch.IsCancellationRequested)
                         {
-                            Console.WriteLine($"Done {i} of {moves.Length}. Cancelled. {depth}");
                             return;
                         }
                         // break to reset the mask TODO: rethink considering how masks are set ?
                         // return as the unset mask part of set on level above
                         if (!_brain.CanSetWith(pathHere))
                         {   
-                            Console.WriteLine($"Done {i} of {moves.Length}. First is different. {depth}");
-                            //break;
                             return;
                         }
                         // Apply mask to the State Evaluator - positions and tickets from the current move, next level
@@ -557,7 +537,6 @@ namespace FantomGamesIntermediary.Opponent
 
                         if (abortSearch.IsCancellationRequested)
                         {
-                            Console.WriteLine($"Done {i} of {moves.Length}. Cancelled two. {depth}");
                             return;
                         }
 

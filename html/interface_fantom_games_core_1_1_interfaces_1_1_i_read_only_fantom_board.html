@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FantomGamesCore: FantomGamesCore.Interfaces.IReadOnlyFantomBoard Interface Reference</title>
+<title>FantomGames: FantomGamesCore.Interfaces.IReadOnlyFantomBoard Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FantomGamesCore
+   <div id="projectname">FantomGames
    </div>
   </td>
  </tr>
@@ -104,20 +104,61 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2894daa7b04f24e3e54f6a25228abea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if indexB tile is neighbor of tile indexA for any Travel Mode.  <br /></td></tr>
 <tr class="memitem:a97c28aa1ee4aa9bea3acd28d3335459b" id="r_a97c28aa1ee4aa9bea3acd28d3335459b"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97c28aa1ee4aa9bea3acd28d3335459b">GetNeighbors</a> (<a class="el" href="namespace_fantom_games_core_1_1_interfaces.html#a7512e7a6e78df5dccb0881049ed61999">TravelModes</a> travelMode, int tileIndex)</td></tr>
 <tr class="memdesc:a97c28aa1ee4aa9bea3acd28d3335459b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all neighbors of the specified Travel Mode's tile.  <br /></td></tr>
+<tr class="memitem:a13a88e67953e14bc75f471daaf1672bd" id="r_a13a88e67953e14bc75f471daaf1672bd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13a88e67953e14bc75f471daaf1672bd">CountNeighbors</a> (<a class="el" href="namespace_fantom_games_core_1_1_interfaces.html#a7512e7a6e78df5dccb0881049ed61999">TravelModes</a> travelMode, int tileIndex)</td></tr>
+<tr class="memdesc:a13a88e67953e14bc75f471daaf1672bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of neighbors for the specified Travel Mode and tile name.  <br /></td></tr>
+<tr class="memitem:a0a2fc398e5116c8e36127bf1b747ef3c" id="r_a0a2fc398e5116c8e36127bf1b747ef3c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a2fc398e5116c8e36127bf1b747ef3c">GetNeighbor</a> (<a class="el" href="namespace_fantom_games_core_1_1_interfaces.html#a7512e7a6e78df5dccb0881049ed61999">TravelModes</a> travelMode, int tileIndex, int neighborIndex)</td></tr>
+<tr class="memdesc:a0a2fc398e5116c8e36127bf1b747ef3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the specified neighbor of the specified Travel Mode tile.  <br /></td></tr>
+<tr class="memitem:a7f3e52fd1cd3b4f4dd4e171ada2a88c7" id="r_a7f3e52fd1cd3b4f4dd4e171ada2a88c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f3e52fd1cd3b4f4dd4e171ada2a88c7">IsNeighbor</a> (<a class="el" href="namespace_fantom_games_core_1_1_interfaces.html#a7512e7a6e78df5dccb0881049ed61999">TravelModes</a> travelMode, int indexA, int indexB)</td></tr>
+<tr class="memdesc:a7f3e52fd1cd3b4f4dd4e171ada2a88c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if indexB tile of the specified Travel Mode is neighbor of tile indexA.  <br /></td></tr>
+<tr class="memitem:a2894daa7b04f24e3e54f6a25228abea8" id="r_a2894daa7b04f24e3e54f6a25228abea8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2894daa7b04f24e3e54f6a25228abea8">IsNeighbor</a> (int indexA, int indexB)</td></tr>
+<tr class="memdesc:a2894daa7b04f24e3e54f6a25228abea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if indexB tile is neighbor of tile indexA for any Travel Mode.  <br /></td></tr>
+<tr class="memitem:a97c28aa1ee4aa9bea3acd28d3335459b" id="r_a97c28aa1ee4aa9bea3acd28d3335459b"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97c28aa1ee4aa9bea3acd28d3335459b">GetNeighbors</a> (<a class="el" href="namespace_fantom_games_core_1_1_interfaces.html#a7512e7a6e78df5dccb0881049ed61999">TravelModes</a> travelMode, int tileIndex)</td></tr>
+<tr class="memdesc:a97c28aa1ee4aa9bea3acd28d3335459b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all neighbors of the specified Travel Mode's tile.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a28be9f1493046066f4bed4bdbd640d20" id="r_a28be9f1493046066f4bed4bdbd640d20"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28be9f1493046066f4bed4bdbd640d20">TileCount</a><code> [get]</code></td></tr>
-<tr class="memdesc:a28be9f1493046066f4bed4bdbd640d20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of loaded tiles.  <br /></td></tr>
-<tr class="memitem:a77c2b932a74a117ccee1d4e91ecd61e9" id="r_a77c2b932a74a117ccee1d4e91ecd61e9"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77c2b932a74a117ccee1d4e91ecd61e9">AllTiles</a><code> [get]</code></td></tr>
-<tr class="memdesc:a77c2b932a74a117ccee1d4e91ecd61e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an enumerable of all tile positions.  <br /></td></tr>
+<tr class="memitem:a3530e9ba3a63c1a8067f369be5774f7c" id="r_a3530e9ba3a63c1a8067f369be5774f7c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3530e9ba3a63c1a8067f369be5774f7c">TileCount</a><code> [get]</code></td></tr>
+<tr class="memdesc:a3530e9ba3a63c1a8067f369be5774f7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the total number of loaded tiles.  <br /></td></tr>
+<tr class="memitem:a809751a46dbc6167cc361fec5fd188c6" id="r_a809751a46dbc6167cc361fec5fd188c6"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a809751a46dbc6167cc361fec5fd188c6">AllTiles</a><code> [get]</code></td></tr>
+<tr class="memdesc:a809751a46dbc6167cc361fec5fd188c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an enumerable of all tile positions.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_i_read_only_fantom_board_8cs_source.html#l00003">3</a> of file <a class="el" href="_i_read_only_fantom_board_8cs_source.html">IReadOnlyFantomBoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_interfaces_2_i_read_only_fantom_board_8cs_source.html#l00003">3</a> of file <a class="el" href="_fantom_games_core_2_interfaces_2_i_read_only_fantom_board_8cs_source.html">IReadOnlyFantomBoard.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a13a88e67953e14bc75f471daaf1672bd" name="a13a88e67953e14bc75f471daaf1672bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13a88e67953e14bc75f471daaf1672bd">&#9670;&#160;</a></span>CountNeighbors()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a13a88e67953e14bc75f471daaf1672bd">&#9670;&#160;</a></span>CountNeighbors() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FantomGamesCore.Interfaces.IReadOnlyFantomBoard.CountNeighbors </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_fantom_games_core_1_1_interfaces.html#a7512e7a6e78df5dccb0881049ed61999">TravelModes</a></td>          <td class="paramname"><span class="paramname"><em>travelMode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tileIndex</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of neighbors for the specified Travel Mode and tile name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">travelMode</td><td></td></tr>
+    <tr><td class="paramname">tileIndex</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a13a88e67953e14bc75f471daaf1672bd" name="a13a88e67953e14bc75f471daaf1672bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13a88e67953e14bc75f471daaf1672bd">&#9670;&#160;</a></span>CountNeighbors() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,7 +189,44 @@ Properties</h2></td></tr>
 </div>
 </div>
 <a id="a0a2fc398e5116c8e36127bf1b747ef3c" name="a0a2fc398e5116c8e36127bf1b747ef3c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a2fc398e5116c8e36127bf1b747ef3c">&#9670;&#160;</a></span>GetNeighbor()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a2fc398e5116c8e36127bf1b747ef3c">&#9670;&#160;</a></span>GetNeighbor() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FantomGamesCore.Interfaces.IReadOnlyFantomBoard.GetNeighbor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_fantom_games_core_1_1_interfaces.html#a7512e7a6e78df5dccb0881049ed61999">TravelModes</a></td>          <td class="paramname"><span class="paramname"><em>travelMode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tileIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>neighborIndex</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the specified neighbor of the specified Travel Mode tile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">travelMode</td><td></td></tr>
+    <tr><td class="paramname">tileIndex</td><td></td></tr>
+    <tr><td class="paramname">neighborIndex</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a0a2fc398e5116c8e36127bf1b747ef3c" name="a0a2fc398e5116c8e36127bf1b747ef3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a2fc398e5116c8e36127bf1b747ef3c">&#9670;&#160;</a></span>GetNeighbor() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -185,7 +263,38 @@ Properties</h2></td></tr>
 </div>
 </div>
 <a id="a97c28aa1ee4aa9bea3acd28d3335459b" name="a97c28aa1ee4aa9bea3acd28d3335459b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a97c28aa1ee4aa9bea3acd28d3335459b">&#9670;&#160;</a></span>GetNeighbors()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a97c28aa1ee4aa9bea3acd28d3335459b">&#9670;&#160;</a></span>GetNeighbors() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int[] FantomGamesCore.Interfaces.IReadOnlyFantomBoard.GetNeighbors </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_fantom_games_core_1_1_interfaces.html#a7512e7a6e78df5dccb0881049ed61999">TravelModes</a></td>          <td class="paramname"><span class="paramname"><em>travelMode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tileIndex</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns all neighbors of the specified Travel Mode's tile. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">travelMode</td><td></td></tr>
+    <tr><td class="paramname">tileIndex</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a97c28aa1ee4aa9bea3acd28d3335459b" name="a97c28aa1ee4aa9bea3acd28d3335459b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97c28aa1ee4aa9bea3acd28d3335459b">&#9670;&#160;</a></span>GetNeighbors() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +325,31 @@ Properties</h2></td></tr>
 </div>
 </div>
 <a id="a2894daa7b04f24e3e54f6a25228abea8" name="a2894daa7b04f24e3e54f6a25228abea8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2894daa7b04f24e3e54f6a25228abea8">&#9670;&#160;</a></span>IsNeighbor() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2894daa7b04f24e3e54f6a25228abea8">&#9670;&#160;</a></span>IsNeighbor() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FantomGamesCore.Interfaces.IReadOnlyFantomBoard.IsNeighbor </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>indexA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>indexB</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if indexB tile is neighbor of tile indexA for any Travel Mode. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a2894daa7b04f24e3e54f6a25228abea8" name="a2894daa7b04f24e3e54f6a25228abea8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2894daa7b04f24e3e54f6a25228abea8">&#9670;&#160;</a></span>IsNeighbor() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -240,7 +373,44 @@ Properties</h2></td></tr>
 </div>
 </div>
 <a id="a7f3e52fd1cd3b4f4dd4e171ada2a88c7" name="a7f3e52fd1cd3b4f4dd4e171ada2a88c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f3e52fd1cd3b4f4dd4e171ada2a88c7">&#9670;&#160;</a></span>IsNeighbor() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f3e52fd1cd3b4f4dd4e171ada2a88c7">&#9670;&#160;</a></span>IsNeighbor() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FantomGamesCore.Interfaces.IReadOnlyFantomBoard.IsNeighbor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_fantom_games_core_1_1_interfaces.html#a7512e7a6e78df5dccb0881049ed61999">TravelModes</a></td>          <td class="paramname"><span class="paramname"><em>travelMode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>indexA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>indexB</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if indexB tile of the specified Travel Mode is neighbor of tile indexA. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">travelMode</td><td></td></tr>
+    <tr><td class="paramname">indexA</td><td></td></tr>
+    <tr><td class="paramname">indexB</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a7f3e52fd1cd3b4f4dd4e171ada2a88c7" name="a7f3e52fd1cd3b4f4dd4e171ada2a88c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f3e52fd1cd3b4f4dd4e171ada2a88c7">&#9670;&#160;</a></span>IsNeighbor() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,8 +447,8 @@ Properties</h2></td></tr>
 </div>
 </div>
 <a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
-<a id="a77c2b932a74a117ccee1d4e91ecd61e9" name="a77c2b932a74a117ccee1d4e91ecd61e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77c2b932a74a117ccee1d4e91ecd61e9">&#9670;&#160;</a></span>AllTiles</h2>
+<a id="a809751a46dbc6167cc361fec5fd188c6" name="a809751a46dbc6167cc361fec5fd188c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a809751a46dbc6167cc361fec5fd188c6">&#9670;&#160;</a></span>AllTiles</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,7 +457,7 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">IEnumerable&lt;int&gt; FantomGamesCore.Interfaces.IReadOnlyFantomBoard.AllTiles</td>
+          <td class="memname">IEnumerable&lt; int &gt; FantomGamesCore.Interfaces.IReadOnlyFantomBoard.AllTiles</td>
         </tr>
       </table>
   </td>
@@ -299,12 +469,12 @@ Properties</h2></td></tr>
 
 <p>Returns an enumerable of all tile positions. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_read_only_fantom_board_8cs_source.html#l00059">59</a> of file <a class="el" href="_i_read_only_fantom_board_8cs_source.html">IReadOnlyFantomBoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_interfaces_2_i_read_only_fantom_board_8cs_source.html#l00059">59</a> of file <a class="el" href="_fantom_games_core_2_interfaces_2_i_read_only_fantom_board_8cs_source.html">IReadOnlyFantomBoard.cs</a>.</p>
 
 </div>
 </div>
-<a id="a28be9f1493046066f4bed4bdbd640d20" name="a28be9f1493046066f4bed4bdbd640d20"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a28be9f1493046066f4bed4bdbd640d20">&#9670;&#160;</a></span>TileCount</h2>
+<a id="a3530e9ba3a63c1a8067f369be5774f7c" name="a3530e9ba3a63c1a8067f369be5774f7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3530e9ba3a63c1a8067f369be5774f7c">&#9670;&#160;</a></span>TileCount</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -325,13 +495,10 @@ Properties</h2></td></tr>
 
 <p>Returns the total number of loaded tiles. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_read_only_fantom_board_8cs_source.html#l00054">54</a> of file <a class="el" href="_i_read_only_fantom_board_8cs_source.html">IReadOnlyFantomBoard.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_interfaces_2_i_read_only_fantom_board_8cs_source.html#l00054">54</a> of file <a class="el" href="_fantom_games_core_2_interfaces_2_i_read_only_fantom_board_8cs_source.html">IReadOnlyFantomBoard.cs</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this interface was generated from the following file:<ul>
-<li>Interfaces/<a class="el" href="_i_read_only_fantom_board_8cs_source.html">IReadOnlyFantomBoard.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

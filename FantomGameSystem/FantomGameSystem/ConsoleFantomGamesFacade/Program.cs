@@ -107,11 +107,6 @@ namespace ConsoleFantomGamesFacade
             Console.WriteLine("Fantom stayed.");
         }
 
-        public void FantomHistoryMoveTo(int tile)
-        {
-            // pass 
-        }
-
         public void FantomMovedTo(int tile, TicketKinds via)
         {
             Console.WriteLine($"Fantom Moved to {tile} using {via} : {Enum.GetName(via)}.");

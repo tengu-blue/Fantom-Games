@@ -51,13 +51,7 @@ namespace FantomGamesIntermediary.Opponent
 
 
         public void GameReset()
-        {
-           // var state = _commander.GetPrivateGameState();
-            //Debug.Assert(state != null);
-
-           // _searcher.Reset(state.Value);
-
-           // Console.WriteLine("RESETING");
+        {           
         }
 
         public void GameRestarted(FantomGameSettings newSettings)

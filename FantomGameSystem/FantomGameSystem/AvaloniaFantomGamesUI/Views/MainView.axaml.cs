@@ -645,26 +645,7 @@ public partial class MainView : UserControl, IFacadeCommander, IFantomGamesFacad
             FantomPiece[Canvas.LeftProperty] = -60;
             FantomPiece[Canvas.TopProperty] = 0;
         }
-
-        // Print out Tickets
-        for (int index = 0; index < state.DetectivesCount; ++index)
-        {
-            Console.WriteLine($"Detective {index} has " +
-                $"{state.GetDetectiveTickets(index, TicketKinds.Mode1)} Mode 1, " +
-                $"{state.GetDetectiveTickets(index, TicketKinds.Mode2)} Mode 2 and " +
-                $"{state.GetDetectiveTickets(index, TicketKinds.Mode3)} Mode 3 Tickets.");
-        }
-
-        Console.WriteLine($"Fantom has " +
-                $"{state.GetFantomTickets(TicketKinds.Mode1)} Mode 1, " +
-                $"{state.GetFantomTickets(TicketKinds.Mode2)} Mode 2, " +
-                $"{state.GetFantomTickets(TicketKinds.Mode3)} Mode 3, " +
-                $"{state.GetFantomTickets(TicketKinds.River)} River, " +
-                $"{state.GetFantomTickets(TicketKinds.Black)} Black and " +
-                $"{state.GetFantomTickets(TicketKinds.Double)} Double Tickets.");
-
-        //Array.Copy(state.ActorTickets, actorTickets, actorTickets.GetLength(0) * actorTickets.GetLength(1));
-
+       
         RoundDisplay.Text = $"Round 1 / {_maxRounds}";
 
         state.CopyFantomTicketsTo(_fantomTickets);
@@ -727,8 +708,6 @@ public partial class MainView : UserControl, IFacadeCommander, IFantomGamesFacad
 
     uint _maxRounds = 22;
 
-    List<int> _fantomMovesHistory = [];
-
     public void ErrorMessage(string message)
     {
         Console.Error.WriteLine(message);
@@ -749,11 +728,6 @@ public partial class MainView : UserControl, IFacadeCommander, IFantomGamesFacad
             FantomLast[Canvas.TopProperty] = 0;
             FantomLast[Canvas.LeftProperty] = -60;
         });
-    }
-
-    public void FantomHistoryMoveTo(int tile)
-    {
-        _fantomMovesHistory.Add(tile);
     }
 
     public void FantomPlacedAt(int tile)
@@ -783,13 +757,11 @@ public partial class MainView : UserControl, IFacadeCommander, IFantomGamesFacad
     public void FantomTurnBegin(uint fantomMove)
     {
         OnUiThread(TravelTicketSelect.Hide);
-        Console.WriteLine("Fantom playing.");
     }
 
     public void FantomTurnEnd()
     {
         OnUiThread(TravelTicketSelect.Hide);
-        Console.WriteLine("Seekers playing.");
     }
 
     public void FantomUsedDouble()
@@ -821,33 +793,31 @@ public partial class MainView : UserControl, IFacadeCommander, IFantomGamesFacad
         OnUiThread(() =>
         {
             FantomTicketHistory.Children.Clear();
-            for (int i = 0; i < _fantomMovesHistory.Count; i++)
-            {
-                var txt = new TextBlock();
-                txt[TextBlock.TextProperty] = $"{_fantomMovesHistory[i]}";
-                txt.VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center;
-                txt.Foreground = new SolidColorBrush(Colors.Wheat);
-                txt.FontFamily = "Bernard MT";
-                txt.FontSize = 50;
+            var history = Commander.GetFantomMovesHistory();
+            if(history != null)
+                foreach (var position in history)
+                {
+                    var txt = new TextBlock();
+                    txt[TextBlock.TextProperty] = $"{position}";
+                    txt.VerticalAlignment = Avalonia.Layout.VerticalAlignment.Center;
+                    txt.Foreground = new SolidColorBrush(Colors.Wheat);
+                    txt.FontFamily = "Bernard MT";
+                    txt.FontSize = 50;
 
-                // make double tickets be overlaid by the next ticket
-                var c = FantomTicketHistory.Children.Count;
+                    // make double tickets be overlaid by the next ticket
+                    var c = FantomTicketHistory.Children.Count;
 
-                int x = c / 8;
-                int y = c % 8;
+                    int x = c / 8;
+                    int y = c % 8;
 
-                txt[Grid.ColumnProperty] = x;
-                txt[Grid.RowProperty] = y;
-                txt[MarginProperty] = new Thickness(100, 0, 0, 0);
+                    txt[Grid.ColumnProperty] = x;
+                    txt[Grid.RowProperty] = y;
+                    txt[MarginProperty] = new Thickness(100, 0, 0, 0);
 
-                FantomTicketHistory.Children.Add(txt);
-            }
+                    FantomTicketHistory.Children.Add(txt);
+                }
         });
-
-
-        Console.Write("Game over: ");
-        Console.WriteLine(gameResult.FantomWon ? "Fantom won" : gameResult.SeekersWon ? "Seekers Won" : "Draw");
-        Console.WriteLine(gameResult.WinningCondition);
+        
     }
 
     public void GameReset()
@@ -868,7 +838,6 @@ public partial class MainView : UserControl, IFacadeCommander, IFantomGamesFacad
         _detectiveTickets = new int[gameState.DetectivesCount, 3];
         _seekerPositions = new int[gameState.SeekersCount];
         _lastFantomTile = -1;
-        _fantomMovesHistory.Clear();
 
         OnUiThread(() =>
         {
@@ -906,17 +875,14 @@ public partial class MainView : UserControl, IFacadeCommander, IFantomGamesFacad
                 _ticketDisplays[i].Reset();
             }
         });
-        Console.WriteLine($"Round {round} over.");
     }
 
     public void SeekerCouldNotBeMoved(int seekerIndex)
     {
-        Console.WriteLine($"Seeker {seekerIndex} could not Move.");
     }
 
     public void SeekersCouldNotBeMoved()
     {
-        Console.WriteLine($"Seekers could not Move.");
     }
 
 
@@ -947,20 +913,17 @@ public partial class MainView : UserControl, IFacadeCommander, IFantomGamesFacad
 
     public void SeekerTurnBegin(int seekerIndex)
     {
-        // NOTE: when running with opponent he moves so quickly that these return non-sense
-        // Console.WriteLine($"Seeker {seekerIndex} playing.");
+        // NOTE: when running with opponent he moves so quickly that these return non-sense        
     }
 
     public void SeekerTurnEnd(int seekerIndex)
     {
-        // see note above ^^ 
-        // Console.WriteLine($"Seeker {seekerIndex} done.");
+        // see note above ^^         
     }
 
     public void ShowInfo(Info status)
     {
-        Console.Write("Currently playing: ");
-        Console.WriteLine(status.IsFantomTurn ? "Fantom." : $"Seeker {status.SeekerIndex}.");
+        // pass
     }
 
 

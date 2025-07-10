@@ -122,7 +122,7 @@ namespace FantomGamesIntermediary.Opponent.Parts.FantomParts
 
         private void Log(string message)
         {
-            Console.WriteLine(message);
+            // no output 
         }
     }
 }

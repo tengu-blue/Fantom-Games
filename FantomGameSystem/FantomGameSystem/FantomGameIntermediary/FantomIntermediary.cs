@@ -3,10 +3,7 @@ using FantomGamesCore.Interfaces;
 using FantomGamesCore.Managers;
 using FantomGamesIntermediary.Opponent;
 using FantomGamesSystemUtils;
-using System;
 using System.Diagnostics;
-using System.Reflection.Metadata.Ecma335;
-using System.Runtime;
 
 namespace FantomGamesIntermediary
 {
@@ -23,6 +20,8 @@ namespace FantomGamesIntermediary
 
         private SeekerOpponent seeker;
         private FantomOpponent fantom;
+
+        private readonly object _safetyLock = new();
 
         /// <summary>
         /// Creates a new Fantom Games Intermediary with the given settings and the main player's facade.
@@ -69,71 +68,31 @@ namespace FantomGamesIntermediary
                 seeker.Wake();
 
             if (iSettings.ComputerFantom)
-                fantom.Wake();
-
-            /* Check all tiles interconnected, change modes
-            var board = _gameManager.GetBoard() ?? throw new Exception("Board Invalid");
-            for (int mode = 0; mode < 4; ++mode)
-            {
-                for (int t = 1; t <= board.TileCount; ++t)
-                {
-                    for (int j = 0; j < board.CountNeighbors((TravelModes)mode, t); ++j)
-                    {
-                        // (u,v) edge -> (v,u) as well
-                        int u = t;
-                        int v = board.GetNeighbor((TravelModes)mode, t, j);
-                        if (!board.IsNeighbor((TravelModes)mode, v, u))
-                            Console.WriteLine($"{u} is neighbor of {v} but not the other way.");
-                    }
-                }
-            }
-            */
-            /* Check for connectedness via multiple modes of travel
-            var board = _gameManager.GetBoard() ?? throw new Exception("Board Invalid");
-            for (int mode = 0; mode < 4; ++mode)
-            {
-                for (int t = 1; t <= board.TileCount; ++t)
-                {
-                    for (int j = 0; j < board.CountNeighbors((TravelModes)mode, t); ++j)
-                    {
-                        // (u,v) edge -> (v,u) as well
-                        int u = t;
-                        int v = board.GetNeighbor((TravelModes)mode, t, j);
-
-                        if (u > v)
-                            continue;
-
-                        // is there edge between them via a different mode?
-                        for (int mode2 = mode+1; mode2 < 4; ++mode2)
-                        {
-                            if (board.IsNeighbor((TravelModes)mode2, u, v))
-                                Console.WriteLine($"{u} and {v} are connected via {mode} and also via {mode2}.");
-                        }
-                    }
-                }
-            }
-            */
+                fantom.Wake();            
         }
 
         private void RecreateOpponents()
         {
-            var gameBoard = _gameManager.GetBoard();
-            Debug.Assert(gameBoard != null);
-
-            seeker?.Terminate();
-            fantom?.Terminate();
-
-            seeker = new SeekerOpponent(this, gameBoard, _gameManager.GetActiveSettings());
-            fantom = new FantomOpponent(this, gameBoard, _gameManager.GetActiveSettings());
-
-            // the 0-th one is always the user
-            if (_managedFacades.Count > 1)
+            lock (_safetyLock)
             {
-                _managedFacades.RemoveAt(2);
-                _managedFacades.RemoveAt(1);
+                var gameBoard = _gameManager.GetBoard();
+                Debug.Assert(gameBoard != null);
+
+                seeker?.Terminate();
+                fantom?.Terminate();
+
+                seeker = new SeekerOpponent(this, gameBoard, _gameManager.GetActiveSettings());
+                fantom = new FantomOpponent(this, gameBoard, _gameManager.GetActiveSettings());
+
+                // the 0-th one is always the user
+                if (_managedFacades.Count > 1)
+                {
+                    _managedFacades.RemoveAt(2);
+                    _managedFacades.RemoveAt(1);
+                }
+                _managedFacades.Add(new() { GameFacade = seeker, IsPublic = true });
+                _managedFacades.Add(new() { GameFacade = fantom, IsPublic = false });
             }
-            _managedFacades.Add(new() { GameFacade = seeker, IsPublic = true });
-            _managedFacades.Add(new() { GameFacade = fantom, IsPublic = false });
         }
 
 
@@ -143,13 +102,16 @@ namespace FantomGamesIntermediary
         /// <param name="newSettings">The new settings.</param>
         public void ChangeSettings(IntermediarySettings newSettings)
         {
-            _activeSettings = newSettings;
-           
-            // index 0 = living player always
-            _managedFacades[0] = new() { GameFacade = _managedFacades[0].GameFacade, IsPublic = !newSettings.LivingPlayerIsFantom };
+            lock (_safetyLock)
+            {
+                _activeSettings = newSettings;
 
-            // settings changed -> reset
-            ResetIntermediary();
+                // index 0 = living player always
+                _managedFacades[0] = new() { GameFacade = _managedFacades[0].GameFacade, IsPublic = !newSettings.LivingPlayerIsFantom };
+
+                // settings changed -> reset
+                ResetIntermediary();
+            }
         }
 
         /// <summary>
@@ -161,12 +123,15 @@ namespace FantomGamesIntermediary
             return _activeSettings;
         }
 
- 
+
+        // remember Fantom's positions for the whole game to give at the end
+        private readonly List<int> _fantomMovesHistory = [];
+
         private void ResetIntermediary()
-        {       
+        {
             if (_activeSettings.ComputerSeeker)
             {
-                seeker.Wake();                
+                seeker.Wake();
             }
             else
             {
@@ -296,11 +261,12 @@ namespace FantomGamesIntermediary
 
         public bool Restart(FantomGameSettings fSettings)
         {
+            Monitor.Enter(_safetyLock);
+
             var retCode = _gameManager.Restart(fSettings);
 
             if (retCode)
             {
-                // TODO: Create new Opponents !! 
                 RecreateOpponents();
 
                 if (_activeSettings.ComputerSeeker)
@@ -309,19 +275,25 @@ namespace FantomGamesIntermediary
                 if (_activeSettings.ComputerFantom)
                     fantom.Wake();
 
+                Monitor.Exit(_safetyLock);
+
                 _managedFacades.ForEachPublic(f => f.GameRestarted(fSettings));
             }
             else
             {
+                Monitor.Exit(_safetyLock);
+
                 SendError(retCode.Message);
             }
 
             return retCode;
+
         }
 
         public bool Reset()
         {
             bool result = _gameManager.Reset();
+            _fantomMovesHistory.Clear();
 
             if (result)
                 _managedFacades.ForEachPublic(f => f.GameReset());
@@ -331,6 +303,19 @@ namespace FantomGamesIntermediary
             return result;
         }
 
+        /// <summary>
+        /// Can be called when the game is Over to receive the full history of Fantom's moves (the tiles he traveled to). 
+        /// </summary>
+        /// <returns>An array of positions if the game is over, null otherwise.</returns>
+        public int[]? GetFantomMovesHistory()
+        {
+            if(_gameManager.IsOver())
+            {
+                return [.. _fantomMovesHistory];
+            }
+
+            return null;
+        }
 
         // Fantom controls ---------------------------------------------------------------
 
@@ -379,7 +364,8 @@ namespace FantomGamesIntermediary
 
                 // Fantom moved, let private Facades know
                 _managedFacades.ForEachPrivate(f => f.FantomMovedTo(tile, via));
-                _managedFacades.ForEachPublic(f => f.FantomHistoryMoveTo(tile));
+
+                _fantomMovesHistory.Add(tile);
 
                 // if revealed announce to all 
                 if (_gameManager.IsFantomRevealing())

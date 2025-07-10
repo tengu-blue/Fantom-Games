@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FantomGamesCore: FantomGamesCore.Interfaces.IFantomPlayerInterface Interface Reference</title>
+<title>FantomGames: FantomGamesCore.Interfaces.IFantomPlayerInterface Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FantomGamesCore
+   <div id="projectname">FantomGames
    </div>
   </td>
  </tr>
@@ -111,14 +111,48 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a8020e1d01134154c14e6cfefa569d0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">If Fantom is currently playing.  <br /></td></tr>
 <tr class="memitem:a0eb190ed1b47f2c27737137b6462e7a3" id="r_a0eb190ed1b47f2c27737137b6462e7a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0eb190ed1b47f2c27737137b6462e7a3">ConfirmTurnOver</a> ()</td></tr>
 <tr class="memdesc:a0eb190ed1b47f2c27737137b6462e7a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required to be called by the user after the Fantom has played to continue the game.  <br /></td></tr>
+<tr class="memitem:a6601c4fbc5d6831247f7272c7e0fdd97" id="r_a6601c4fbc5d6831247f7272c7e0fdd97"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; <a class="el" href="struct_fantom_games_core_1_1_fantom_game_state.html">FantomGameState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6601c4fbc5d6831247f7272c7e0fdd97">GetGameState</a> ()</td></tr>
+<tr class="memdesc:a6601c4fbc5d6831247f7272c7e0fdd97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the private Game State, which always contains the Fantom's position.  <br /></td></tr>
+<tr class="memitem:ac2f65e9e39c9710d7dd494ad4c3dcd84" id="r_ac2f65e9e39c9710d7dd494ad4c3dcd84"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2f65e9e39c9710d7dd494ad4c3dcd84">UseDouble</a> ()</td></tr>
+<tr class="memdesc:ac2f65e9e39c9710d7dd494ad4c3dcd84"><td class="mdescLeft">&#160;</td><td class="mdescRight">If available, will use the Double Move Ticket. Afterwards two Moves are expected with other Ticket Kinds.  <br /></td></tr>
+<tr class="memitem:acf3120522cdc6dfa13b1b23eddef698b" id="r_acf3120522cdc6dfa13b1b23eddef698b"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf3120522cdc6dfa13b1b23eddef698b">Move</a> (int tileIndex_Where, <a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a> ticketKind)</td></tr>
+<tr class="memdesc:acf3120522cdc6dfa13b1b23eddef698b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the Fantom via the specified Ticket to the given position.  <br /></td></tr>
+<tr class="memitem:aed69c1ad7e15c459bbd47a3028aa150d" id="r_aed69c1ad7e15c459bbd47a3028aa150d"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed69c1ad7e15c459bbd47a3028aa150d">PlaceAt</a> (int tileIndex_Where)</td></tr>
+<tr class="memdesc:aed69c1ad7e15c459bbd47a3028aa150d"><td class="mdescLeft">&#160;</td><td class="mdescRight">At the start of the game if Fantom isn't placed on the Playing Board, must be placed via this.  <br /></td></tr>
+<tr class="memitem:a8fc78751694e312c5800191ba49b57bf" id="r_a8fc78751694e312c5800191ba49b57bf"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fc78751694e312c5800191ba49b57bf">CannotMove</a> ()</td></tr>
+<tr class="memdesc:a8fc78751694e312c5800191ba49b57bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the Fantom Cannot Move because no tiles or Tickets are available, this has to be called, to continue with the game.  <br /></td></tr>
+<tr class="memitem:a8020e1d01134154c14e6cfefa569d0ff" id="r_a8020e1d01134154c14e6cfefa569d0ff"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8020e1d01134154c14e6cfefa569d0ff">IsFantomTurn</a> ()</td></tr>
+<tr class="memdesc:a8020e1d01134154c14e6cfefa569d0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">If Fantom is currently playing.  <br /></td></tr>
+<tr class="memitem:a0eb190ed1b47f2c27737137b6462e7a3" id="r_a0eb190ed1b47f2c27737137b6462e7a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0eb190ed1b47f2c27737137b6462e7a3">ConfirmTurnOver</a> ()</td></tr>
+<tr class="memdesc:a0eb190ed1b47f2c27737137b6462e7a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required to be called by the user after the Fantom has played to continue the game.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains utilities the Fantom can use during the game. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_fantom_player_interface_8cs_source.html#l00007">7</a> of file <a class="el" href="_i_fantom_player_interface_8cs_source.html">IFantomPlayerInterface.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_interfaces_2_i_fantom_player_interface_8cs_source.html#l00007">7</a> of file <a class="el" href="_fantom_games_core_2_interfaces_2_i_fantom_player_interface_8cs_source.html">IFantomPlayerInterface.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a8fc78751694e312c5800191ba49b57bf" name="a8fc78751694e312c5800191ba49b57bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fc78751694e312c5800191ba49b57bf">&#9670;&#160;</a></span>CannotMove()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fc78751694e312c5800191ba49b57bf">&#9670;&#160;</a></span>CannotMove() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; int &gt; FantomGamesCore.Interfaces.IFantomPlayerInterface.CannotMove </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If the Fantom Cannot Move because no tiles or Tickets are available, this has to be called, to continue with the game. </p>
+<dl class="section return"><dt>Returns</dt><dd>Return Code Ok if truly cannot Move else int id of the tile that can be Moved to (first one that fits) and Return Code Fail.</dd></dl>
+
+</div>
+</div>
+<a id="a8fc78751694e312c5800191ba49b57bf" name="a8fc78751694e312c5800191ba49b57bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fc78751694e312c5800191ba49b57bf">&#9670;&#160;</a></span>CannotMove() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -138,7 +172,27 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a0eb190ed1b47f2c27737137b6462e7a3" name="a0eb190ed1b47f2c27737137b6462e7a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0eb190ed1b47f2c27737137b6462e7a3">&#9670;&#160;</a></span>ConfirmTurnOver()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eb190ed1b47f2c27737137b6462e7a3">&#9670;&#160;</a></span>ConfirmTurnOver() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FantomGamesCore.Interfaces.IFantomPlayerInterface.ConfirmTurnOver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Required to be called by the user after the Fantom has played to continue the game. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a0eb190ed1b47f2c27737137b6462e7a3" name="a0eb190ed1b47f2c27737137b6462e7a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0eb190ed1b47f2c27737137b6462e7a3">&#9670;&#160;</a></span>ConfirmTurnOver() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -158,7 +212,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a6601c4fbc5d6831247f7272c7e0fdd97" name="a6601c4fbc5d6831247f7272c7e0fdd97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6601c4fbc5d6831247f7272c7e0fdd97">&#9670;&#160;</a></span>GetGameState()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6601c4fbc5d6831247f7272c7e0fdd97">&#9670;&#160;</a></span>GetGameState() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,12 +229,34 @@ Public Member Functions</h2></td></tr>
 <p>Returns the private Game State, which always contains the Fantom's position. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Implemented in <a class="el" href="class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#a90bf5eff3682345b9650dc61a3eab0de">FantomGamesCore.Managers.FantomGameManager</a>.</p>
+<p>Implemented in <a class="el" href="class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#a90bf5eff3682345b9650dc61a3eab0de">FantomGamesCore.Managers.FantomGameManager</a>, and <a class="el" href="class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#a90bf5eff3682345b9650dc61a3eab0de">FantomGamesCore.Managers.FantomGameManager</a>.</p>
+
+</div>
+</div>
+<a id="a6601c4fbc5d6831247f7272c7e0fdd97" name="a6601c4fbc5d6831247f7272c7e0fdd97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6601c4fbc5d6831247f7272c7e0fdd97">&#9670;&#160;</a></span>GetGameState() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; <a class="el" href="struct_fantom_games_core_1_1_fantom_game_state.html">FantomGameState</a> &gt; FantomGamesCore.Interfaces.IFantomPlayerInterface.GetGameState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the private Game State, which always contains the Fantom's position. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implemented in <a class="el" href="class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#a90bf5eff3682345b9650dc61a3eab0de">FantomGamesCore.Managers.FantomGameManager</a>, and <a class="el" href="class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#a90bf5eff3682345b9650dc61a3eab0de">FantomGamesCore.Managers.FantomGameManager</a>.</p>
 
 </div>
 </div>
 <a id="a8020e1d01134154c14e6cfefa569d0ff" name="a8020e1d01134154c14e6cfefa569d0ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8020e1d01134154c14e6cfefa569d0ff">&#9670;&#160;</a></span>IsFantomTurn()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8020e1d01134154c14e6cfefa569d0ff">&#9670;&#160;</a></span>IsFantomTurn() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,12 +273,65 @@ Public Member Functions</h2></td></tr>
 <p>If Fantom is currently playing. </p>
 <dl class="section return"><dt>Returns</dt><dd>True if Fantom can play.</dd></dl>
 
-<p>Implemented in <a class="el" href="class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#af01d6ea20c50d05d2c6797061e5ca08c">FantomGamesCore.Managers.FantomGameManager</a>.</p>
+<p>Implemented in <a class="el" href="class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#af01d6ea20c50d05d2c6797061e5ca08c">FantomGamesCore.Managers.FantomGameManager</a>, and <a class="el" href="class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#af01d6ea20c50d05d2c6797061e5ca08c">FantomGamesCore.Managers.FantomGameManager</a>.</p>
+
+</div>
+</div>
+<a id="a8020e1d01134154c14e6cfefa569d0ff" name="a8020e1d01134154c14e6cfefa569d0ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8020e1d01134154c14e6cfefa569d0ff">&#9670;&#160;</a></span>IsFantomTurn() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FantomGamesCore.Interfaces.IFantomPlayerInterface.IsFantomTurn </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If Fantom is currently playing. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if Fantom can play.</dd></dl>
+
+<p>Implemented in <a class="el" href="class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#af01d6ea20c50d05d2c6797061e5ca08c">FantomGamesCore.Managers.FantomGameManager</a>, and <a class="el" href="class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#af01d6ea20c50d05d2c6797061e5ca08c">FantomGamesCore.Managers.FantomGameManager</a>.</p>
 
 </div>
 </div>
 <a id="acf3120522cdc6dfa13b1b23eddef698b" name="acf3120522cdc6dfa13b1b23eddef698b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf3120522cdc6dfa13b1b23eddef698b">&#9670;&#160;</a></span>Move()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acf3120522cdc6dfa13b1b23eddef698b">&#9670;&#160;</a></span>Move() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; bool &gt; FantomGamesCore.Interfaces.IFantomPlayerInterface.Move </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tileIndex_Where</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a></td>          <td class="paramname"><span class="paramname"><em>ticketKind</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Moves the Fantom via the specified Ticket to the given position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tileIndex_Where</td><td></td></tr>
+    <tr><td class="paramname">ticketKind</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True, if successfully used the Ticket. Else False with reason in Code.</dd></dl>
+
+</div>
+</div>
+<a id="acf3120522cdc6dfa13b1b23eddef698b" name="acf3120522cdc6dfa13b1b23eddef698b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf3120522cdc6dfa13b1b23eddef698b">&#9670;&#160;</a></span>Move() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -233,7 +362,33 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="aed69c1ad7e15c459bbd47a3028aa150d" name="aed69c1ad7e15c459bbd47a3028aa150d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed69c1ad7e15c459bbd47a3028aa150d">&#9670;&#160;</a></span>PlaceAt()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aed69c1ad7e15c459bbd47a3028aa150d">&#9670;&#160;</a></span>PlaceAt() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; bool &gt; FantomGamesCore.Interfaces.IFantomPlayerInterface.PlaceAt </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tileIndex_Where</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>At the start of the game if Fantom isn't placed on the Playing Board, must be placed via this. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tileIndex_Where</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True, if successfully placed. Else False with reason in Code.</dd></dl>
+
+</div>
+</div>
+<a id="aed69c1ad7e15c459bbd47a3028aa150d" name="aed69c1ad7e15c459bbd47a3028aa150d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed69c1ad7e15c459bbd47a3028aa150d">&#9670;&#160;</a></span>PlaceAt() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,7 +414,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="ac2f65e9e39c9710d7dd494ad4c3dcd84" name="ac2f65e9e39c9710d7dd494ad4c3dcd84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2f65e9e39c9710d7dd494ad4c3dcd84">&#9670;&#160;</a></span>UseDouble()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2f65e9e39c9710d7dd494ad4c3dcd84">&#9670;&#160;</a></span>UseDouble() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -278,9 +433,26 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this interface was generated from the following file:<ul>
-<li>Interfaces/<a class="el" href="_i_fantom_player_interface_8cs_source.html">IFantomPlayerInterface.cs</a></li>
-</ul>
+<a id="ac2f65e9e39c9710d7dd494ad4c3dcd84" name="ac2f65e9e39c9710d7dd494ad4c3dcd84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2f65e9e39c9710d7dd494ad4c3dcd84">&#9670;&#160;</a></span>UseDouble() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; bool &gt; FantomGamesCore.Interfaces.IFantomPlayerInterface.UseDouble </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If available, will use the Double Move Ticket. Afterwards two Moves are expected with other Ticket Kinds. </p>
+<dl class="section return"><dt>Returns</dt><dd>True, if successfully used the Ticket. Else False with reason in Code.</dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

@@ -4,5 +4,5 @@ var struct_fantom_games_core_1_1_interfaces_1_1_game_board_loading_tile =
     [ "Mode2Neighbors", "struct_fantom_games_core_1_1_interfaces_1_1_game_board_loading_tile.html#a6979ec7ee303727d3dc9f447dd657e6a", null ],
     [ "Mode3Neighbors", "struct_fantom_games_core_1_1_interfaces_1_1_game_board_loading_tile.html#a4e76b0bf5109b9818fd86fab0539b879", null ],
     [ "RiverNeighbors", "struct_fantom_games_core_1_1_interfaces_1_1_game_board_loading_tile.html#a902a839cf711cc693615a42508abda29", null ],
-    [ "TileProperties", "struct_fantom_games_core_1_1_interfaces_1_1_game_board_loading_tile.html#a77c0c692271a1de47d5885c99b78e79b", null ]
+    [ "TileProperties", "struct_fantom_games_core_1_1_interfaces_1_1_game_board_loading_tile.html#a1929e87dd1f06e2e655379334e0b15ca", null ]
 ];

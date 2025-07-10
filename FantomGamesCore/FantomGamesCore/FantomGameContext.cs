@@ -317,8 +317,7 @@ namespace FantomGamesCore
         public bool IsFantomCaught()
         {
             // The Fantom is Caught when a Detective has moved him off the Board.
-            // The Fantom is always zero-index Actor
-            // Console.WriteLine($"Checking Fantom position {ActorsManager.GetTileOf(0)}");
+            // The Fantom is always zero-index Actor            
             return !ActorsManager.IsActorOnBoard(0);
         }
 

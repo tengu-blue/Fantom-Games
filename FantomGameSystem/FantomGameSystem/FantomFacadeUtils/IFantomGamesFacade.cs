@@ -94,12 +94,6 @@ namespace FantomGamesSystemUtils
         void FantomMovedTo(int tile, TicketKinds via);
 
         /// <summary>
-        /// Called when the Fantom moves to a tile, for history keeping in the Tickets table.
-        /// </summary>
-        /// <param name="tile"></param>
-        void FantomHistoryMoveTo(int tile);
-
-        /// <summary>
         /// Called when the Fantom skips their turn.
         /// </summary>
         void FantomCouldNotBeMoved();

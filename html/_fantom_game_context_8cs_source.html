@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FantomGamesCore: FantomGameContext.cs Source File</title>
+<title>FantomGames: C:/Users/Jakub/school/bakalarka/doc_test/FantomGamesCore/FantomGameContext.cs Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FantomGamesCore
+   <div id="projectname">FantomGames
    </div>
   </td>
  </tr>
@@ -292,7 +292,7 @@ $(function(){initNavTree('_fantom_game_context_8cs_source.html','',''); });
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        <span class="comment">// Game conditions checking --------------------------------------</span></div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> CheckConditions(<a class="code hl_enumeration" href="namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670">GameOverConditions</a>[] conditions)</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> CheckConditions(<a class="code hl_enumeration" href="namespace_fantom_games_core.html#ac050fd1e2b33a6cbaa18dfded85af473">GameOverConditions</a>[] conditions)</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>        {</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            <span class="comment">// Each integer represents multiple variables, if at least one is true, then that clause is fulfilled</span></div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            <span class="comment">// All clauses have to be true, if one is false -&gt; fail</span></div>
@@ -309,15 +309,15 @@ $(function(){initNavTree('_fantom_game_context_8cs_source.html','',''); });
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        }</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        <span class="keyword">public</span> <a class="code hl_enumeration" href="namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670">GameOverConditions</a>[] GetPassingConditions(<a class="code hl_enumeration" href="namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670">GameOverConditions</a>[] conditions)</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>        <span class="keyword">public</span> <a class="code hl_enumeration" href="namespace_fantom_games_core.html#ac050fd1e2b33a6cbaa18dfded85af473">GameOverConditions</a>[] GetPassingConditions(<a class="code hl_enumeration" href="namespace_fantom_games_core.html#ac050fd1e2b33a6cbaa18dfded85af473">GameOverConditions</a>[] conditions)</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        {</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>            List&lt;GameOverConditions&gt; passing = [];</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>            <span class="keywordflow">foreach</span> (var clause <span class="keywordflow">in</span> conditions)</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            {</div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                <a class="code hl_enumeration" href="namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670">GameOverConditions</a> passingCond = <a class="code hl_enumeration" href="namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670">GameOverConditions</a>.None;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>                <a class="code hl_enumeration" href="namespace_fantom_games_core.html#ac050fd1e2b33a6cbaa18dfded85af473">GameOverConditions</a> passingCond = <a class="code hl_enumeration" href="namespace_fantom_games_core.html#ac050fd1e2b33a6cbaa18dfded85af473">GameOverConditions</a>.None;</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                <span class="keywordflow">foreach</span> (var condition <span class="keywordflow">in</span> Enum.GetValues&lt;<a class="code hl_enumeration" href="namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670">GameOverConditions</a>&gt;())</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>                <span class="keywordflow">foreach</span> (var condition <span class="keywordflow">in</span> Enum.GetValues&lt;<a class="code hl_enumeration" href="namespace_fantom_games_core.html#ac050fd1e2b33a6cbaa18dfded85af473">GameOverConditions</a>&gt;())</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>                {</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>                    <span class="keywordflow">if</span> (clause.HasFlag(condition))</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>                    {</div>
@@ -327,17 +327,17 @@ $(function(){initNavTree('_fantom_game_context_8cs_source.html','',''); });
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>                    }</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>                }</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                <span class="keywordflow">if</span> (passingCond != <a class="code hl_enumeration" href="namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670">GameOverConditions</a>.None)</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                <span class="keywordflow">if</span> (passingCond != <a class="code hl_enumeration" href="namespace_fantom_games_core.html#ac050fd1e2b33a6cbaa18dfded85af473">GameOverConditions</a>.None)</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>                    passing.Add(passingCond);</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>            }</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>            <span class="keywordflow">return</span> [.. passing];</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        }</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
-<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> CheckClause(<a class="code hl_enumeration" href="namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670">GameOverConditions</a> clause)</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> CheckClause(<a class="code hl_enumeration" href="namespace_fantom_games_core.html#ac050fd1e2b33a6cbaa18dfded85af473">GameOverConditions</a> clause)</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        {</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            <span class="comment">// check all active conditions</span></div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            <span class="keywordflow">foreach</span> (var condition <span class="keywordflow">in</span> Enum.GetValues&lt;<a class="code hl_enumeration" href="namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670">GameOverConditions</a>&gt;())</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>            <span class="keywordflow">foreach</span> (var condition <span class="keywordflow">in</span> Enum.GetValues&lt;<a class="code hl_enumeration" href="namespace_fantom_games_core.html#ac050fd1e2b33a6cbaa18dfded85af473">GameOverConditions</a>&gt;())</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            {</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                <span class="keywordflow">if</span> (clause.HasFlag(condition))</div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>                {</div>
@@ -351,7 +351,7 @@ $(function(){initNavTree('_fantom_game_context_8cs_source.html','',''); });
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        }</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <span class="comment">// TODO: fill all the conditions</span></div>
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> CheckCondition(<a class="code hl_enumeration" href="namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670">GameOverConditions</a> condition)</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> CheckCondition(<a class="code hl_enumeration" href="namespace_fantom_games_core.html#ac050fd1e2b33a6cbaa18dfded85af473">GameOverConditions</a> condition)</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        {</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>            <span class="keywordflow">return</span> condition <span class="keywordflow">switch</span></div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            {</div>
@@ -418,21 +418,21 @@ $(function(){initNavTree('_fantom_game_context_8cs_source.html','',''); });
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span></div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>        <span class="keyword">public</span> GameResolutionStates gameResolutionResult { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; } = GameResolutionStates.Playing;</div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        <span class="keyword">public</span> <a class="code hl_enumeration" href="namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670">GameOverConditions</a>[] trueWinningConditions { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        <span class="keyword">public</span> <a class="code hl_enumeration" href="namespace_fantom_games_core.html#ac050fd1e2b33a6cbaa18dfded85af473">GameOverConditions</a>[] trueWinningConditions { <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> SeekersWon(<a class="code hl_enumeration" href="namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670">GameOverConditions</a>[] trueWinningConditions)</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> SeekersWon(<a class="code hl_enumeration" href="namespace_fantom_games_core.html#ac050fd1e2b33a6cbaa18dfded85af473">GameOverConditions</a>[] trueWinningConditions)</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>        {</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>            gameResolutionResult = GameResolutionStates.SeekersWon;</div>
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>            this.trueWinningConditions = trueWinningConditions;</div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>        }</div>
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span> </div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> FantomWon(<a class="code hl_enumeration" href="namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670">GameOverConditions</a>[] trueWinningConditions)</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> FantomWon(<a class="code hl_enumeration" href="namespace_fantom_games_core.html#ac050fd1e2b33a6cbaa18dfded85af473">GameOverConditions</a>[] trueWinningConditions)</div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        {</div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>            gameResolutionResult = GameResolutionStates.FantomWon;</div>
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>            this.trueWinningConditions = trueWinningConditions;</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>        }</div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Draw(<a class="code hl_enumeration" href="namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670">GameOverConditions</a>[] trueWinningConditions)</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>        <span class="keyword">public</span> <span class="keywordtype">void</span> Draw(<a class="code hl_enumeration" href="namespace_fantom_games_core.html#ac050fd1e2b33a6cbaa18dfded85af473">GameOverConditions</a>[] trueWinningConditions)</div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>        {</div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>            gameResolutionResult = GameResolutionStates.Draw;</div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>            this.trueWinningConditions = trueWinningConditions;</div>
@@ -441,19 +441,19 @@ $(function(){initNavTree('_fantom_game_context_8cs_source.html','',''); });
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>}</div>
 <div class="ttc" id="ainterface_fantom_games_core_1_1_interfaces_1_1_i_read_only_fantom_board_html_a0a2fc398e5116c8e36127bf1b747ef3c"><div class="ttname"><a href="interface_fantom_games_core_1_1_interfaces_1_1_i_read_only_fantom_board.html#a0a2fc398e5116c8e36127bf1b747ef3c">FantomGamesCore.Interfaces.IReadOnlyFantomBoard.GetNeighbor</a></div><div class="ttdeci">int GetNeighbor(TravelModes travelMode, int tileIndex, int neighborIndex)</div><div class="ttdoc">Get the specified neighbor of the specified Travel Mode tile.</div></div>
 <div class="ttc" id="ainterface_fantom_games_core_1_1_interfaces_1_1_i_read_only_fantom_board_html_a13a88e67953e14bc75f471daaf1672bd"><div class="ttname"><a href="interface_fantom_games_core_1_1_interfaces_1_1_i_read_only_fantom_board.html#a13a88e67953e14bc75f471daaf1672bd">FantomGamesCore.Interfaces.IReadOnlyFantomBoard.CountNeighbors</a></div><div class="ttdeci">int CountNeighbors(TravelModes travelMode, int tileIndex)</div><div class="ttdoc">Returns the number of neighbors for the specified Travel Mode and tile name.</div></div>
-<div class="ttc" id="anamespace_fantom_games_core_1_1_interfaces_html"><div class="ttname"><a href="namespace_fantom_games_core_1_1_interfaces.html">FantomGamesCore.Interfaces</a></div><div class="ttdef"><b>Definition</b> <a href="_i_fantom_game_interface_8cs_source.html#l00001">IFantomGameInterface.cs:2</a></div></div>
-<div class="ttc" id="anamespace_fantom_games_core_1_1_managers_html"><div class="ttname"><a href="namespace_fantom_games_core_1_1_managers.html">FantomGamesCore.Managers</a></div><div class="ttdef"><b>Definition</b> <a href="_actors_manager_8cs_source.html#l00001">ActorsManager.cs:2</a></div></div>
+<div class="ttc" id="anamespace_fantom_games_core_1_1_interfaces_html"><div class="ttname"><a href="namespace_fantom_games_core_1_1_interfaces.html">FantomGamesCore.Interfaces</a></div><div class="ttdef"><b>Definition</b> <a href="_fantom_games_core_2_interfaces_2_i_fantom_game_interface_8cs_source.html#l00001">IFantomGameInterface.cs:2</a></div></div>
+<div class="ttc" id="anamespace_fantom_games_core_1_1_managers_html"><div class="ttname"><a href="namespace_fantom_games_core_1_1_managers.html">FantomGamesCore.Managers</a></div><div class="ttdef"><b>Definition</b> <a href="_fantom_games_core_2_managers_2_actors_manager_8cs_source.html#l00001">ActorsManager.cs:2</a></div></div>
 <div class="ttc" id="anamespace_fantom_games_core_html"><div class="ttname"><a href="namespace_fantom_games_core.html">FantomGamesCore</a></div><div class="ttdef"><b>Definition</b> <a href="_fantom_board_8cs_source.html#l00003">FantomBoard.cs:4</a></div></div>
-<div class="ttc" id="anamespace_fantom_games_core_html_a406337a6071e8527489efc0786ee93d8"><div class="ttname"><a href="namespace_fantom_games_core.html#a406337a6071e8527489efc0786ee93d8">FantomGamesCore.ReturnCodes</a></div><div class="ttdeci">ReturnCodes</div><div class="ttdef"><b>Definition</b> <a href="_return_code_8cs_source.html#l00004">ReturnCode.cs:5</a></div></div>
-<div class="ttc" id="anamespace_fantom_games_core_html_a9d0420c0443afe021ba99924f0202670"><div class="ttname"><a href="namespace_fantom_games_core.html#a9d0420c0443afe021ba99924f0202670">FantomGamesCore.GameOverConditions</a></div><div class="ttdeci">GameOverConditions</div><div class="ttdoc">Various Conditions checked by the Game System. Can be combined into Victory / Defeat / Draw condition...</div><div class="ttdef"><b>Definition</b> <a href="_fantom_game_settings_8cs_source.html#l00251">FantomGameSettings.cs:252</a></div></div>
-<div class="ttc" id="anamespace_fantom_games_core_html_aa4a9d40fc9adb789c4d12acff8c81e3c"><div class="ttname"><a href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">FantomGamesCore.TicketKinds</a></div><div class="ttdeci">TicketKinds</div><div class="ttdoc">All known Ticket types.</div><div class="ttdef"><b>Definition</b> <a href="_fantom_game_settings_8cs_source.html#l00188">FantomGameSettings.cs:189</a></div></div>
+<div class="ttc" id="anamespace_fantom_games_core_html_a406337a6071e8527489efc0786ee93d8"><div class="ttname"><a href="namespace_fantom_games_core.html#a406337a6071e8527489efc0786ee93d8">FantomGamesCore.ReturnCodes</a></div><div class="ttdeci">ReturnCodes</div><div class="ttdef"><b>Definition</b> <a href="_fantom_games_core_2_return_code_8cs_source.html#l00004">ReturnCode.cs:5</a></div></div>
+<div class="ttc" id="anamespace_fantom_games_core_html_aa4a9d40fc9adb789c4d12acff8c81e3c"><div class="ttname"><a href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">FantomGamesCore.TicketKinds</a></div><div class="ttdeci">TicketKinds</div><div class="ttdoc">All known Ticket types.</div><div class="ttdef"><b>Definition</b> <a href="_fantom_games_core_2_fantom_game_settings_8cs_source.html#l00188">FantomGameSettings.cs:189</a></div></div>
+<div class="ttc" id="anamespace_fantom_games_core_html_ac050fd1e2b33a6cbaa18dfded85af473"><div class="ttname"><a href="namespace_fantom_games_core.html#ac050fd1e2b33a6cbaa18dfded85af473">FantomGamesCore.GameOverConditions</a></div><div class="ttdeci">GameOverConditions</div><div class="ttdoc">Various Conditions checked by the Game System. Can be combined into Victory / Defeat / Draw condition...</div><div class="ttdef"><b>Definition</b> <a href="_fantom_games_core_2_fantom_game_settings_8cs_source.html#l00251">FantomGameSettings.cs:252</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>FantomGameContext.cs</b></li>
+    <li class="navelem"><a href="dir_0556240156a98d4f3b72b3c0d8b8e432.html">school</a></li><li class="navelem"><a href="dir_8e389b6cc973865d2eb277c7841dfbc0.html">bakalarka</a></li><li class="navelem"><a href="dir_18c76e46ba462360793f4a424206ce7b.html">doc_test</a></li><li class="navelem"><a href="dir_fe87627638e40e95800e45d3b45815bb.html">FantomGamesCore</a></li><li class="navelem"><b>FantomGameContext.cs</b></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

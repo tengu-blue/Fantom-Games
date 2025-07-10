@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FantomGamesCore: FantomGamesCore.Interfaces.IGameBoardLoader Interface Reference</title>
+<title>FantomGames: FantomGamesCore.Interfaces.IGameBoardLoader Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FantomGamesCore
+   <div id="projectname">FantomGames
    </div>
   </td>
  </tr>
@@ -99,19 +99,21 @@ $(function(){initNavTree('interface_fantom_games_core_1_1_interfaces_1_1_i_game_
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a32d06edfda2cee6b0f9422a056c603c6" id="r_a32d06edfda2cee6b0f9422a056c603c6"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="struct_fantom_games_core_1_1_interfaces_1_1_game_board_loading_tile.html">GameBoardLoadingTile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32d06edfda2cee6b0f9422a056c603c6">LoadedTiles</a> ()</td></tr>
 <tr class="memdesc:a32d06edfda2cee6b0f9422a056c603c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">All loaded tiles exposed to the GameBoard.  <br /></td></tr>
+<tr class="memitem:a32d06edfda2cee6b0f9422a056c603c6" id="r_a32d06edfda2cee6b0f9422a056c603c6"><td class="memItemLeft" align="right" valign="top">IEnumerable&lt; <a class="el" href="struct_fantom_games_core_1_1_interfaces_1_1_game_board_loading_tile.html">GameBoardLoadingTile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32d06edfda2cee6b0f9422a056c603c6">LoadedTiles</a> ()</td></tr>
+<tr class="memdesc:a32d06edfda2cee6b0f9422a056c603c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">All loaded tiles exposed to the GameBoard.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:af5a2b116ce84ed16f8fba9bd4a3a3a23" id="r_af5a2b116ce84ed16f8fba9bd4a3a3a23"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5a2b116ce84ed16f8fba9bd4a3a3a23">TileCount</a><code> [get]</code></td></tr>
-<tr class="memdesc:af5a2b116ce84ed16f8fba9bd4a3a3a23"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many tiles the game board has in total. How many times the Enumerable will be called.  <br /></td></tr>
+<tr class="memitem:a2f994a2ccb0f420a931851b7123951e9" id="r_a2f994a2ccb0f420a931851b7123951e9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f994a2ccb0f420a931851b7123951e9">TileCount</a><code> [get]</code></td></tr>
+<tr class="memdesc:a2f994a2ccb0f420a931851b7123951e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">How many tiles the game board has in total. How many times the Enumerable will be called.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Used by the Core to load the playing board. Has to give a number of total tiles to be loaded and implement a method to retrieve those tiles via an Enumerable. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_game_board_loader_8cs_source.html#l00017">17</a> of file <a class="el" href="_i_game_board_loader_8cs_source.html">IGameBoardLoader.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_interfaces_2_i_game_board_loader_8cs_source.html#l00017">17</a> of file <a class="el" href="_fantom_games_core_2_interfaces_2_i_game_board_loader_8cs_source.html">IGameBoardLoader.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a32d06edfda2cee6b0f9422a056c603c6" name="a32d06edfda2cee6b0f9422a056c603c6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32d06edfda2cee6b0f9422a056c603c6">&#9670;&#160;</a></span>LoadedTiles()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d06edfda2cee6b0f9422a056c603c6">&#9670;&#160;</a></span>LoadedTiles() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,11 +130,35 @@ Properties</h2></td></tr>
 <p>All loaded tiles exposed to the GameBoard. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
+<p>Implemented in <a class="el" href="class_fantom_games_intermediary_1_1_intermediary_fantom_board_loader.html#a67ec4c927faccc28c42bdd995a7a3037">FantomGamesIntermediary.IntermediaryFantomBoardLoader</a>.</p>
+
+</div>
+</div>
+<a id="a32d06edfda2cee6b0f9422a056c603c6" name="a32d06edfda2cee6b0f9422a056c603c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32d06edfda2cee6b0f9422a056c603c6">&#9670;&#160;</a></span>LoadedTiles() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerable&lt; <a class="el" href="struct_fantom_games_core_1_1_interfaces_1_1_game_board_loading_tile.html">GameBoardLoadingTile</a> &gt; FantomGamesCore.Interfaces.IGameBoardLoader.LoadedTiles </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>All loaded tiles exposed to the GameBoard. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implemented in <a class="el" href="class_fantom_games_intermediary_1_1_intermediary_fantom_board_loader.html#a67ec4c927faccc28c42bdd995a7a3037">FantomGamesIntermediary.IntermediaryFantomBoardLoader</a>.</p>
+
 </div>
 </div>
 <a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
-<a id="af5a2b116ce84ed16f8fba9bd4a3a3a23" name="af5a2b116ce84ed16f8fba9bd4a3a3a23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5a2b116ce84ed16f8fba9bd4a3a3a23">&#9670;&#160;</a></span>TileCount</h2>
+<a id="a2f994a2ccb0f420a931851b7123951e9" name="a2f994a2ccb0f420a931851b7123951e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f994a2ccb0f420a931851b7123951e9">&#9670;&#160;</a></span>TileCount</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,13 +179,12 @@ Properties</h2></td></tr>
 
 <p>How many tiles the game board has in total. How many times the Enumerable will be called. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_game_board_loader_8cs_source.html#l00022">22</a> of file <a class="el" href="_i_game_board_loader_8cs_source.html">IGameBoardLoader.cs</a>.</p>
+<p>Implemented in <a class="el" href="class_fantom_games_intermediary_1_1_intermediary_fantom_board_loader.html#a938ae32b45390e4e0d943280bf2d7859">FantomGamesIntermediary.IntermediaryFantomBoardLoader</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_interfaces_2_i_game_board_loader_8cs_source.html#l00022">22</a> of file <a class="el" href="_fantom_games_core_2_interfaces_2_i_game_board_loader_8cs_source.html">IGameBoardLoader.cs</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this interface was generated from the following file:<ul>
-<li>Interfaces/<a class="el" href="_i_game_board_loader_8cs_source.html">IGameBoardLoader.cs</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "FantomGamesCore", "index.html", [
+  [ "FantomGames", "index.html", [
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", "namespaces_dup" ],
       [ "Package Members", "namespacemembers.html", [
@@ -38,8 +38,8 @@ var NAVTREE =
       [ "Class Index", "classes.html", null ],
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ],
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Properties", "functions_prop.html", null ]
       ] ]
@@ -50,7 +50,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"namespace_fantom_games_core_1_1_interfaces.html#a7512e7a6e78df5dccb0881049ed61999a04c542f260d16590ec60c594f67a30e7"
+"interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a5cf235a23afddd7d05036c04a0caeef9",
+"interface_fantom_games_system_utils_1_1_i_general_commander.html#a60c0c692c2f1ae3025ec72ad48c85a8d",
+"namespace_fantom_games_core_1_1_interfaces.html#a3af43050b41780355feb9f3c0a710a9ea149529f6dcbcc198787e69a11235422e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

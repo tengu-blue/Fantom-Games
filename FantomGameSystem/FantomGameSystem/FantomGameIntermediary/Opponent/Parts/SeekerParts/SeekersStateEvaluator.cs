@@ -227,7 +227,6 @@ namespace FantomGamesIntermediary.Opponent.Parts.SeekerParts
         {
             if (revealedAt is not null)
             {
-                Console.WriteLine("REVEALED");
                 // clear the current possible positions
                 Array.Clear(_futurePossiblePositions, 0, TileCount + 1);
                 // set the revealed position as the only one

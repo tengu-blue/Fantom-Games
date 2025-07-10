@@ -65,8 +65,7 @@ namespace FantomGamesIntermediary.Opponent.Interfaces
                 {
                     _worstMoveValue = newWorstValue;
                     _bestMoveValue = newBestValue;
-                    _bestSequence.SetMoves(proposedSequence);
-                    Console.WriteLine(_bestSequence);
+                    _bestSequence.SetMoves(proposedSequence);                    
                 }
             }
         }

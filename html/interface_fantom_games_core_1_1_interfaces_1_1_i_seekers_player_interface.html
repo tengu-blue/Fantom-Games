@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FantomGamesCore: FantomGamesCore.Interfaces.ISeekersPlayerInterface Interface Reference</title>
+<title>FantomGames: FantomGamesCore.Interfaces.ISeekersPlayerInterface Interface Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FantomGamesCore
+   <div id="projectname">FantomGames
    </div>
   </td>
  </tr>
@@ -111,14 +111,48 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0195abb7f77f56812aa013269df4e669"><td class="mdescLeft">&#160;</td><td class="mdescRight">If Seekers are currently playing.  <br /></td></tr>
 <tr class="memitem:a5a84333e3bc4851eb830fe6023585c36" id="r_a5a84333e3bc4851eb830fe6023585c36"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a84333e3bc4851eb830fe6023585c36">ConfirmTurnOver</a> ()</td></tr>
 <tr class="memdesc:a5a84333e3bc4851eb830fe6023585c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required to be called by the user after the Seekers have played to continue the game.  <br /></td></tr>
+<tr class="memitem:aa112b97556a284c8e4a4f768368e03d4" id="r_aa112b97556a284c8e4a4f768368e03d4"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; <a class="el" href="struct_fantom_games_core_1_1_fantom_game_state.html">FantomGameState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa112b97556a284c8e4a4f768368e03d4">GetGameState</a> ()</td></tr>
+<tr class="memdesc:aa112b97556a284c8e4a4f768368e03d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the public Game State, which might not contain the Fantom's position.  <br /></td></tr>
+<tr class="memitem:a9afe57c489a3b5658b2d2662e278144d" id="r_a9afe57c489a3b5658b2d2662e278144d"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9afe57c489a3b5658b2d2662e278144d">Move</a> (int seekerIndex, int tileIndex_Where, <a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a> ticketKind)</td></tr>
+<tr class="memdesc:a9afe57c489a3b5658b2d2662e278144d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the specified Seeker via the specified Ticket to the given position.  <br /></td></tr>
+<tr class="memitem:ab233bc6d12fea8434971414dafd3ebc6" id="r_ab233bc6d12fea8434971414dafd3ebc6"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab233bc6d12fea8434971414dafd3ebc6">PlaceAt</a> (int seekerIndex, int tileIndex_Where)</td></tr>
+<tr class="memdesc:ab233bc6d12fea8434971414dafd3ebc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">At the start of the game if Seekers aren't placed on the Playing Board, must be placed via this.  <br /></td></tr>
+<tr class="memitem:a53a499cd6912cba36872ab07d717f01a" id="r_a53a499cd6912cba36872ab07d717f01a"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53a499cd6912cba36872ab07d717f01a">CannotMove</a> ()</td></tr>
+<tr class="memdesc:a53a499cd6912cba36872ab07d717f01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If none of the yet unmoved Seekers or the next Seeker Cannot Move this has to be called, to continue with the game.  <br /></td></tr>
+<tr class="memitem:adf4819547c0dc88db621ec0db4369d89" id="r_adf4819547c0dc88db621ec0db4369d89"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf4819547c0dc88db621ec0db4369d89">SeekerIndex</a> ()</td></tr>
+<tr class="memdesc:adf4819547c0dc88db621ec0db4369d89"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current Seekers index, if it makes sense in current context.  <br /></td></tr>
+<tr class="memitem:a0195abb7f77f56812aa013269df4e669" id="r_a0195abb7f77f56812aa013269df4e669"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0195abb7f77f56812aa013269df4e669">IsSeekerTurn</a> ()</td></tr>
+<tr class="memdesc:a0195abb7f77f56812aa013269df4e669"><td class="mdescLeft">&#160;</td><td class="mdescRight">If Seekers are currently playing.  <br /></td></tr>
+<tr class="memitem:a5a84333e3bc4851eb830fe6023585c36" id="r_a5a84333e3bc4851eb830fe6023585c36"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a84333e3bc4851eb830fe6023585c36">ConfirmTurnOver</a> ()</td></tr>
+<tr class="memdesc:a5a84333e3bc4851eb830fe6023585c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required to be called by the user after the Seekers have played to continue the game.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains utilities the Seekers can use during the game. </p>
 
-<p class="definition">Definition at line <a class="el" href="_i_seekers_player_interface_8cs_source.html#l00006">6</a> of file <a class="el" href="_i_seekers_player_interface_8cs_source.html">ISeekersPlayerInterface.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_interfaces_2_i_seekers_player_interface_8cs_source.html#l00006">6</a> of file <a class="el" href="_fantom_games_core_2_interfaces_2_i_seekers_player_interface_8cs_source.html">ISeekersPlayerInterface.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a53a499cd6912cba36872ab07d717f01a" name="a53a499cd6912cba36872ab07d717f01a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53a499cd6912cba36872ab07d717f01a">&#9670;&#160;</a></span>CannotMove()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a53a499cd6912cba36872ab07d717f01a">&#9670;&#160;</a></span>CannotMove() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; int &gt; FantomGamesCore.Interfaces.ISeekersPlayerInterface.CannotMove </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If none of the yet unmoved Seekers or the next Seeker Cannot Move this has to be called, to continue with the game. </p>
+<dl class="section return"><dt>Returns</dt><dd>Return Code Ok if truly cannot Move else int id of the tile that can be Moved to (first one that fits) with Return Code Fail.</dd></dl>
+
+</div>
+</div>
+<a id="a53a499cd6912cba36872ab07d717f01a" name="a53a499cd6912cba36872ab07d717f01a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53a499cd6912cba36872ab07d717f01a">&#9670;&#160;</a></span>CannotMove() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -138,7 +172,27 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a5a84333e3bc4851eb830fe6023585c36" name="a5a84333e3bc4851eb830fe6023585c36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a84333e3bc4851eb830fe6023585c36">&#9670;&#160;</a></span>ConfirmTurnOver()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a84333e3bc4851eb830fe6023585c36">&#9670;&#160;</a></span>ConfirmTurnOver() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FantomGamesCore.Interfaces.ISeekersPlayerInterface.ConfirmTurnOver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Required to be called by the user after the Seekers have played to continue the game. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="a5a84333e3bc4851eb830fe6023585c36" name="a5a84333e3bc4851eb830fe6023585c36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a84333e3bc4851eb830fe6023585c36">&#9670;&#160;</a></span>ConfirmTurnOver() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -158,7 +212,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="aa112b97556a284c8e4a4f768368e03d4" name="aa112b97556a284c8e4a4f768368e03d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa112b97556a284c8e4a4f768368e03d4">&#9670;&#160;</a></span>GetGameState()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa112b97556a284c8e4a4f768368e03d4">&#9670;&#160;</a></span>GetGameState() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,12 +229,54 @@ Public Member Functions</h2></td></tr>
 <p>Returns the public Game State, which might not contain the Fantom's position. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p>Implemented in <a class="el" href="class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#a90bf5eff3682345b9650dc61a3eab0de">FantomGamesCore.Managers.FantomGameManager</a>.</p>
+<p>Implemented in <a class="el" href="class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#a90bf5eff3682345b9650dc61a3eab0de">FantomGamesCore.Managers.FantomGameManager</a>, and <a class="el" href="class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#a90bf5eff3682345b9650dc61a3eab0de">FantomGamesCore.Managers.FantomGameManager</a>.</p>
+
+</div>
+</div>
+<a id="aa112b97556a284c8e4a4f768368e03d4" name="aa112b97556a284c8e4a4f768368e03d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa112b97556a284c8e4a4f768368e03d4">&#9670;&#160;</a></span>GetGameState() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; <a class="el" href="struct_fantom_games_core_1_1_fantom_game_state.html">FantomGameState</a> &gt; FantomGamesCore.Interfaces.ISeekersPlayerInterface.GetGameState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the public Game State, which might not contain the Fantom's position. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implemented in <a class="el" href="class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#a90bf5eff3682345b9650dc61a3eab0de">FantomGamesCore.Managers.FantomGameManager</a>, and <a class="el" href="class_fantom_games_core_1_1_managers_1_1_fantom_game_manager.html#a90bf5eff3682345b9650dc61a3eab0de">FantomGamesCore.Managers.FantomGameManager</a>.</p>
 
 </div>
 </div>
 <a id="a0195abb7f77f56812aa013269df4e669" name="a0195abb7f77f56812aa013269df4e669"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0195abb7f77f56812aa013269df4e669">&#9670;&#160;</a></span>IsSeekerTurn()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0195abb7f77f56812aa013269df4e669">&#9670;&#160;</a></span>IsSeekerTurn() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FantomGamesCore.Interfaces.ISeekersPlayerInterface.IsSeekerTurn </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If Seekers are currently playing. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if Seekers can play.</dd></dl>
+
+</div>
+</div>
+<a id="a0195abb7f77f56812aa013269df4e669" name="a0195abb7f77f56812aa013269df4e669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0195abb7f77f56812aa013269df4e669">&#9670;&#160;</a></span>IsSeekerTurn() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,7 +296,44 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a9afe57c489a3b5658b2d2662e278144d" name="a9afe57c489a3b5658b2d2662e278144d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9afe57c489a3b5658b2d2662e278144d">&#9670;&#160;</a></span>Move()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9afe57c489a3b5658b2d2662e278144d">&#9670;&#160;</a></span>Move() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; bool &gt; FantomGamesCore.Interfaces.ISeekersPlayerInterface.Move </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>seekerIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tileIndex_Where</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a></td>          <td class="paramname"><span class="paramname"><em>ticketKind</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Moves the specified Seeker via the specified Ticket to the given position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">seekerIndex</td><td></td></tr>
+    <tr><td class="paramname">tileIndex_Where</td><td></td></tr>
+    <tr><td class="paramname">ticketKind</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True, if successfully used the Ticket. Else False with reason in Code.</dd></dl>
+
+</div>
+</div>
+<a id="a9afe57c489a3b5658b2d2662e278144d" name="a9afe57c489a3b5658b2d2662e278144d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9afe57c489a3b5658b2d2662e278144d">&#9670;&#160;</a></span>Move() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -237,7 +370,38 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="ab233bc6d12fea8434971414dafd3ebc6" name="ab233bc6d12fea8434971414dafd3ebc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab233bc6d12fea8434971414dafd3ebc6">&#9670;&#160;</a></span>PlaceAt()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab233bc6d12fea8434971414dafd3ebc6">&#9670;&#160;</a></span>PlaceAt() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; bool &gt; FantomGamesCore.Interfaces.ISeekersPlayerInterface.PlaceAt </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>seekerIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tileIndex_Where</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>At the start of the game if Seekers aren't placed on the Playing Board, must be placed via this. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">seekerIndex</td><td></td></tr>
+    <tr><td class="paramname">tileIndex_Where</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True, if successfully placed. Else False with reason in Code.</dd></dl>
+
+</div>
+</div>
+<a id="ab233bc6d12fea8434971414dafd3ebc6" name="ab233bc6d12fea8434971414dafd3ebc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab233bc6d12fea8434971414dafd3ebc6">&#9670;&#160;</a></span>PlaceAt() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -268,7 +432,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="adf4819547c0dc88db621ec0db4369d89" name="adf4819547c0dc88db621ec0db4369d89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf4819547c0dc88db621ec0db4369d89">&#9670;&#160;</a></span>SeekerIndex()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adf4819547c0dc88db621ec0db4369d89">&#9670;&#160;</a></span>SeekerIndex() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -287,9 +451,26 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this interface was generated from the following file:<ul>
-<li>Interfaces/<a class="el" href="_i_seekers_player_interface_8cs_source.html">ISeekersPlayerInterface.cs</a></li>
-</ul>
+<a id="adf4819547c0dc88db621ec0db4369d89" name="adf4819547c0dc88db621ec0db4369d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf4819547c0dc88db621ec0db4369d89">&#9670;&#160;</a></span>SeekerIndex() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; int &gt; FantomGamesCore.Interfaces.ISeekersPlayerInterface.SeekerIndex </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The current Seekers index, if it makes sense in current context. </p>
+<dl class="section return"><dt>Returns</dt><dd>The index of the current Seeker.</dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">

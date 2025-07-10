@@ -36,7 +36,7 @@
 				<Setter Property="FontSize" Value="25"/>
 				<Setter Property="Margin" Value="5"/>
 			</Style>
-
+			
 		</Window.Styles>
 
 </Window>

@@ -40,10 +40,10 @@
 				PointerPressed="BoardMousePressed">
 
 				<!-- Board stays where it is; split into 4 parts for better performance -->				
-				<Image Source="/Assets/BoardDesat_P1.png" Canvas.Left="0" Canvas.Top="0" />
-				<Image Source="/Assets/BoardDesat_P2.png" Canvas.Left="1435" Canvas.Top="0" />
-				<Image Source="/Assets/BoardDesat_P3.png" Canvas.Left="0" Canvas.Top="1435" />
-				<Image Source="/Assets/BoardDesat_P4.png" Canvas.Left="1435" Canvas.Top="1435" />
+				<Image Source="/Assets/BoardDesat_P1.png" Canvas.Left="0" Canvas.Top="0" RenderOptions.BitmapInterpolationMode="HighQuality" />
+				<Image Source="/Assets/BoardDesat_P2.png" Canvas.Left="1435" Canvas.Top="0" RenderOptions.BitmapInterpolationMode="HighQuality" />
+				<Image Source="/Assets/BoardDesat_P3.png" Canvas.Left="0" Canvas.Top="1435" RenderOptions.BitmapInterpolationMode="HighQuality" />
+				<Image Source="/Assets/BoardDesat_P4.png" Canvas.Left="1435" Canvas.Top="1435" RenderOptions.BitmapInterpolationMode="HighQuality" />
 				
 				<!-- Position Pieces via canvas offsets -->
 				<Image Classes="piece" Source="/Assets/Fantom.png" Canvas.Left="-60" Canvas.Top="0" Name="FantomPiece"/>
@@ -64,8 +64,9 @@
 
 				<Image 
 					Canvas.Left="2870"
+					RenderOptions.BitmapInterpolationMode="HighQuality"
 					Source="/Assets/TicketsTable.png"/>
-				
+					
 				<Grid	   Canvas.Left="2870"
 						   Height="1432"
 						   Width="1269"

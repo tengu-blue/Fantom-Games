@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>FantomGamesCore: FantomGamesCore.Managers.FantomGameManager Class Reference</title>
+<title>FantomGames: FantomGamesCore.Managers.FantomGameManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">FantomGamesCore
+   <div id="projectname">FantomGames
    </div>
   </td>
  </tr>
@@ -154,19 +154,82 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0d290e00dc6641d16758f45ed65ea665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a game state changed listener.  <br /></td></tr>
 <tr class="memitem:aebe6c1c48f4b129d2ef45b4ac6b5eeb5" id="r_aebe6c1c48f4b129d2ef45b4ac6b5eeb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebe6c1c48f4b129d2ef45b4ac6b5eeb5">SetLogger</a> (TextWriter? logger)</td></tr>
 <tr class="memdesc:aebe6c1c48f4b129d2ef45b4ac6b5eeb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the logger to a TextWriter or disables logging if null. Logger is also passed via settings.  <br /></td></tr>
+<tr class="memitem:aa38d12c34cfba85f3b2b4bb700afe98d" id="r_aa38d12c34cfba85f3b2b4bb700afe98d"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa38d12c34cfba85f3b2b4bb700afe98d">DoCommand</a> (object args)</td></tr>
+<tr class="memdesc:aa38d12c34cfba85f3b2b4bb700afe98d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A general purpose command for future core expansions.  <br /></td></tr>
+<tr class="memitem:aa26882760862fd172fb02b3034830022" id="r_aa26882760862fd172fb02b3034830022"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa26882760862fd172fb02b3034830022">Start</a> ()</td></tr>
+<tr class="memdesc:aa26882760862fd172fb02b3034830022"><td class="mdescLeft">&#160;</td><td class="mdescRight">An initial start command, can only be called once at the start. Purpose is to give control to the user over when the game finally begins.  <br /></td></tr>
+<tr class="memitem:ae4e1e4004b372616bac932d3613622f9" id="r_ae4e1e4004b372616bac932d3613622f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4e1e4004b372616bac932d3613622f9">Stop</a> ()</td></tr>
+<tr class="memdesc:ae4e1e4004b372616bac932d3613622f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">For stopping the game correctly. Once called, the game cannot be started again.  <br /></td></tr>
+<tr class="memitem:a90bf5eff3682345b9650dc61a3eab0de" id="r_a90bf5eff3682345b9650dc61a3eab0de"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; <a class="el" href="struct_fantom_games_core_1_1_fantom_game_state.html">FantomGameState</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90bf5eff3682345b9650dc61a3eab0de">GetGameState</a> ()</td></tr>
+<tr class="memdesc:a90bf5eff3682345b9650dc61a3eab0de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the private (Fantom / Full) current game state with information about all Actor positions, Tickets etc.  <br /></td></tr>
+<tr class="memitem:ac5df9196a2a8773133111d779ef47053" id="r_ac5df9196a2a8773133111d779ef47053"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5df9196a2a8773133111d779ef47053">HaveAllSeekersMoved</a> ()</td></tr>
+<tr class="memitem:a6b321b580d0db85e9931d407919b5522" id="r_a6b321b580d0db85e9931d407919b5522"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b321b580d0db85e9931d407919b5522">Reset</a> ()</td></tr>
+<tr class="memdesc:a6b321b580d0db85e9931d407919b5522"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the game again with current (last valid) settings.  <br /></td></tr>
+<tr class="memitem:a9ce430c7a4ed0a67d59d01637badcd6a" id="r_a9ce430c7a4ed0a67d59d01637badcd6a"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ce430c7a4ed0a67d59d01637badcd6a">Restart</a> (<a class="el" href="struct_fantom_games_core_1_1_fantom_game_settings.html">FantomGameSettings</a> newSettings)</td></tr>
+<tr class="memdesc:a9ce430c7a4ed0a67d59d01637badcd6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the current game settings to new ones.  <br /></td></tr>
+<tr class="memitem:a22f51c1b9e4818303e34b449916abe37" id="r_a22f51c1b9e4818303e34b449916abe37"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; <a class="el" href="struct_fantom_games_core_1_1_fantom_game_result.html">FantomGameResult</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22f51c1b9e4818303e34b449916abe37">GetGameResult</a> ()</td></tr>
+<tr class="memdesc:a22f51c1b9e4818303e34b449916abe37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Once the game is over, this will return information about how the game ended. Invalid when the game is not over yet.  <br /></td></tr>
+<tr class="memitem:a0298306a96f3f5dca8fe88f6b2aae39a" id="r_a0298306a96f3f5dca8fe88f6b2aae39a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0298306a96f3f5dca8fe88f6b2aae39a">IsValid</a> ()</td></tr>
+<tr class="memdesc:a0298306a96f3f5dca8fe88f6b2aae39a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the current settings led to a valid state will return true.  <br /></td></tr>
+<tr class="memitem:a42b5deab51b47c56565c7a345e5a257a" id="r_a42b5deab51b47c56565c7a345e5a257a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42b5deab51b47c56565c7a345e5a257a">IsOver</a> ()</td></tr>
+<tr class="memdesc:a42b5deab51b47c56565c7a345e5a257a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the game has ended.  <br /></td></tr>
+<tr class="memitem:ae25569d9c9a20751ed748db8de721801" id="r_ae25569d9c9a20751ed748db8de721801"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae25569d9c9a20751ed748db8de721801">IsFantomRevealing</a> ()</td></tr>
+<tr class="memdesc:ae25569d9c9a20751ed748db8de721801"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this Turn Fantom will be revealed.  <br /></td></tr>
+<tr class="memitem:af01d6ea20c50d05d2c6797061e5ca08c" id="r_af01d6ea20c50d05d2c6797061e5ca08c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af01d6ea20c50d05d2c6797061e5ca08c">IsFantomTurn</a> ()</td></tr>
+<tr class="memdesc:af01d6ea20c50d05d2c6797061e5ca08c"><td class="mdescLeft">&#160;</td><td class="mdescRight">If it's currently Fantom's turn.  <br /></td></tr>
+<tr class="memitem:ac5e774bbf5c63da90b2208be8025620c" id="r_ac5e774bbf5c63da90b2208be8025620c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5e774bbf5c63da90b2208be8025620c">IsSeekersTurn</a> ()</td></tr>
+<tr class="memdesc:ac5e774bbf5c63da90b2208be8025620c"><td class="mdescLeft">&#160;</td><td class="mdescRight">If it's currently Seekers' turn.  <br /></td></tr>
+<tr class="memitem:a0a73adc9e448922ab09fc5ef8fa7274d" id="r_a0a73adc9e448922ab09fc5ef8fa7274d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_read_only_fantom_board.html">IReadOnlyFantomBoard</a>?&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a73adc9e448922ab09fc5ef8fa7274d">GetBoard</a> ()</td></tr>
+<tr class="memdesc:a0a73adc9e448922ab09fc5ef8fa7274d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the currently loaded playing board.  <br /></td></tr>
+<tr class="memitem:a61947eb1e7154e5387013625dc94ee69" id="r_a61947eb1e7154e5387013625dc94ee69"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61947eb1e7154e5387013625dc94ee69">GetSeekerIndex</a> ()</td></tr>
+<tr class="memdesc:a61947eb1e7154e5387013625dc94ee69"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current seeker index if ordering is enabled. Not defined if ordering disabled.  <br /></td></tr>
+<tr class="memitem:a286479b38be1ab886d129c53cb0d4275" id="r_a286479b38be1ab886d129c53cb0d4275"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_fantom_games_core_1_1_fantom_game_settings.html">FantomGameSettings</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a286479b38be1ab886d129c53cb0d4275">GetActiveSettings</a> ()</td></tr>
+<tr class="memdesc:a286479b38be1ab886d129c53cb0d4275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the currently loaded settings. Might return default (empty) if in invalid state.  <br /></td></tr>
+<tr class="memitem:af1a2d54c096d6b8875994cd717ef81bf" id="r_af1a2d54c096d6b8875994cd717ef81bf"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af1a2d54c096d6b8875994cd717ef81bf">GetRemainingTicketsForDetective</a> (int detectiveIndex, <a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a> ticketKind)</td></tr>
+<tr class="memdesc:af1a2d54c096d6b8875994cd717ef81bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current number of tickets of a given type held by the specified Detective. Undefined for Bobbies.  <br /></td></tr>
+<tr class="memitem:a744e26970dd13c5b3415dce93479c0d0" id="r_a744e26970dd13c5b3415dce93479c0d0"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a744e26970dd13c5b3415dce93479c0d0">GetRemainingTicketsForFantom</a> (<a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a> ticketKind)</td></tr>
+<tr class="memdesc:a744e26970dd13c5b3415dce93479c0d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current number of tickets of a given type held by the Fantom.  <br /></td></tr>
+<tr class="memitem:a20a94b53c7d58af23e4a4c3d9322a5ba" id="r_a20a94b53c7d58af23e4a4c3d9322a5ba"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20a94b53c7d58af23e4a4c3d9322a5ba">GetRemainingTicketsInSupply</a> (<a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a> ticketKind)</td></tr>
+<tr class="memdesc:a20a94b53c7d58af23e4a4c3d9322a5ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current number of tickets of a given type in the supply.  <br /></td></tr>
+<tr class="memitem:a3544f9854b45d395f97953cef6ea3b9e" id="r_a3544f9854b45d395f97953cef6ea3b9e"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3544f9854b45d395f97953cef6ea3b9e">CurrentRound</a> ()</td></tr>
+<tr class="memdesc:a3544f9854b45d395f97953cef6ea3b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of the current Round.  <br /></td></tr>
+<tr class="memitem:a0b7e2f18d18340aa8cc1145ed412e859" id="r_a0b7e2f18d18340aa8cc1145ed412e859"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b7e2f18d18340aa8cc1145ed412e859">CurrentMove</a> ()</td></tr>
+<tr class="memdesc:a0b7e2f18d18340aa8cc1145ed412e859"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of the done Fantom Moves.  <br /></td></tr>
+<tr class="memitem:ad086bfc9bc9b9bc934cc4d60a71d11f7" id="r_ad086bfc9bc9b9bc934cc4d60a71d11f7"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad086bfc9bc9b9bc934cc4d60a71d11f7">PlaceSeekerAt</a> (int seekerIndex, int tileIndex)</td></tr>
+<tr class="memdesc:ad086bfc9bc9b9bc934cc4d60a71d11f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">If starting positions aren't specified, user has to specify before game can begin.  <br /></td></tr>
+<tr class="memitem:a9973ffa6d12c4302625d9a678b7d11d0" id="r_a9973ffa6d12c4302625d9a678b7d11d0"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9973ffa6d12c4302625d9a678b7d11d0">PlaceFantomAt</a> (int tileIndex)</td></tr>
+<tr class="memdesc:a9973ffa6d12c4302625d9a678b7d11d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">If starting positions aren't specified, user has to specify before game can begin.  <br /></td></tr>
+<tr class="memitem:a140f3fda716e6f034257688667357747" id="r_a140f3fda716e6f034257688667357747"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a140f3fda716e6f034257688667357747">ConfirmFantomTurnOver</a> ()</td></tr>
+<tr class="memdesc:a140f3fda716e6f034257688667357747"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required to be called by the user after the Fantom has played to continue the game.  <br /></td></tr>
+<tr class="memitem:af3eaacace87968af710cda4d018c7c31" id="r_af3eaacace87968af710cda4d018c7c31"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3eaacace87968af710cda4d018c7c31">ConfirmSeekersTurnOver</a> ()</td></tr>
+<tr class="memdesc:af3eaacace87968af710cda4d018c7c31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required to be called by the user after the Seekers have played to continue the game.  <br /></td></tr>
+<tr class="memitem:a12447fc109a7cf574b58e6b9c81167dc" id="r_a12447fc109a7cf574b58e6b9c81167dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_player_interface.html">IFantomPlayerInterface</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12447fc109a7cf574b58e6b9c81167dc">GetFantomPlayerTools</a> ()</td></tr>
+<tr class="memdesc:a12447fc109a7cf574b58e6b9c81167dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for controlling the Fantom safely.  <br /></td></tr>
+<tr class="memitem:a2f8c546d5a62d34f7add887546b84c10" id="r_a2f8c546d5a62d34f7add887546b84c10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_seekers_player_interface.html">ISeekersPlayerInterface</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f8c546d5a62d34f7add887546b84c10">GetSeekersPlayerTools</a> ()</td></tr>
+<tr class="memdesc:a2f8c546d5a62d34f7add887546b84c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface for controlling the Seekers safely.  <br /></td></tr>
+<tr class="memitem:acec8c7a655e67e792ef5b6e9e01241a1" id="r_acec8c7a655e67e792ef5b6e9e01241a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acec8c7a655e67e792ef5b6e9e01241a1">AddGameStateChangeCallback</a> (FantomGameStateChangedCallback callback)</td></tr>
+<tr class="memdesc:acec8c7a655e67e792ef5b6e9e01241a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new game state changed listener.  <br /></td></tr>
+<tr class="memitem:a0d290e00dc6641d16758f45ed65ea665" id="r_a0d290e00dc6641d16758f45ed65ea665"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d290e00dc6641d16758f45ed65ea665">RemoveGameStateChangeCallback</a> (FantomGameStateChangedCallback callback)</td></tr>
+<tr class="memdesc:a0d290e00dc6641d16758f45ed65ea665"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a game state changed listener.  <br /></td></tr>
+<tr class="memitem:aebe6c1c48f4b129d2ef45b4ac6b5eeb5" id="r_aebe6c1c48f4b129d2ef45b4ac6b5eeb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebe6c1c48f4b129d2ef45b4ac6b5eeb5">SetLogger</a> (TextWriter? logger)</td></tr>
+<tr class="memdesc:aebe6c1c48f4b129d2ef45b4ac6b5eeb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the logger to a TextWriter or disables logging if null. Logger is also passed via settings.  <br /></td></tr>
+<tr class="memitem:aa38d12c34cfba85f3b2b4bb700afe98d" id="r_aa38d12c34cfba85f3b2b4bb700afe98d"><td class="memItemLeft" align="right" valign="top">ReturnCode&lt; object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa38d12c34cfba85f3b2b4bb700afe98d">DoCommand</a> (object args)</td></tr>
+<tr class="memdesc:aa38d12c34cfba85f3b2b4bb700afe98d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A general purpose command for future core expansions.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a13076da10ac9ec8a14e0bcd341f7662d" id="r_a13076da10ac9ec8a14e0bcd341f7662d"><td class="memItemLeft" align="right" valign="top">static ReturnCode&lt; <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html">IFantomGameInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13076da10ac9ec8a14e0bcd341f7662d">CreateGame</a> (<a class="el" href="struct_fantom_games_core_1_1_fantom_game_settings.html">FantomGameSettings</a> settings)</td></tr>
+<tr class="memdesc:a13076da10ac9ec8a14e0bcd341f7662d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an instance of a new Game Core using the passed initial settings.  <br /></td></tr>
 <tr class="memitem:a13076da10ac9ec8a14e0bcd341f7662d" id="r_a13076da10ac9ec8a14e0bcd341f7662d"><td class="memItemLeft" align="right" valign="top">static ReturnCode&lt; <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html">IFantomGameInterface</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13076da10ac9ec8a14e0bcd341f7662d">CreateGame</a> (<a class="el" href="struct_fantom_games_core_1_1_fantom_game_settings.html">FantomGameSettings</a> settings)</td></tr>
 <tr class="memdesc:a13076da10ac9ec8a14e0bcd341f7662d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an instance of a new Game Core using the passed initial settings.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The main entry for the Game Core. Use the appropriate interfaces to control it. </p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00009">9</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00009">9</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="acec8c7a655e67e792ef5b6e9e01241a1" name="acec8c7a655e67e792ef5b6e9e01241a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acec8c7a655e67e792ef5b6e9e01241a1">&#9670;&#160;</a></span>AddGameStateChangeCallback()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#acec8c7a655e67e792ef5b6e9e01241a1">&#9670;&#160;</a></span>AddGameStateChangeCallback() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -190,12 +253,41 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a9e9a2941ac63ac6b448d28b792584e83">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l01093">1093</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l01093">1093</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="acec8c7a655e67e792ef5b6e9e01241a1" name="acec8c7a655e67e792ef5b6e9e01241a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec8c7a655e67e792ef5b6e9e01241a1">&#9670;&#160;</a></span>AddGameStateChangeCallback() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FantomGamesCore.Managers.FantomGameManager.AddGameStateChangeCallback </td>
+          <td>(</td>
+          <td class="paramtype">FantomGameStateChangedCallback</td>          <td class="paramname"><span class="paramname"><em>callback</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a new game state changed listener. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a9e9a2941ac63ac6b448d28b792584e83">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l01093">1093</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a140f3fda716e6f034257688667357747" name="a140f3fda716e6f034257688667357747"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a140f3fda716e6f034257688667357747">&#9670;&#160;</a></span>ConfirmFantomTurnOver()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a140f3fda716e6f034257688667357747">&#9670;&#160;</a></span>ConfirmFantomTurnOver() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,12 +306,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#afc0908fb226769757812000579e45dd9">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00674">674</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00674">674</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a140f3fda716e6f034257688667357747" name="a140f3fda716e6f034257688667357747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a140f3fda716e6f034257688667357747">&#9670;&#160;</a></span>ConfirmFantomTurnOver() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FantomGamesCore.Managers.FantomGameManager.ConfirmFantomTurnOver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Required to be called by the user after the Fantom has played to continue the game. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#afc0908fb226769757812000579e45dd9">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00674">674</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="af3eaacace87968af710cda4d018c7c31" name="af3eaacace87968af710cda4d018c7c31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3eaacace87968af710cda4d018c7c31">&#9670;&#160;</a></span>ConfirmSeekersTurnOver()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af3eaacace87968af710cda4d018c7c31">&#9670;&#160;</a></span>ConfirmSeekersTurnOver() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,12 +354,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#ad676d03c98bc1fc919e04ce48d9b8f4d">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00721">721</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00721">721</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="af3eaacace87968af710cda4d018c7c31" name="af3eaacace87968af710cda4d018c7c31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3eaacace87968af710cda4d018c7c31">&#9670;&#160;</a></span>ConfirmSeekersTurnOver() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FantomGamesCore.Managers.FantomGameManager.ConfirmSeekersTurnOver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Required to be called by the user after the Seekers have played to continue the game. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#ad676d03c98bc1fc919e04ce48d9b8f4d">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00721">721</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a13076da10ac9ec8a14e0bcd341f7662d" name="a13076da10ac9ec8a14e0bcd341f7662d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a13076da10ac9ec8a14e0bcd341f7662d">&#9670;&#160;</a></span>CreateGame()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a13076da10ac9ec8a14e0bcd341f7662d">&#9670;&#160;</a></span>CreateGame() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -274,12 +414,48 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A return code with an <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html" title="Through this interface the game can be controlled.">IFantomGameInterface</a> instance of this newly created Game Core.</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00041">41</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00041">41</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a13076da10ac9ec8a14e0bcd341f7662d" name="a13076da10ac9ec8a14e0bcd341f7662d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13076da10ac9ec8a14e0bcd341f7662d">&#9670;&#160;</a></span>CreateGame() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html">IFantomGameInterface</a> &gt; FantomGamesCore.Managers.FantomGameManager.CreateGame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_fantom_games_core_1_1_fantom_game_settings.html">FantomGameSettings</a></td>          <td class="paramname"><span class="paramname"><em>settings</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create an instance of a new Game Core using the passed initial settings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">settings</td><td>The initial settings.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A return code with an <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html" title="Through this interface the game can be controlled.">IFantomGameInterface</a> instance of this newly created Game Core.</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00041">41</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a0b7e2f18d18340aa8cc1145ed412e859" name="a0b7e2f18d18340aa8cc1145ed412e859"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b7e2f18d18340aa8cc1145ed412e859">&#9670;&#160;</a></span>CurrentMove()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b7e2f18d18340aa8cc1145ed412e859">&#9670;&#160;</a></span>CurrentMove() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -298,12 +474,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#aa51b9913bdd0bdbbacd7db576271043e">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00556">556</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00556">556</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0b7e2f18d18340aa8cc1145ed412e859" name="a0b7e2f18d18340aa8cc1145ed412e859"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b7e2f18d18340aa8cc1145ed412e859">&#9670;&#160;</a></span>CurrentMove() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; uint &gt; FantomGamesCore.Managers.FantomGameManager.CurrentMove </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of the done Fantom Moves. </p>
+<dl class="section return"><dt>Returns</dt><dd>The number of the current Fantom Move.</dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#aa51b9913bdd0bdbbacd7db576271043e">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00556">556</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a3544f9854b45d395f97953cef6ea3b9e" name="a3544f9854b45d395f97953cef6ea3b9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3544f9854b45d395f97953cef6ea3b9e">&#9670;&#160;</a></span>CurrentRound()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3544f9854b45d395f97953cef6ea3b9e">&#9670;&#160;</a></span>CurrentRound() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -322,12 +522,96 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#abc8c77600293758b57e818d5c5705e26">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00545">545</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00545">545</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3544f9854b45d395f97953cef6ea3b9e" name="a3544f9854b45d395f97953cef6ea3b9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3544f9854b45d395f97953cef6ea3b9e">&#9670;&#160;</a></span>CurrentRound() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; uint &gt; FantomGamesCore.Managers.FantomGameManager.CurrentRound </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The number of the current Round. </p>
+<dl class="section return"><dt>Returns</dt><dd>The number of the current Round.</dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#abc8c77600293758b57e818d5c5705e26">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00545">545</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa38d12c34cfba85f3b2b4bb700afe98d" name="aa38d12c34cfba85f3b2b4bb700afe98d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa38d12c34cfba85f3b2b4bb700afe98d">&#9670;&#160;</a></span>DoCommand() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; object &gt; FantomGamesCore.Managers.FantomGameManager.DoCommand </td>
+          <td>(</td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A general purpose command for future core expansions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Arguments for the generic command.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A return code for the command.</dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#ac0e70af458912ed8f64fa685b6c085c4">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l01130">1130</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa38d12c34cfba85f3b2b4bb700afe98d" name="aa38d12c34cfba85f3b2b4bb700afe98d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa38d12c34cfba85f3b2b4bb700afe98d">&#9670;&#160;</a></span>DoCommand() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; object &gt; FantomGamesCore.Managers.FantomGameManager.DoCommand </td>
+          <td>(</td>
+          <td class="paramtype">object</td>          <td class="paramname"><span class="paramname"><em>args</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A general purpose command for future core expansions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Arguments for the generic command.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A return code for the command.</dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#ac0e70af458912ed8f64fa685b6c085c4">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l01130">1130</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a286479b38be1ab886d129c53cb0d4275" name="a286479b38be1ab886d129c53cb0d4275"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a286479b38be1ab886d129c53cb0d4275">&#9670;&#160;</a></span>GetActiveSettings()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a286479b38be1ab886d129c53cb0d4275">&#9670;&#160;</a></span>GetActiveSettings() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -346,12 +630,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a043563f01782001b6572aa210023b8b2">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00510">510</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00510">510</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a286479b38be1ab886d129c53cb0d4275" name="a286479b38be1ab886d129c53cb0d4275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a286479b38be1ab886d129c53cb0d4275">&#9670;&#160;</a></span>GetActiveSettings() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_fantom_games_core_1_1_fantom_game_settings.html">FantomGameSettings</a> FantomGamesCore.Managers.FantomGameManager.GetActiveSettings </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the currently loaded settings. Might return default (empty) if in invalid state. </p>
+<dl class="section return"><dt>Returns</dt><dd>Currently loaded settings.</dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a043563f01782001b6572aa210023b8b2">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00510">510</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a0a73adc9e448922ab09fc5ef8fa7274d" name="a0a73adc9e448922ab09fc5ef8fa7274d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a73adc9e448922ab09fc5ef8fa7274d">&#9670;&#160;</a></span>GetBoard()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a73adc9e448922ab09fc5ef8fa7274d">&#9670;&#160;</a></span>GetBoard() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -370,12 +678,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a88a7c0f267e2e568ccb4af3ecf27d49e">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00495">495</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00495">495</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0a73adc9e448922ab09fc5ef8fa7274d" name="a0a73adc9e448922ab09fc5ef8fa7274d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a73adc9e448922ab09fc5ef8fa7274d">&#9670;&#160;</a></span>GetBoard() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_read_only_fantom_board.html">IReadOnlyFantomBoard</a>? FantomGamesCore.Managers.FantomGameManager.GetBoard </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the currently loaded playing board. </p>
+<dl class="section return"><dt>Returns</dt><dd>A readonly version of the currently loaded playing board or null if none is loaded.</dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a88a7c0f267e2e568ccb4af3ecf27d49e">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00495">495</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a12447fc109a7cf574b58e6b9c81167dc" name="a12447fc109a7cf574b58e6b9c81167dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12447fc109a7cf574b58e6b9c81167dc">&#9670;&#160;</a></span>GetFantomPlayerTools()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a12447fc109a7cf574b58e6b9c81167dc">&#9670;&#160;</a></span>GetFantomPlayerTools() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -394,12 +726,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a3217bd4b5944994c9cb4bf4b868476e1">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00776">776</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00776">776</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a12447fc109a7cf574b58e6b9c81167dc" name="a12447fc109a7cf574b58e6b9c81167dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12447fc109a7cf574b58e6b9c81167dc">&#9670;&#160;</a></span>GetFantomPlayerTools() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_player_interface.html">IFantomPlayerInterface</a> FantomGamesCore.Managers.FantomGameManager.GetFantomPlayerTools </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interface for controlling the Fantom safely. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a3217bd4b5944994c9cb4bf4b868476e1">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00776">776</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a22f51c1b9e4818303e34b449916abe37" name="a22f51c1b9e4818303e34b449916abe37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22f51c1b9e4818303e34b449916abe37">&#9670;&#160;</a></span>GetGameResult()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a22f51c1b9e4818303e34b449916abe37">&#9670;&#160;</a></span>GetGameResult() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -418,12 +774,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#aafb5966ed1b5b343e90cbfb27d4eba25">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00432">432</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00432">432</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a22f51c1b9e4818303e34b449916abe37" name="a22f51c1b9e4818303e34b449916abe37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22f51c1b9e4818303e34b449916abe37">&#9670;&#160;</a></span>GetGameResult() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; <a class="el" href="struct_fantom_games_core_1_1_fantom_game_result.html">FantomGameResult</a> &gt; FantomGamesCore.Managers.FantomGameManager.GetGameResult </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Once the game is over, this will return information about how the game ended. Invalid when the game is not over yet. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#aafb5966ed1b5b343e90cbfb27d4eba25">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00432">432</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a90bf5eff3682345b9650dc61a3eab0de" name="a90bf5eff3682345b9650dc61a3eab0de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90bf5eff3682345b9650dc61a3eab0de">&#9670;&#160;</a></span>GetGameState()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a90bf5eff3682345b9650dc61a3eab0de">&#9670;&#160;</a></span>GetGameState() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -442,12 +822,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a8d0d364c9c887efc24e9204bb7dd5d3a">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00268">268</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00268">268</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a90bf5eff3682345b9650dc61a3eab0de" name="a90bf5eff3682345b9650dc61a3eab0de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90bf5eff3682345b9650dc61a3eab0de">&#9670;&#160;</a></span>GetGameState() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; <a class="el" href="struct_fantom_games_core_1_1_fantom_game_state.html">FantomGameState</a> &gt; FantomGamesCore.Managers.FantomGameManager.GetGameState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the private (Fantom / Full) current game state with information about all Actor positions, Tickets etc. </p>
+<dl class="section return"><dt>Returns</dt><dd>Returns the current game state.</dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a8d0d364c9c887efc24e9204bb7dd5d3a">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00268">268</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="af1a2d54c096d6b8875994cd717ef81bf" name="af1a2d54c096d6b8875994cd717ef81bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1a2d54c096d6b8875994cd717ef81bf">&#9670;&#160;</a></span>GetRemainingTicketsForDetective()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af1a2d54c096d6b8875994cd717ef81bf">&#9670;&#160;</a></span>GetRemainingTicketsForDetective() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -477,12 +881,47 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a682f7b6565f8df751fe6192df5c0424c">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00520">520</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00520">520</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="af1a2d54c096d6b8875994cd717ef81bf" name="af1a2d54c096d6b8875994cd717ef81bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1a2d54c096d6b8875994cd717ef81bf">&#9670;&#160;</a></span>GetRemainingTicketsForDetective() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; int &gt; FantomGamesCore.Managers.FantomGameManager.GetRemainingTicketsForDetective </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>detectiveIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a></td>          <td class="paramname"><span class="paramname"><em>ticketKind</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Current number of tickets of a given type held by the specified Detective. Undefined for Bobbies. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">detectiveIndex</td><td>The index of the detective in question.</td></tr>
+    <tr><td class="paramname">ticketKind</td><td>The kind of the Tickets.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Remaining number of Tickets for that Detective.</dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a682f7b6565f8df751fe6192df5c0424c">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00520">520</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a744e26970dd13c5b3415dce93479c0d0" name="a744e26970dd13c5b3415dce93479c0d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a744e26970dd13c5b3415dce93479c0d0">&#9670;&#160;</a></span>GetRemainingTicketsForFantom()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a744e26970dd13c5b3415dce93479c0d0">&#9670;&#160;</a></span>GetRemainingTicketsForFantom() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -507,12 +946,42 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a5cf235a23afddd7d05036c04a0caeef9">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00534">534</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00534">534</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a744e26970dd13c5b3415dce93479c0d0" name="a744e26970dd13c5b3415dce93479c0d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744e26970dd13c5b3415dce93479c0d0">&#9670;&#160;</a></span>GetRemainingTicketsForFantom() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; int &gt; FantomGamesCore.Managers.FantomGameManager.GetRemainingTicketsForFantom </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a></td>          <td class="paramname"><span class="paramname"><em>ticketKind</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Current number of tickets of a given type held by the Fantom. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ticketKind</td><td>The kind of the Tickets.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a5cf235a23afddd7d05036c04a0caeef9">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00534">534</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a20a94b53c7d58af23e4a4c3d9322a5ba" name="a20a94b53c7d58af23e4a4c3d9322a5ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20a94b53c7d58af23e4a4c3d9322a5ba">&#9670;&#160;</a></span>GetRemainingTicketsInSupply()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a94b53c7d58af23e4a4c3d9322a5ba">&#9670;&#160;</a></span>GetRemainingTicketsInSupply() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -537,12 +1006,42 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#ad737ac4fe18b31d6cade434b3a31d356">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00539">539</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00539">539</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a20a94b53c7d58af23e4a4c3d9322a5ba" name="a20a94b53c7d58af23e4a4c3d9322a5ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a94b53c7d58af23e4a4c3d9322a5ba">&#9670;&#160;</a></span>GetRemainingTicketsInSupply() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; int &gt; FantomGamesCore.Managers.FantomGameManager.GetRemainingTicketsInSupply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespace_fantom_games_core.html#aa4a9d40fc9adb789c4d12acff8c81e3c">TicketKinds</a></td>          <td class="paramname"><span class="paramname"><em>ticketKind</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Current number of tickets of a given type in the supply. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ticketKind</td><td>The kind of the Tickets.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#ad737ac4fe18b31d6cade434b3a31d356">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00539">539</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a61947eb1e7154e5387013625dc94ee69" name="a61947eb1e7154e5387013625dc94ee69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61947eb1e7154e5387013625dc94ee69">&#9670;&#160;</a></span>GetSeekerIndex()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a61947eb1e7154e5387013625dc94ee69">&#9670;&#160;</a></span>GetSeekerIndex() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -561,12 +1060,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a4b276467f77264322b65ceb6dd7669e3">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00500">500</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00500">500</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a61947eb1e7154e5387013625dc94ee69" name="a61947eb1e7154e5387013625dc94ee69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61947eb1e7154e5387013625dc94ee69">&#9670;&#160;</a></span>GetSeekerIndex() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; int &gt; FantomGamesCore.Managers.FantomGameManager.GetSeekerIndex </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The current seeker index if ordering is enabled. Not defined if ordering disabled. </p>
+<dl class="section return"><dt>Returns</dt><dd>The current seeking Actor index.</dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a4b276467f77264322b65ceb6dd7669e3">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00500">500</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a2f8c546d5a62d34f7add887546b84c10" name="a2f8c546d5a62d34f7add887546b84c10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2f8c546d5a62d34f7add887546b84c10">&#9670;&#160;</a></span>GetSeekersPlayerTools()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f8c546d5a62d34f7add887546b84c10">&#9670;&#160;</a></span>GetSeekersPlayerTools() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -585,12 +1108,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a360c9d7495b9417a5438f4d00dfce03d">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00782">782</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00782">782</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2f8c546d5a62d34f7add887546b84c10" name="a2f8c546d5a62d34f7add887546b84c10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f8c546d5a62d34f7add887546b84c10">&#9670;&#160;</a></span>GetSeekersPlayerTools() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_seekers_player_interface.html">ISeekersPlayerInterface</a> FantomGamesCore.Managers.FantomGameManager.GetSeekersPlayerTools </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interface for controlling the Seekers safely. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a360c9d7495b9417a5438f4d00dfce03d">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00782">782</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="ac5df9196a2a8773133111d779ef47053" name="ac5df9196a2a8773133111d779ef47053"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5df9196a2a8773133111d779ef47053">&#9670;&#160;</a></span>HaveAllSeekersMoved()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5df9196a2a8773133111d779ef47053">&#9670;&#160;</a></span>HaveAllSeekersMoved() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -604,12 +1151,31 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00286">286</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00286">286</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac5df9196a2a8773133111d779ef47053" name="ac5df9196a2a8773133111d779ef47053"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5df9196a2a8773133111d779ef47053">&#9670;&#160;</a></span>HaveAllSeekersMoved() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FantomGamesCore.Managers.FantomGameManager.HaveAllSeekersMoved </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00286">286</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="ae25569d9c9a20751ed748db8de721801" name="ae25569d9c9a20751ed748db8de721801"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae25569d9c9a20751ed748db8de721801">&#9670;&#160;</a></span>IsFantomRevealing()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae25569d9c9a20751ed748db8de721801">&#9670;&#160;</a></span>IsFantomRevealing() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -628,12 +1194,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a0b03603b4e23c4ce47a5bcc7e782c3ff">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00472">472</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00472">472</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae25569d9c9a20751ed748db8de721801" name="ae25569d9c9a20751ed748db8de721801"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae25569d9c9a20751ed748db8de721801">&#9670;&#160;</a></span>IsFantomRevealing() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FantomGamesCore.Managers.FantomGameManager.IsFantomRevealing </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If this Turn Fantom will be revealed. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if it is a revealing Move.</dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a0b03603b4e23c4ce47a5bcc7e782c3ff">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00472">472</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="af01d6ea20c50d05d2c6797061e5ca08c" name="af01d6ea20c50d05d2c6797061e5ca08c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af01d6ea20c50d05d2c6797061e5ca08c">&#9670;&#160;</a></span>IsFantomTurn()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af01d6ea20c50d05d2c6797061e5ca08c">&#9670;&#160;</a></span>IsFantomTurn() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -652,12 +1242,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a1f090a0c01f9934402157010a941ecec">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00480">480</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00480">480</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="af01d6ea20c50d05d2c6797061e5ca08c" name="af01d6ea20c50d05d2c6797061e5ca08c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af01d6ea20c50d05d2c6797061e5ca08c">&#9670;&#160;</a></span>IsFantomTurn() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FantomGamesCore.Managers.FantomGameManager.IsFantomTurn </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If it's currently Fantom's turn. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if is Fantom's turn.</dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a1f090a0c01f9934402157010a941ecec">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00480">480</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a42b5deab51b47c56565c7a345e5a257a" name="a42b5deab51b47c56565c7a345e5a257a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42b5deab51b47c56565c7a345e5a257a">&#9670;&#160;</a></span>IsOver()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a42b5deab51b47c56565c7a345e5a257a">&#9670;&#160;</a></span>IsOver() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -676,12 +1290,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a969929427b53217d260193bdea53d073">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00467">467</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00467">467</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a42b5deab51b47c56565c7a345e5a257a" name="a42b5deab51b47c56565c7a345e5a257a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42b5deab51b47c56565c7a345e5a257a">&#9670;&#160;</a></span>IsOver() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FantomGamesCore.Managers.FantomGameManager.IsOver </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If the game has ended. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the game is over.</dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a969929427b53217d260193bdea53d073">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00467">467</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="ac5e774bbf5c63da90b2208be8025620c" name="ac5e774bbf5c63da90b2208be8025620c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5e774bbf5c63da90b2208be8025620c">&#9670;&#160;</a></span>IsSeekersTurn()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5e774bbf5c63da90b2208be8025620c">&#9670;&#160;</a></span>IsSeekersTurn() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -700,12 +1338,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a67a72d35a21807323ace7b0add680761">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00488">488</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00488">488</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac5e774bbf5c63da90b2208be8025620c" name="ac5e774bbf5c63da90b2208be8025620c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5e774bbf5c63da90b2208be8025620c">&#9670;&#160;</a></span>IsSeekersTurn() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FantomGamesCore.Managers.FantomGameManager.IsSeekersTurn </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If it's currently Seekers' turn. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if it is Seekers' turn.</dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a67a72d35a21807323ace7b0add680761">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00488">488</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a0298306a96f3f5dca8fe88f6b2aae39a" name="a0298306a96f3f5dca8fe88f6b2aae39a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0298306a96f3f5dca8fe88f6b2aae39a">&#9670;&#160;</a></span>IsValid()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0298306a96f3f5dca8fe88f6b2aae39a">&#9670;&#160;</a></span>IsValid() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -724,12 +1386,36 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a9375ae488993891d61574bce27c50493">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00462">462</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00462">462</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0298306a96f3f5dca8fe88f6b2aae39a" name="a0298306a96f3f5dca8fe88f6b2aae39a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0298306a96f3f5dca8fe88f6b2aae39a">&#9670;&#160;</a></span>IsValid() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FantomGamesCore.Managers.FantomGameManager.IsValid </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If the current settings led to a valid state will return true. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the game can be played.</dd></dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a9375ae488993891d61574bce27c50493">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00462">462</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a9973ffa6d12c4302625d9a678b7d11d0" name="a9973ffa6d12c4302625d9a678b7d11d0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9973ffa6d12c4302625d9a678b7d11d0">&#9670;&#160;</a></span>PlaceFantomAt()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9973ffa6d12c4302625d9a678b7d11d0">&#9670;&#160;</a></span>PlaceFantomAt() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -753,12 +1439,41 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#ace3fcfeb886a6728e006bf1e2d0c3bf3">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00627">627</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00627">627</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9973ffa6d12c4302625d9a678b7d11d0" name="a9973ffa6d12c4302625d9a678b7d11d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9973ffa6d12c4302625d9a678b7d11d0">&#9670;&#160;</a></span>PlaceFantomAt() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; bool &gt; FantomGamesCore.Managers.FantomGameManager.PlaceFantomAt </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tileIndex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If starting positions aren't specified, user has to specify before game can begin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tileIndex</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#ace3fcfeb886a6728e006bf1e2d0c3bf3">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00627">627</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="ad086bfc9bc9b9bc934cc4d60a71d11f7" name="ad086bfc9bc9b9bc934cc4d60a71d11f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad086bfc9bc9b9bc934cc4d60a71d11f7">&#9670;&#160;</a></span>PlaceSeekerAt()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad086bfc9bc9b9bc934cc4d60a71d11f7">&#9670;&#160;</a></span>PlaceSeekerAt() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -787,12 +1502,46 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a73d27f5c325d838fe53aa53008ac2109">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00595">595</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00595">595</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad086bfc9bc9b9bc934cc4d60a71d11f7" name="ad086bfc9bc9b9bc934cc4d60a71d11f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad086bfc9bc9b9bc934cc4d60a71d11f7">&#9670;&#160;</a></span>PlaceSeekerAt() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; bool &gt; FantomGamesCore.Managers.FantomGameManager.PlaceSeekerAt </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>seekerIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>tileIndex</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>If starting positions aren't specified, user has to specify before game can begin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">detectiveIndex</td><td></td></tr>
+    <tr><td class="paramname">tileIndex</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a73d27f5c325d838fe53aa53008ac2109">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00595">595</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a0d290e00dc6641d16758f45ed65ea665" name="a0d290e00dc6641d16758f45ed65ea665"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d290e00dc6641d16758f45ed65ea665">&#9670;&#160;</a></span>RemoveGameStateChangeCallback()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d290e00dc6641d16758f45ed65ea665">&#9670;&#160;</a></span>RemoveGameStateChangeCallback() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -816,12 +1565,41 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a0cca717ee920ed0f36021be51049bc05">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l01099">1099</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l01099">1099</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0d290e00dc6641d16758f45ed65ea665" name="a0d290e00dc6641d16758f45ed65ea665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d290e00dc6641d16758f45ed65ea665">&#9670;&#160;</a></span>RemoveGameStateChangeCallback() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FantomGamesCore.Managers.FantomGameManager.RemoveGameStateChangeCallback </td>
+          <td>(</td>
+          <td class="paramtype">FantomGameStateChangedCallback</td>          <td class="paramname"><span class="paramname"><em>callback</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a game state changed listener. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a0cca717ee920ed0f36021be51049bc05">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l01099">1099</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a6b321b580d0db85e9931d407919b5522" name="a6b321b580d0db85e9931d407919b5522"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b321b580d0db85e9931d407919b5522">&#9670;&#160;</a></span>Reset()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b321b580d0db85e9931d407919b5522">&#9670;&#160;</a></span>Reset() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -839,12 +1617,35 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a4b60bd04c4680d8ac97103f455b0527d">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00346">346</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00346">346</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a6b321b580d0db85e9931d407919b5522" name="a6b321b580d0db85e9931d407919b5522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b321b580d0db85e9931d407919b5522">&#9670;&#160;</a></span>Reset() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FantomGamesCore.Managers.FantomGameManager.Reset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starts the game again with current (last valid) settings. </p>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a4b60bd04c4680d8ac97103f455b0527d">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00346">346</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="a9ce430c7a4ed0a67d59d01637badcd6a" name="a9ce430c7a4ed0a67d59d01637badcd6a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ce430c7a4ed0a67d59d01637badcd6a">&#9670;&#160;</a></span>Restart()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ce430c7a4ed0a67d59d01637badcd6a">&#9670;&#160;</a></span>Restart() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -868,12 +1669,41 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#acd29f9042add6c5727c007b4a8eca6c5">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00375">375</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00375">375</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9ce430c7a4ed0a67d59d01637badcd6a" name="a9ce430c7a4ed0a67d59d01637badcd6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ce430c7a4ed0a67d59d01637badcd6a">&#9670;&#160;</a></span>Restart() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReturnCode&lt; bool &gt; FantomGamesCore.Managers.FantomGameManager.Restart </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_fantom_games_core_1_1_fantom_game_settings.html">FantomGameSettings</a></td>          <td class="paramname"><span class="paramname"><em>newSettings</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the current game settings to new ones. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newSettings</td><td>The new game settings to be set.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#acd29f9042add6c5727c007b4a8eca6c5">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00375">375</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="aebe6c1c48f4b129d2ef45b4ac6b5eeb5" name="aebe6c1c48f4b129d2ef45b4ac6b5eeb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebe6c1c48f4b129d2ef45b4ac6b5eeb5">&#9670;&#160;</a></span>SetLogger()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aebe6c1c48f4b129d2ef45b4ac6b5eeb5">&#9670;&#160;</a></span>SetLogger() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -897,12 +1727,41 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a40a4df9ffa3479433dca6e52fcf88dcc">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l01105">1105</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l01105">1105</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="aebe6c1c48f4b129d2ef45b4ac6b5eeb5" name="aebe6c1c48f4b129d2ef45b4ac6b5eeb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebe6c1c48f4b129d2ef45b4ac6b5eeb5">&#9670;&#160;</a></span>SetLogger() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FantomGamesCore.Managers.FantomGameManager.SetLogger </td>
+          <td>(</td>
+          <td class="paramtype">TextWriter?</td>          <td class="paramname"><span class="paramname"><em>logger</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the logger to a TextWriter or disables logging if null. Logger is also passed via settings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">logger</td><td>The new logger destination or null.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a40a4df9ffa3479433dca6e52fcf88dcc">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l01105">1105</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="aa26882760862fd172fb02b3034830022" name="aa26882760862fd172fb02b3034830022"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa26882760862fd172fb02b3034830022">&#9670;&#160;</a></span>Start()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa26882760862fd172fb02b3034830022">&#9670;&#160;</a></span>Start() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -920,12 +1779,35 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#aa2096eb047c2c9f09926b215efb9b19f">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00071">71</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00071">71</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="aa26882760862fd172fb02b3034830022" name="aa26882760862fd172fb02b3034830022"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa26882760862fd172fb02b3034830022">&#9670;&#160;</a></span>Start() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FantomGamesCore.Managers.FantomGameManager.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>An initial start command, can only be called once at the start. Purpose is to give control to the user over when the game finally begins. </p>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#aa2096eb047c2c9f09926b215efb9b19f">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00071">71</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
 <a id="ae4e1e4004b372616bac932d3613622f9" name="ae4e1e4004b372616bac932d3613622f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4e1e4004b372616bac932d3613622f9">&#9670;&#160;</a></span>Stop()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4e1e4004b372616bac932d3613622f9">&#9670;&#160;</a></span>Stop() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -943,13 +1825,33 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a8ee30e45b0dc72e0a58de85801e7056a">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_fantom_game_manager_8cs_source.html#l00086">86</a> of file <a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html#l00086">86</a> of file <a class="el" href="_fantom_games_core_2_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>Managers/<a class="el" href="_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a></li>
-</ul>
+<a id="ae4e1e4004b372616bac932d3613622f9" name="ae4e1e4004b372616bac932d3613622f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4e1e4004b372616bac932d3613622f9">&#9670;&#160;</a></span>Stop() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FantomGamesCore.Managers.FantomGameManager.Stop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>For stopping the game correctly. Once called, the game cannot be started again. </p>
+
+<p>Implements <a class="el" href="interface_fantom_games_core_1_1_interfaces_1_1_i_fantom_game_interface.html#a8ee30e45b0dc72e0a58de85801e7056a">FantomGamesCore.Interfaces.IFantomGameInterface</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html#l00086">86</a> of file <a class="el" href="_managers_2_fantom_game_manager_8cs_source.html">FantomGameManager.cs</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
